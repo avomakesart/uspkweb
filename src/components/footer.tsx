@@ -143,7 +143,6 @@ export function Footer({ ...rest }: FooterProps) {
       </div>
       <Container {...rest}>
         <div className="flex items-center gap-12">
-          <div className="bg-black h-50 w-50 rounded-xl relative hidden lg:flex" />
           <div className="flex flex-col items-start max-w-4xl gap-4">
             <h2 className="text-5xl font-semibold text-white">
               Escucha nuestro podcast y lleva{" "}
