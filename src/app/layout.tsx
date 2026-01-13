@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
-import { Playfair_Display, Montserrat } from "next/font/google";
-import "./globals.css";
-import { Navbar } from "@/components/navbar/navbar";
 import { Footer } from "@/components/footer";
-import { Toaster } from "sonner";
-import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+import { Navbar } from "@/components/navbar/navbar";
 import { siteConfig } from "@/lib/config";
+import { GoogleTagManager } from "@next/third-parties/google";
+import type { Metadata } from "next";
+import { Montserrat, Playfair_Display } from "next/font/google";
 import Script from "next/script";
+import { Toaster } from "sonner";
+import "./globals.css";
 
 const monserratSans = Montserrat({
   variable: "--font-sans",
@@ -94,10 +94,7 @@ export default function RootLayout({
           <Footer />
         </div>
         <Toaster richColors position="top-center" />
-        <GoogleTagManager
-          gtmId="GTM-P956LK8W"
-          gtmScriptUrl="https://www.googletagmanager.com/ns.html?id=GTM-P956LK8W"
-        />
+        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID!} />
       </body>
     </html>
   );
