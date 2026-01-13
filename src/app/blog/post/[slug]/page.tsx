@@ -1,4 +1,3 @@
-import Link from "next/link";
 import imageUrlBuilder from "@sanity/image-url";
 import type { SanityDocument } from "@sanity/client";
 import type { SanityImageSource } from "@sanity/image-url/lib/types/types";
@@ -9,6 +8,7 @@ import Image from "next/image";
 import SpotifyEmbed from "@/components/sanity/spotify-embed";
 import SoundCloudEmbed from "@/components/sanity/soundcloud-embed";
 import { Metadata, ResolvingMetadata } from "next";
+import { BackToBlogLink } from "../back-to-blog-link";
 
 const { projectId, dataset } = client.config();
 const urlFor = (source: SanityImageSource) =>
@@ -22,6 +22,7 @@ const serializers: PortableTextProps["components"] = {
   types: {
     image: (props) =>
       props.value ? (
+        // eslint-disable-next-line @next/next/no-img-element
         <img
           className="rounded-lg not-prose w-full h-auto"
           src={urlFor(props.value)!
@@ -85,9 +86,7 @@ export default async function Post(props: PageProps<"/blog/post/[slug]">) {
 
   return (
     <main className="container mx-auto min-h-screen max-w-3xl p-8 flex flex-col gap-4">
-      <Link href="/blog" className="hover:underline">
-        ← Regresar a todos los posts
-      </Link>
+      <BackToBlogLink slug={params.slug} />
       {postImageUrl && (
         <Image
           src={postImageUrl}

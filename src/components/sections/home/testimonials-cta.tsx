@@ -1,6 +1,8 @@
+"use client";
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { GOOGLE_REVIEWS_URL } from "@/lib/constants";
+import { sendGTMEvent } from "@next/third-parties/google";
 import { IconStarFilled } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -50,7 +52,17 @@ export const TestimonialsCTA = () => {
                 <div className="flex items-center justify-between pt-4">
                   <span className="font-bold">Karla, Guadalajara</span>
                   <div className="flex flex-col items-center gap-2">
-                    <Button variant="link" className="p-0 underline" asChild>
+                    <Button
+                      variant="link"
+                      className="p-0 underline"
+                      onClick={() =>
+                        sendGTMEvent({
+                          event: "cta_click",
+                          cta_label: "google_reviews",
+                        })
+                      }
+                      asChild
+                    >
                       <Link href={GOOGLE_REVIEWS_URL}>Leer más</Link>
                     </Button>
                     <div className="flex items-center gap-1">

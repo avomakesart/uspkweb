@@ -1,5 +1,6 @@
 "use client";
 import { Container } from "@/components/container";
+import { sendGTMEvent } from "@next/third-parties/google";
 import { IconMinus } from "@tabler/icons-react";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
@@ -19,21 +20,28 @@ export const VideoCTA = () => {
 
     const handlePlay = () => {
       setIsPlaying(true);
+      sendGTMEvent({ event: "cta_click", cta_label: "home_video_play" });
       setVideoState("playing");
     };
 
     const handlePause = () => {
       setIsPlaying(false);
+      sendGTMEvent({ event: "cta_click", cta_label: "home_video_paused" });
       setVideoState("paused");
     };
 
     const handleEnded = () => {
       setIsPlaying(false);
+      sendGTMEvent({ event: "cta_click", cta_label: "home_video_ended" });
       setVideoState("ended");
     };
 
     const handleLoadedMetadata = () => {
       if (video.currentTime === 0 && video.paused) {
+        sendGTMEvent({
+          event: "cta_click",
+          cta_label: "home_video_notstarted",
+        });
         setVideoState("notstarted");
       }
     };
@@ -102,13 +110,13 @@ export const VideoCTA = () => {
               className="absolute -left-[15rem] -top-[11rem] z-10"
             />
           </div>
-         <div
+          <div
             className="bg-black rounded-[6rem] w-auto relative h-130 z-20 cursor-pointer"
             onMouseEnter={() => setIsVideoHovered(true)}
             onMouseLeave={() => setIsVideoHovered(false)}
             onClick={handleTogglePlay}
           >
-            <video 
+            <video
               ref={videoRef}
               className="w-full h-full rounded-[6rem] object-cover"
             >
@@ -119,12 +127,12 @@ export const VideoCTA = () => {
               Your browser does not support the video tag.
             </video>
 
-      <button
+            <button
               type="button"
               aria-label={isPlaying ? "Pausar video" : "Reproducir video"}
               className={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
                          bg-white rounded-full p-4 z-30 transition-opacity duration-300
-                         ${showButton ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+                         ${showButton ? "opacity-100" : "opacity-0 pointer-events-none"}`}
               onClick={(e) => {
                 e.stopPropagation(); // Prevent double-triggering from parent div
                 handleTogglePlay();
@@ -132,7 +140,7 @@ export const VideoCTA = () => {
             >
               {isPlaying ? (
                 <IconMinus className="h-8 w-8 text-black" />
-              ) : videoState === 'ended' ? (
+              ) : videoState === "ended" ? (
                 // Replay icon
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

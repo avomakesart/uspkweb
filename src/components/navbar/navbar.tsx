@@ -19,6 +19,7 @@ import { cn } from "@/lib/utils";
 import { MobileNav } from "./mobile-nav";
 import Image from "next/image";
 import { WHATSAPP_CONTACT_URL } from "@/lib/constants";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 export function Navbar() {
   const pathname = usePathname();
@@ -100,7 +101,16 @@ export function Navbar() {
           </Popover> */}
           {/* Main nav */}
           <div className="flex items-center gap-6">
-            <Link href="/" className="text-primary hover:text-primary/90">
+            <Link
+              href="/"
+              className="text-primary hover:text-primary/90"
+              onClick={() =>
+                sendGTMEvent({
+                  event: "nav_click",
+                  cta_label: "navbar_logo",
+                })
+              }
+            >
               {pathname === "/academy" ? (
                 <Image
                   src="https://pub-74a58968a0814f12bf1cecf8c23125ee.r2.dev/logos/ua-white-logo.png"
@@ -125,6 +135,12 @@ export function Navbar() {
                   <NavigationMenuLink
                     active={link.active}
                     href={link.href}
+                    onClick={() =>
+                      sendGTMEvent({
+                        event: "nav_click",
+                        cta_label: `navbar_${link.label.toLowerCase().replace(/\s+/g, "_")}`,
+                      })
+                    }
                     className={cn(
                       "text-muted-foreground text-base hover:text-primary py-1.5 font-medium focus:bg-transparent active:bg-transparent",
                       pathname === "/academy" &&
@@ -158,7 +174,17 @@ export function Navbar() {
             <a href="#">Login</a>
           </Button>
           <Button asChild variant="brand" shape="rounded" className="text-base">
-            <Link href={WHATSAPP_CONTACT_URL}>Clase Gratis</Link>
+            <Link
+              href={WHATSAPP_CONTACT_URL}
+              onClick={() =>
+                sendGTMEvent({
+                  event: "contact_click",
+                  cta_label: "navbar_free_class",
+                })
+              }
+            >
+              Clase Gratis
+            </Link>
           </Button>
         </div>
       </div>

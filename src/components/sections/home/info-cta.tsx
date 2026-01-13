@@ -1,6 +1,9 @@
+"use client"
 import { Container } from "@/components/container";
+
 import { Button } from "@/components/ui/button";
 import { WHATSAPP_CONTACT_URL } from "@/lib/constants";
+import { sendGTMEvent } from "@next/third-parties/google";
 import { IconInfoCircle } from "@tabler/icons-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -33,6 +36,12 @@ export const InfoCTA = () => {
             variant="brand"
             size="lg"
             shape="rounded"
+            onClick={() =>
+              sendGTMEvent({
+                event: "contact_click",
+                cta_label: "whatsapp_cta_get_your_plan",
+              })
+            }
             asChild
           >
             <Link

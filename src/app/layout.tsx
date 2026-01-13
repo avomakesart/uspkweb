@@ -4,7 +4,9 @@ import "./globals.css";
 import { Navbar } from "@/components/navbar/navbar";
 import { Footer } from "@/components/footer";
 import { Toaster } from "sonner";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import { siteConfig } from "@/lib/config";
+import Script from "next/script";
 
 const monserratSans = Montserrat({
   variable: "--font-sans",
@@ -16,6 +18,8 @@ const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
 });
 
+const GOOGLE_ANALYTICS_ID = process.env.NEXT_GOOGLE_ANALYTICS_ID || "";
+
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
@@ -23,7 +27,13 @@ export const metadata: Metadata = {
   },
   // metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL!),
   description: siteConfig.description,
-  keywords: ["English", "Ingles", "Academy", "Academia de idiomas", "Ingles con resultados"],
+  keywords: [
+    "English",
+    "Ingles",
+    "Academy",
+    "Academia de idiomas",
+    "Ingles con resultados",
+  ],
   authors: [
     {
       name: "Alvaro Castillo",
@@ -60,7 +70,7 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   manifest: `${siteConfig.url}/site.webmanifest`,
-}
+};
 
 export default function RootLayout({
   children,
@@ -73,7 +83,7 @@ export default function RootLayout({
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <script src="https://t.contentsquare.net/uxa/0565f7123dde4.js"></script>
+        <Script src="https://t.contentsquare.net/uxa/0565f7123dde4.js" />
       </head>
       <body
         className={`${monserratSans.variable} ${playfairDisplay.variable} antialiased bg-brand-yellow-foreground`}
@@ -84,6 +94,10 @@ export default function RootLayout({
           <Footer />
         </div>
         <Toaster richColors position="top-center" />
+        <GoogleTagManager
+          gtmId="GTM-P956LK8W"
+          gtmScriptUrl="https://www.googletagmanager.com/ns.html?id=GTM-P956LK8W"
+        />
       </body>
     </html>
   );

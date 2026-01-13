@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/field";
 import { sendForm } from "@/lib/actions/send-email";
 import { useActionState, useEffect, useState } from "react";
+import { sendGTMEvent } from "@next/third-parties/google";
 import { toast } from "sonner";
 import { InputStartSelect } from "./input-start-select";
 import { Button } from "./ui/button";
@@ -104,6 +105,7 @@ export const ContactForm = () => {
       toast.success("Tu formulario ha sido enviado correctamente.", {
         description: "Un asesor se pondrá en contacto contigo pronto.",
       });
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setFormValues({
         fullName: "",
         email: "",
@@ -146,6 +148,8 @@ export const ContactForm = () => {
     });
 
     if (Object.keys(validationErrors).length > 0) return;
+
+    sendGTMEvent({ event: "contact_form_submit", cta_label: "contact_form" });
 
     // If no validation errors, execute server action
     formAction(formData);

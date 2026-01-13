@@ -19,7 +19,7 @@ import { cn } from "@/lib/utils";
 import { IconCircleCheckFilled, IconStarFilled } from "@tabler/icons-react";
 import { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
+import { TrackableLink } from "@/components/trackable-link";
 
 export const metadata: Metadata = {
   title: "Servicios",
@@ -315,9 +315,12 @@ export default function ServicesPage() {
                           className="w-full text-black"
                           asChild
                         >
-                          <Link href={service.buttonLink}>
+                          <TrackableLink
+                            href={service.buttonLink}
+                            ctaLabel={`service_button_${service.title.replace(" ", "_")}`}
+                          >
                             {service.buttonLabel}
-                          </Link>
+                          </TrackableLink>
                         </Button>
                       </div>
                     </div>
@@ -376,9 +379,13 @@ export default function ServicesPage() {
                   className="text-black"
                   asChild
                 >
-                  <Link href={WHATSAPP_CONTACT_URL}>
+                  <TrackableLink
+                    href={WHATSAPP_CONTACT_URL}
+                    ctaLabel="services_free_consultation"
+                    eventName="contact_click"
+                  >
                     Agendar mi asesoría gratis
-                  </Link>
+                  </TrackableLink>
                 </Button>
               </div>
             </div>
@@ -463,9 +470,13 @@ export default function ServicesPage() {
                   className="text-black"
                   asChild
                 >
-                  <Link href={WHATSAPP_CONTACT_URL_DIRECTOR}>
+                  <TrackableLink
+                    href={WHATSAPP_CONTACT_URL_DIRECTOR}
+                    ctaLabel="services_requeest_quote"
+                    eventName="contact_click"
+                  >
                     Solicitar presupuesto
-                  </Link>
+                  </TrackableLink>
                 </Button>
               </div>
             </div>
@@ -574,9 +585,12 @@ export default function ServicesPage() {
                               shape="rounded"
                               asChild
                             >
-                              <Link href={englishPlan.buttonLink}>
+                              <TrackableLink
+                                href={englishPlan.buttonLink}
+                                ctaLabel={`english_plan_${englishPlan.planTitle}`}
+                              >
                                 {englishPlan.buttonLabel}
-                              </Link>
+                              </TrackableLink>
                             </Button>
                           </div>
                         </div>
@@ -645,9 +659,12 @@ export default function ServicesPage() {
                     className="text-black"
                     asChild
                   >
-                    <Link href={TYPEFORM_ENGLISH_TEST_URL}>
+                    <TrackableLink
+                      href={TYPEFORM_ENGLISH_TEST_URL}
+                      ctaLabel="services_typeform_level_test"
+                    >
                       Descúbrelo gratis aquí
-                    </Link>
+                    </TrackableLink>
                   </Button>
                 </div>
               </div>

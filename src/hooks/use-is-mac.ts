@@ -1,11 +1,10 @@
-import { useEffect, useState } from "react"
+import { useState } from "react";
 
 export function useIsMac() {
-  const [isMac, setIsMac] = useState(true)
+  const [isMac] = useState(() => {
+    if (typeof navigator === "undefined") return true;
+    return navigator.platform.toUpperCase().includes("MAC");
+  });
 
-  useEffect(() => {
-    setIsMac(navigator.platform.toUpperCase().includes("MAC"))
-  }, [])
-
-  return isMac
+  return isMac;
 }

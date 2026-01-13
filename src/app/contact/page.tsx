@@ -1,19 +1,9 @@
 import { ContactForm } from "@/components/contact-form";
 import { Container } from "@/components/container";
-import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import {
-  TYPEFORM_ENGLISH_TEST_URL,
-  WHATSAPP_CONTACT_URL,
-} from "@/lib/constants";
-import {
-  IconBrandWhatsapp,
-  IconMailFilled,
-  IconPhoneFilled,
-} from "@tabler/icons-react";
 import { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
+import { ContactInfoActions } from "@/components/sections/contact/contact-info-actions";
 
 export const metadata: Metadata = {
   title: "Contacto",
@@ -54,65 +44,7 @@ export default async function ContactPage() {
         <div className="bg-brand-blue w-full py-10">
           <Container className="relative">
             <div className="flex items-center flex-col lg:flex-row justify-between w-full gap-10">
-              <div className="flex flex-col lg:px-0 px-4 w-full items-start gap-10">
-                <h4 className="text-2xl font-semibold text-white">
-                  Estamos listos para acompañarte en tu camino hacia el inglés.
-                </h4>
-
-                <div className="flex flex-col items-start gap-5">
-                  <div className="flex items-center gap-3">
-                    <span className="bg-white rounded-full p-1">
-                      <IconPhoneFilled />
-                    </span>
-                    <a
-                      href="tel:+523323207866"
-                      className="text-white text-lg hover:underline"
-                    >
-                      +52 33 2320 7866
-                    </a>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <span className="bg-white rounded-full p-1">
-                      <IconMailFilled />
-                    </span>
-                    <a
-                      href="mailto:hello@uspk.com.mx"
-                      className="text-white text-lg hover:underline"
-                    >
-                      hello@uspk.com.mx
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-4">
-                  <p className="text-white">
-                    ¿Prefieres hablar con nosotros directamente? Escríbenos:
-                  </p>
-                  <Link href={WHATSAPP_CONTACT_URL} className="flex">
-                    <span className="bg-green-500 rounded-sm p-1">
-                      <IconBrandWhatsapp className="text-white" />
-                    </span>
-                  </Link>
-                </div>
-
-                <div className="border border-white mx-auto rounded-lg p-8">
-                  <div className="flex flex-col items-center gap-6">
-                    <p className="font-bold text-xl text-white">
-                      Evalúa tu nivel en minutos y descubre por dónde empezar.
-                    </p>
-                    <Button
-                      variant="brand"
-                      shape="rounded"
-                      className="text-black"
-                      asChild
-                    >
-                      <Link href={TYPEFORM_ENGLISH_TEST_URL}>
-                        Haz tu test gratuito
-                      </Link>
-                    </Button>
-                  </div>
-                </div>
-              </div>
+              <ContactInfoActions />
               <Separator
                 orientation="vertical"
                 className="h-110! mx-8 hidden lg:flex"
