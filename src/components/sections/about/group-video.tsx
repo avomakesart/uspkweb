@@ -1,7 +1,8 @@
 "use client";
 import { useVideoControls } from "@/hooks/use-video-controls";
 import { IconMinus } from "@tabler/icons-react";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 export const GroupVideo = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -12,6 +13,32 @@ export const GroupVideo = () => {
     videoState,
     setIsVideoHovered,
   } = useVideoControls({ videoRef });
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const handlePlay = () =>
+      sendGTMEvent({ event: "cta_click", cta_label: "about_group_video_play" });
+    const handlePause = () =>
+      sendGTMEvent({ event: "cta_click", cta_label: "about_group_video_paused" });
+    const handleEnded = () =>
+      sendGTMEvent({ event: "cta_click", cta_label: "about_group_video_ended" });
+    const handleLoaded = () =>
+      sendGTMEvent({ event: "cta_click", cta_label: "about_group_video_notstarted" });
+
+    video.addEventListener("play", handlePlay);
+    video.addEventListener("pause", handlePause);
+    video.addEventListener("ended", handleEnded);
+    video.addEventListener("loadedmetadata", handleLoaded);
+
+    return () => {
+      video.removeEventListener("play", handlePlay);
+      video.removeEventListener("pause", handlePause);
+      video.removeEventListener("ended", handleEnded);
+      video.removeEventListener("loadedmetadata", handleLoaded);
+    };
+  }, []);
 
   return (
     <div

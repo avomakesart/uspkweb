@@ -1,7 +1,10 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { FACEBOOK_PAGE_URL, GOOGLE_REVIEWS_URL } from "@/lib/constants";
+import { sendGTMEvent } from "@next/third-parties/google";
+import Image from "next/image";
 import Link from "next/link";
 
 export const FactsSection = () => {
@@ -52,6 +55,12 @@ export const FactsSection = () => {
                 size="sm"
                 className="mt-auto mb-6 text-foreground"
                 asChild
+                onClick={() =>
+                  sendGTMEvent({
+                    event: "social_link",
+                    cta_label: "facebook_reviews",
+                  })
+                }
               >
                 <Link href={FACEBOOK_PAGE_URL}>Quiero verificarlo</Link>
               </Button>
@@ -74,6 +83,12 @@ export const FactsSection = () => {
                 variant="brand"
                 size="sm"
                 className="mt-auto mb-6 text-foreground"
+                onClick={() =>
+                  sendGTMEvent({
+                    event: "social_link",
+                    cta_label: "google_reviews",
+                  })
+                }
                 asChild
               >
                 <Link href={GOOGLE_REVIEWS_URL}>Quiero verificarlo</Link>

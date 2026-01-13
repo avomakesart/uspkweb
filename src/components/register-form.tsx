@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useActionState, useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Input } from "./ui/input";
@@ -10,6 +10,7 @@ import { Field, FieldError, FieldGroup, FieldSet } from "./ui/field";
 import { sendRegisterForm } from "@/lib/actions/send-email";
 import { toast } from "sonner";
 import { Spinner } from "./ui/spinner";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 type FormValues = {
   name: string;
@@ -84,6 +85,7 @@ export const RegisterForm = () => {
       toast.success("Tu formulario ha sido enviado correctamente.", {
         description: "Un asesor se pondrá en contacto contigo pronto.",
       });
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setFormValues({
         name: "",
         lastName: "",
@@ -123,6 +125,8 @@ export const RegisterForm = () => {
     });
 
     if (Object.keys(validationErrors).length > 0) return;
+
+    sendGTMEvent({ event: "contact_form_submit", cta_label: "services_register_form" });
 
     // If no validation errors, execute server action
     formAction(formData);

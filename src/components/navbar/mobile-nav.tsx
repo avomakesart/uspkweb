@@ -3,6 +3,7 @@
 import * as React from "react";
 import Link, { LinkProps } from "next/link";
 import { useRouter } from "next/navigation";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 import { cn } from "@/lib/utils";
 import {
@@ -136,6 +137,10 @@ function MobileLink({
     <Link
       href={href}
       onClick={() => {
+        sendGTMEvent({
+          event: "nav_click",
+          cta_label: `navbar_mobile_${String(children).toLowerCase().replace(/\s+/g, "_")}`,
+        });
         router.push(href.toString());
         onOpenChange?.(false);
       }}

@@ -113,6 +113,7 @@ export default async function BlogPage() {
             ).url()}
             author={featuredBlogPosts[0].author.name}
             category={featuredBlogPosts[0].category.name}
+            trackingLabel={featuredBlogPosts[0].slug.current}
             content={
               <div className="flex flex-col gap-4">
                 {featuredBlogPosts[0].body?.map((content) =>

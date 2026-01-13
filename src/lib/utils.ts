@@ -1,7 +1,6 @@
 import { clsx, type ClassValue } from "clsx";
 import { toast } from "sonner";
 import { twMerge } from "tailwind-merge";
-import {} from "react";
 import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 import urlBuilder from "@sanity/image-url";
 import imageUrlBuilder from '@sanity/image-url';

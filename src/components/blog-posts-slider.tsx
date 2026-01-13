@@ -12,6 +12,7 @@ import {
 import Link from "next/link"
 import Image from "next/image"
 import { getSanityImage } from "@/lib/utils"
+import { sendGTMEvent } from "@next/third-parties/google"
 
 type BlogPost = {
   _id: string
@@ -69,7 +70,15 @@ export function BlogPostsSlider({ posts }: { posts: BlogPost[] }) {
                 key={blogPost._id}
                 className="pl-2 sm:pl-3 md:pl-4 lg:pl-6 basis-full sm:basis-1/2 lg:basis-1/3 relative"
               >
-                <Link href={`/blog/post/${blogPost.slug.current}`}>
+                <Link
+                  href={`/blog/post/${blogPost.slug.current}`}
+                  onClick={() =>
+                    sendGTMEvent({
+                      event: "cta_click",
+                      cta_label: `blog_post_click_${blogPost.slug.current}`,
+                    })
+                  }
+                >
                   <div className="relative rounded-lg sm:rounded-xl md:rounded-2xl lg:rounded-[32px] overflow-hidden min-h-[280px] sm:min-h-[320px] md:min-h-[360px] lg:min-h-[400px] flex flex-col justify-between p-4 sm:p-6 md:p-8 lg:p-12">
                     <Image
                       src={getSanityImage(blogPost.image.asset._ref).url() || "/placeholder.svg"}

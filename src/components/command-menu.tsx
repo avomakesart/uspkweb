@@ -35,7 +35,11 @@ import {
 import { Button } from "./ui/button";
 import { Kbd, KbdGroup } from "./ui/kbd";
 
-export function CommandMenu() {
+interface CommandMenuProps {
+  onTrack?: () => void;
+}
+
+export function CommandMenu({ onTrack }: CommandMenuProps) {
   const [open, setOpen] = React.useState(false);
   const isMac = useIsMac();
   const router = useRouter();
@@ -45,12 +49,19 @@ export function CommandMenu() {
       if (e.key === "k" && (e.metaKey || e.ctrlKey)) {
         e.preventDefault();
         setOpen((open) => !open);
+        onTrack?.();
       }
     };
 
     document.addEventListener("keydown", down);
     return () => document.removeEventListener("keydown", down);
-  }, []);
+  }, [onTrack]);
+
+
+  const handleCommanMenuOpen = React.useCallback(() => {
+    setOpen(true)
+    onTrack?.();
+  }, [onTrack])
 
   return (
     <>
@@ -59,7 +70,7 @@ export function CommandMenu() {
           className="bg-background rounded-full p-2 w-96 h-10 placeholder:text-center"
           suppressHydrationWarning
           variant="ghost"
-          onClick={() => setOpen(true)}
+          onClick={handleCommanMenuOpen}
         />
         <div className="absolute top-2.5 right-15 hidden gap-1 sm:flex">
           <KbdGroup>
@@ -68,7 +79,7 @@ export function CommandMenu() {
           </KbdGroup>
         </div>
         <div className="absolute right-0 top-0 bg-brand-yellow text-background rounded-r-full p-2 w-12 h-10">
-          <Search onClick={() => setOpen(true)} />
+          <Search onClick={handleCommanMenuOpen} />
         </div>
       </div>
       <CommandDialog open={open} onOpenChange={setOpen}>

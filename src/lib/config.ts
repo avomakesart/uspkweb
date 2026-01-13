@@ -8,6 +8,8 @@ export const siteConfig = {
     instagram: "https://www.instagram.com/uspk_cursos_de_ingles",
     facebook:
       "https://www.facebook.com/people/%C3%9Cspk-English/100094348652144/",
+    tiktok: "https://www.tiktok.com/@uspkenglish",
+    linkedin: "https://www.linkedin.com/company/uspk/",
   },
 };
 

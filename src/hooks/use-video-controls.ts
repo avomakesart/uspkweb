@@ -48,7 +48,7 @@ export const useVideoControls = ({
       video.removeEventListener("ended", handleEnded);
       video.removeEventListener("loadedmetadata", handleLoadedMetadata);
     };
-  }, []);
+  }, [videoRef]);
 
   const handleTogglePlay = async () => {
     const video = videoRef.current;

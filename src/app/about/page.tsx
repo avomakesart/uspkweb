@@ -9,7 +9,7 @@ import { WHATSAPP_CONTACT_URL } from "@/lib/constants";
 import { IconThumbUp, IconUsersGroup } from "@tabler/icons-react";
 import { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
+import { TrackableLink } from "../../components/trackable-link";
 
 export const metadata: Metadata = {
   title: "Nosotros",
@@ -172,7 +172,13 @@ export default function About() {
                   className="text-black"
                   asChild
                 >
-                  <Link href={WHATSAPP_CONTACT_URL}>Inscríbete hoy</Link>
+                  <TrackableLink
+                    eventName="contact_click"
+                    href={WHATSAPP_CONTACT_URL}
+                    ctaLabel="about_whatsapp_signup"
+                  >
+                    Inscríbete hoy
+                  </TrackableLink>
                 </Button>
               </div>
             </div>
@@ -356,7 +362,13 @@ export default function About() {
                   className="text-black"
                   asChild
                 >
-                  <Link href={WHATSAPP_CONTACT_URL}>Empieza ya</Link>
+                  <TrackableLink
+                    eventName="contact_click"
+                    href={WHATSAPP_CONTACT_URL}
+                    ctaLabel="about_whatsapp_start"
+                  >
+                    Empieza ya
+                  </TrackableLink>
                 </Button>
               </div>
             </div>

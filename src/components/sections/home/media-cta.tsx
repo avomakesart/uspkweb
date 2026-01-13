@@ -1,6 +1,8 @@
+"use client";
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { WHATSAPP_CONTACT_URL } from "@/lib/constants";
+import { sendGTMEvent } from "@next/third-parties/google";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -26,7 +28,18 @@ export const MediaCTA = () => {
                 <span className="font-semibold">Nuevo grupo</span>
                 <span>Nivel 1</span>
               </div>
-              <Button variant="brand" shape="rounded" className="text-black" asChild>
+              <Button
+                variant="brand"
+                shape="rounded"
+                onClick={() =>
+                  sendGTMEvent({
+                    event: "contact_click",
+                    cta_label: "whatsapp_cta_start_today",
+                  })
+                }
+                className="text-black"
+                asChild
+              >
                 <Link
                   href={`${WHATSAPP_CONTACT_URL}?text=${encodeURI("Comienzo hoy mismo")}`}
                 >

@@ -1,29 +1,41 @@
-import Image from "next/image"
+"use client";
+import Image from "next/image";
 import { ReactNode } from "react";
 import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
 import Link from "next/link";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 export function FeaturedArticle({
   featuredImage,
   title,
   blogTitle,
   category,
+  trackingLabel,
   content,
   author,
   postLink,
 }: {
   featuredImage?: string;
   blogTitle?: string;
-  postLink: string
+  postLink: string;
   title?: ReactNode;
   category?: string;
   content?: ReactNode;
   author?: string;
+  trackingLabel?: string;
 }) {
   return (
     <div className="flex flex-col lg:flex-row gap-6 max-w-7xl w-full">
       <div className="relative">
-        <Link href={postLink}>
+        <Link
+          href={postLink}
+          onClick={() =>
+            sendGTMEvent({
+              event: "cta_click",
+              cta_label: `blog_featured_${(trackingLabel || blogTitle || postLink).toString().replace(/\s+/g, "_")}`,
+            })
+          }
+        >
           <div className="relative rounded-[32px] overflow-hidden min-h-[600px] flex flex-col justify-between p-12">
             <Image
               src={

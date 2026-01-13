@@ -1,9 +1,10 @@
+"use client"
 import { Container } from "@/components/container";
-import Image from "next/image";
-import { EarthIcon } from "./earth-icon";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import { WHATSAPP_CONTACT_URL } from "@/lib/constants";
+import { sendGTMEvent } from "@next/third-parties/google";
+import Image from "next/image";
+import Link from "next/link";
 
 export const InitialCTA = () => {
   return (
@@ -25,13 +26,28 @@ export const InitialCTA = () => {
           </div>
           <div className="flex flex-col lg:flex-row  lg:gap-24 w-full justify-around items-center">
             <div className="lg:mr-12">
-            <Image src="https://pub-74a58968a0814f12bf1cecf8c23125ee.r2.dev/images/world-icon-img.png" alt="world icon" width={400} height={200} />
+              <Image
+                src="https://pub-74a58968a0814f12bf1cecf8c23125ee.r2.dev/images/world-icon-img.png"
+                alt="world icon"
+                width={400}
+                height={200}
+              />
             </div>
             <div className="flex flex-col mt-10 lg:mt-0 lg:flex-row items-center gap-6">
               <span className="font-bold text-xl text-center text-white">
                 ¿Estás listo para hablar inglés?
               </span>
-              <Button variant="brand" shape="rounded" asChild>
+              <Button
+                variant="brand"
+                shape="rounded"
+                onClick={() =>
+                  sendGTMEvent({
+                    event: "contact_click",
+                    cta_label: "whatsapp_cta_talk_to_us",
+                  })
+                }
+                asChild
+              >
                 <Link
                   href={`${WHATSAPP_CONTACT_URL}?text=${encodeURI("Estoy Listo Para hablar Ingles")}`}
                 >
