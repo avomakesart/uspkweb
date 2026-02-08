@@ -19,3 +19,5 @@ export const META_THEME_COLORS = {
   light: "#ffffff",
   dark: "#09090b",
 };
+
+export const whatsAppPhoneNumber = "5213323207866";

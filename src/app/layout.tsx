@@ -1,5 +1,7 @@
 import { Footer } from "@/components/footer";
 import { Navbar } from "@/components/navbar/navbar";
+import { TooltipProvider } from "@/components/ui/tooltip";
+import { WhatsAppCTA } from "@/components/whats-app-cta";
 import { siteConfig } from "@/lib/config";
 import { GoogleTagManager } from "@next/third-parties/google";
 import type { Metadata } from "next";
@@ -7,6 +9,7 @@ import { Montserrat, Playfair_Display } from "next/font/google";
 import Script from "next/script";
 import { Toaster } from "sonner";
 import "./globals.css";
+import { AppScripts } from "@/components/app-scripts";
 
 const monserratSans = Montserrat({
   variable: "--font-sans",
@@ -17,8 +20,6 @@ const playfairDisplay = Playfair_Display({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
-
-const GOOGLE_ANALYTICS_ID = process.env.NEXT_GOOGLE_ANALYTICS_ID || "";
 
 export const metadata: Metadata = {
   title: {
@@ -77,36 +78,29 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const isWhatsAppEnabled = true;
   return (
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <Script src="https://t.contentsquare.net/uxa/0565f7123dde4.js" />
+        <AppScripts />
       </head>
-      <body
-        className={`${monserratSans.variable} ${playfairDisplay.variable} antialiased bg-brand-yellow-foreground`}
-      >
-        <div className="flex flex-col min-h-screen" id="app-container">
-          <Navbar />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </div>
-        <Toaster richColors position="top-center" />
-        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID!} />
-      </body>
-      <noscript>
-        <iframe
-          src={`https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GTM_ID!}`}
-          height="0"
-          width="0"
-          style={{
-            display: "none",
-            visibility: "hidden",
-          }}
-        />
-      </noscript>
+      <TooltipProvider>
+        <body
+          className={`${monserratSans.variable} ${playfairDisplay.variable} antialiased bg-brand-yellow-foreground`}
+        >
+          <div className="flex flex-col min-h-screen" id="app-container">
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
+          <Toaster richColors position="top-center" />
+          <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID!} />
+          {isWhatsAppEnabled ? <WhatsAppCTA /> : null}
+        </body>
+      </TooltipProvider>
     </html>
   );
 }

@@ -96,6 +96,7 @@ export function Footer({ ...rest }: FooterProps) {
     <footer
       className={cn("bg-brand-blue mt-40 py-14 px-4 z-20", {
         "mt-0": pathname === "/contact",
+        hidden: pathname === "/request-quote",
       })}
     >
       <div className="w-full bg-brand-yellow p-8 rounded-4xl -mt-40 mb-20 max-w-5xl mx-auto">
@@ -228,42 +229,106 @@ export function Footer({ ...rest }: FooterProps) {
             </span>
             <ul className="list-disc text-background space-y-2">
               <li>
-                <Link href="/" onClick={() => sendGTMEvent({ event: "nav_click", cta_label: "footer_home" })}>
+                <Link
+                  href="/"
+                  onClick={() =>
+                    sendGTMEvent({
+                      event: "nav_click",
+                      cta_label: "footer_home",
+                    })
+                  }
+                >
                   Inicio
                 </Link>
               </li>
               <li>
-                <Link href="/services" onClick={() => sendGTMEvent({ event: "nav_click", cta_label: "footer_services" })}>
+                <Link
+                  href="/services"
+                  onClick={() =>
+                    sendGTMEvent({
+                      event: "nav_click",
+                      cta_label: "footer_services",
+                    })
+                  }
+                >
                   Servicios
                 </Link>
               </li>
               <li>
-                <Link href="/about" onClick={() => sendGTMEvent({ event: "nav_click", cta_label: "footer_about" })}>
+                <Link
+                  href="/about"
+                  onClick={() =>
+                    sendGTMEvent({
+                      event: "nav_click",
+                      cta_label: "footer_about",
+                    })
+                  }
+                >
                   Nosotros
                 </Link>
               </li>
               <li>
-                <Link href="/contact" onClick={() => sendGTMEvent({ event: "nav_click", cta_label: "footer_contact" })}>
+                <Link
+                  href="/contact"
+                  onClick={() =>
+                    sendGTMEvent({
+                      event: "nav_click",
+                      cta_label: "footer_contact",
+                    })
+                  }
+                >
                   Contacto
                 </Link>
               </li>
               <li>
-                <Link href={USPK_ACADEMY_URL} onClick={() => sendGTMEvent({ event: "nav_click", cta_label: "footer_academy" })}>
+                <Link
+                  href={USPK_ACADEMY_URL}
+                  onClick={() =>
+                    sendGTMEvent({
+                      event: "nav_click",
+                      cta_label: "footer_academy",
+                    })
+                  }
+                >
                   Üspk Academy
                 </Link>
               </li>
               <li>
-                <a href="#" onClick={() => sendGTMEvent({ event: "nav_click", cta_label: "footer_login" })}>
+                <a
+                  href="#"
+                  onClick={() =>
+                    sendGTMEvent({
+                      event: "nav_click",
+                      cta_label: "footer_login",
+                    })
+                  }
+                >
                   Log in
                 </a>
               </li>
               <li>
-                <Link href={WHATSAPP_CONTACT_URL} onClick={() => sendGTMEvent({ event: "contact_click", cta_label: "footer_free_class" })}>
+                <Link
+                  href={WHATSAPP_CONTACT_URL}
+                  onClick={() =>
+                    sendGTMEvent({
+                      event: "contact_click",
+                      cta_label: "footer_free_class",
+                    })
+                  }
+                >
                   Clase Gratis
                 </Link>
               </li>
               <li>
-                <Link href="/blog" onClick={() => sendGTMEvent({ event: "nav_click", cta_label: "footer_blog" })}>
+                <Link
+                  href="/blog"
+                  onClick={() =>
+                    sendGTMEvent({
+                      event: "nav_click",
+                      cta_label: "footer_blog",
+                    })
+                  }
+                >
                   Blog
                 </Link>
               </li>
@@ -276,27 +341,67 @@ export function Footer({ ...rest }: FooterProps) {
 
             <ul className="list-disc text-background space-y-2">
               <li>
-                <a href="#" onClick={() => sendGTMEvent({ event: "utility_click", cta_label: "footer_payments" })}>
+                <a
+                  href="#"
+                  onClick={() =>
+                    sendGTMEvent({
+                      event: "utility_click",
+                      cta_label: "footer_payments",
+                    })
+                  }
+                >
                   Pagos
                 </a>
               </li>
               <li>
-                <a href="#" onClick={() => sendGTMEvent({ event: "utility_click", cta_label: "footer_invoices" })}>
+                <a
+                  href="#"
+                  onClick={() =>
+                    sendGTMEvent({
+                      event: "utility_click",
+                      cta_label: "footer_invoices",
+                    })
+                  }
+                >
                   Facturas
                 </a>
               </li>
               <li>
-                <a href="#" onClick={() => sendGTMEvent({ event: "utility_click", cta_label: "footer_help" })}>
+                <a
+                  href="#"
+                  onClick={() =>
+                    sendGTMEvent({
+                      event: "utility_click",
+                      cta_label: "footer_help",
+                    })
+                  }
+                >
                   Ayuda
                 </a>
               </li>
               <li>
-                <a href="#" onClick={() => sendGTMEvent({ event: "utility_click", cta_label: "footer_careers" })}>
+                <a
+                  href="#"
+                  onClick={() =>
+                    sendGTMEvent({
+                      event: "utility_click",
+                      cta_label: "footer_careers",
+                    })
+                  }
+                >
                   Bolsa de trabajo
                 </a>
               </li>
               <li>
-                <Link href={TYPEFORM_ENGLISH_TEST_URL} onClick={() => sendGTMEvent({ event: "cta_click", cta_label: "footer_level_test" })}>
+                <Link
+                  href={TYPEFORM_ENGLISH_TEST_URL}
+                  onClick={() =>
+                    sendGTMEvent({
+                      event: "cta_click",
+                      cta_label: "footer_level_test",
+                    })
+                  }
+                >
                   Evaluación Gratis
                 </Link>
               </li>
@@ -307,14 +412,40 @@ export function Footer({ ...rest }: FooterProps) {
               Contacto
             </span>
             <div className="flex flex-col gap-2 items-start">
-              <a className="text-background" href="tel:+523323207866" onClick={() => sendGTMEvent({ event: "contact_click", cta_label: "footer_phone" })}>
+              <a
+                className="text-background"
+                href="tel:+523323207866"
+                onClick={() =>
+                  sendGTMEvent({
+                    event: "contact_click",
+                    cta_label: "footer_phone",
+                  })
+                }
+              >
                 +52 33 2320 7866
               </a>
-              <a className="text-background" href="mailto:hello@uspk.com.mx" onClick={() => sendGTMEvent({ event: "contact_click", cta_label: "footer_email" })}>
+              <a
+                className="text-background"
+                href="mailto:hello@uspk.com.mx"
+                onClick={() =>
+                  sendGTMEvent({
+                    event: "contact_click",
+                    cta_label: "footer_email",
+                  })
+                }
+              >
                 hello@uspk.com.mx
               </a>
               <div className="flex gap-1 mt-2 items-center">
-                <a href={WHATSAPP_CONTACT_URL} onClick={() => sendGTMEvent({ event: "social_link", cta_label: "footer_whatsapp" })}>
+                <a
+                  href={WHATSAPP_CONTACT_URL}
+                  onClick={() =>
+                    sendGTMEvent({
+                      event: "social_link",
+                      cta_label: "footer_whatsapp",
+                    })
+                  }
+                >
                   <Image
                     src="https://pub-b7daf0a886e34f2b8c2ab3497bc521f7.r2.dev/files/f8bc1cf9-6d77-45cd-9263-b8c646f2c8ed.svg"
                     alt="Whatsapp"
@@ -323,7 +454,15 @@ export function Footer({ ...rest }: FooterProps) {
                     className="max-w-full size-9"
                   />
                 </a>
-                <a href={FACEBOOK_PAGE_URL} onClick={() => sendGTMEvent({ event: "social_link", cta_label: "footer_facebook" })}>
+                <a
+                  href={FACEBOOK_PAGE_URL}
+                  onClick={() =>
+                    sendGTMEvent({
+                      event: "social_link",
+                      cta_label: "footer_facebook",
+                    })
+                  }
+                >
                   <Image
                     src="https://pub-b7daf0a886e34f2b8c2ab3497bc521f7.r2.dev/files/36bc055d-f95a-4b1e-93f9-fd22d4e31260.svg"
                     alt="Facebook"
@@ -332,7 +471,15 @@ export function Footer({ ...rest }: FooterProps) {
                     className="max-w-full size-9"
                   />
                 </a>
-                <a href={siteConfig.links.tiktok} onClick={() => sendGTMEvent({ event: "social_link", cta_label: "footer_tiktok" })}>
+                <a
+                  href={siteConfig.links.tiktok}
+                  onClick={() =>
+                    sendGTMEvent({
+                      event: "social_link",
+                      cta_label: "footer_tiktok",
+                    })
+                  }
+                >
                   <Image
                     src="https://pub-b7daf0a886e34f2b8c2ab3497bc521f7.r2.dev/files/60e2d119-c1c0-4671-938c-34f5ce165871.svg"
                     alt="Tiktok"
@@ -341,7 +488,15 @@ export function Footer({ ...rest }: FooterProps) {
                     className="max-w-full size-9"
                   />
                 </a>
-                <a href={siteConfig.links.instagram} onClick={() => sendGTMEvent({ event: "social_link", cta_label: "footer_instagram" })}>
+                <a
+                  href={siteConfig.links.instagram}
+                  onClick={() =>
+                    sendGTMEvent({
+                      event: "social_link",
+                      cta_label: "footer_instagram",
+                    })
+                  }
+                >
                   <Image
                     src="https://pub-b7daf0a886e34f2b8c2ab3497bc521f7.r2.dev/files/6d3adc6a-960d-4256-ada2-4e58d90c7f34.svg"
                     alt="Instagram"
@@ -350,7 +505,15 @@ export function Footer({ ...rest }: FooterProps) {
                     className="max-w-full size-9"
                   />
                 </a>
-                <a href={siteConfig.links.linkedin} onClick={() => sendGTMEvent({ event: "social_link", cta_label: "footer_linkedin" })}>
+                <a
+                  href={siteConfig.links.linkedin}
+                  onClick={() =>
+                    sendGTMEvent({
+                      event: "social_link",
+                      cta_label: "footer_linkedin",
+                    })
+                  }
+                >
                   <Image
                     src="https://pub-b7daf0a886e34f2b8c2ab3497bc521f7.r2.dev/files/1bb6ceea-41ac-4ac6-a7f1-4db63c2405c4.svg"
                     alt="Linkedin"
