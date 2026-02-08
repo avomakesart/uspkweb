@@ -31,6 +31,7 @@ const buttonVariants = cva(
         default: "rounded-md",
         rounded: "rounded-full",
         square: "rounded-none",
+        pill: "p-3 rounded-[3.125rem]",
       },
       shadow: {
         default: "shadow-sm",

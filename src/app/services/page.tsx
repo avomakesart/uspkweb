@@ -471,7 +471,7 @@ export default function ServicesPage() {
                   asChild
                 >
                   <TrackableLink
-                    href={WHATSAPP_CONTACT_URL_DIRECTOR}
+                    href="/request-quote"
                     ctaLabel="services_requeest_quote"
                     eventName="contact_click"
                   >
