@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inglés para Empresas · Capacitación Corporativa | Üspk English</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--blue:#1D3557;--blue-light:#2A4A73;--blue-dark:#152841;--blue-darker:#0F1C2E;
+--yellow:#FFD123;--yellow-bg:#FFF7DB;--yellow-dark:#E6BC1F;
+--green:#16A34A;--green-bg:#F0FDF4;--red:#DC2626;
+--bg:#FFFFFF;--text:#1C1917;--text-mid:#57534E;--text-light:#A8A29E;
+--border:#E7E5E4;--whatsapp:#25D366;
+--serif:'Playfair Display',Georgia,serif;--sans:'Montserrat',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--blue-dark);color:#E2E8F0;line-height:1.2;letter-spacing:-0.05em;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.container{max-width:740px;margin:0 auto;padding:0 20px}
+p,li{line-height:1.6;letter-spacing:-0.01em}
+
+.nav-bar{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;border-bottom:1px solid rgba(255,255,255,.06)}
+.nav-logo{font-weight:800;font-size:1.1rem;color:#fff;letter-spacing:-0.03em}
+.nav-logo span{color:var(--yellow)}
+.nav-cta{background:var(--yellow);color:var(--blue);font-weight:700;font-size:.82rem;padding:10px 20px;border-radius:8px;text-decoration:none;transition:all .2s}
+.nav-cta:hover{background:var(--yellow-dark)}
+
+/* HERO */
+.hero{padding:72px 20px 56px;text-align:center;position:relative}
+.hero::after{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:700px;height:600px;background:radial-gradient(ellipse,rgba(255,209,35,.06) 0%,transparent 65%);pointer-events:none}
+.hero>*{position:relative;z-index:1}
+.badge-row{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:24px;flex-wrap:wrap}
+.badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);padding:6px 14px;border-radius:100px;font-size:.75rem;font-weight:600;color:#94A3B8}
+h1{font-family:var(--serif);font-size:clamp(2rem,5vw,3rem);line-height:1.12;font-weight:700;color:#fff;margin-bottom:20px}
+h1 em{color:var(--yellow);font-style:italic}
+.hero-sub{font-size:1.08rem;color:#94A3B8;max-width:580px;margin:0 auto 36px;line-height:1.75}
+
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:560px;margin:0 auto 40px}
+.stat{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:20px 16px;text-align:center}
+.stat-num{font-family:var(--serif);font-size:1.8rem;font-weight:700;color:var(--yellow);line-height:1;margin-bottom:4px}
+.stat-label{font-size:.75rem;color:#64748B;font-weight:500}
+
+.cta-group{display:flex;flex-direction:column;align-items:center;gap:12px}
+.cta-primary{display:inline-flex;align-items:center;gap:10px;background:var(--yellow);color:var(--blue);font-weight:800;font-size:1.05rem;padding:18px 40px;border-radius:12px;text-decoration:none;transition:all .3s;box-shadow:0 4px 32px rgba(255,209,35,.2);letter-spacing:-0.02em}
+.cta-primary:hover{transform:translateY(-2px);box-shadow:0 8px 40px rgba(255,209,35,.3)}
+.cta-whatsapp{display:inline-flex;align-items:center;gap:8px;background:var(--whatsapp);color:#fff;font-weight:700;font-size:.95rem;padding:14px 30px;border-radius:12px;text-decoration:none;transition:all .3s}
+.cta-whatsapp:hover{transform:translateY(-2px)}
+.cta-sub{font-size:.78rem;color:#64748B}
+
+/* COST */
+.cost-section{padding:56px 20px;border-top:1px solid rgba(255,255,255,.06)}
+.cost-section h2{font-family:var(--serif);font-size:clamp(1.6rem,4vw,2.2rem);text-align:center;margin-bottom:12px;font-weight:700;color:#fff;line-height:1.15}
+.cost-sub{text-align:center;color:#94A3B8;font-size:.95rem;margin-bottom:36px}
+.cost-grid{max-width:640px;margin:0 auto;display:grid;gap:12px}
+.cost-item{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:22px 24px;display:flex;align-items:flex-start;gap:16px;transition:all .25s}
+.cost-item:hover{border-color:rgba(220,38,38,.3);background:rgba(255,255,255,.05)}
+.cost-icon{width:40px;height:40px;background:rgba(220,38,38,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
+.cost-text h3{font-size:.95rem;font-weight:700;margin-bottom:2px;color:#fff}
+.cost-text p{font-size:.82rem;color:#94A3B8;line-height:1.6}
+
+/* SOLUTION */
+.solution{padding:56px 20px;background:rgba(255,255,255,.02);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06)}
+.solution h2{font-family:var(--serif);font-size:clamp(1.6rem,4vw,2.2rem);text-align:center;margin-bottom:12px;font-weight:700;color:#fff;line-height:1.15}
+.solution-sub{text-align:center;color:#94A3B8;font-size:.95rem;margin-bottom:36px}
+.feature-grid{max-width:640px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.feature-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:24px 20px;transition:all .25s}
+.feature-card:hover{border-color:rgba(255,209,35,.3);transform:translateY(-2px)}
+.feature-card .f-icon{font-size:1.6rem;margin-bottom:12px}
+.feature-card h3{font-size:.92rem;font-weight:700;margin-bottom:6px;color:#fff}
+.feature-card p{font-size:.8rem;color:#94A3B8;line-height:1.6}
+
+/* PROCESS */
+.process{padding:56px 20px}
+.process h2{font-family:var(--serif);font-size:clamp(1.5rem,4vw,2rem);text-align:center;margin-bottom:36px;font-weight:700;color:#fff}
+.process-steps{max-width:560px;margin:0 auto}
+.p-step{display:flex;gap:20px;padding-bottom:32px;position:relative}
+.p-step:last-child{padding-bottom:0}
+.p-num{width:44px;height:44px;background:var(--yellow);color:var(--blue);border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.9rem;flex-shrink:0;z-index:1}
+.p-step:not(:last-child)::after{content:'';position:absolute;top:44px;left:22px;width:2px;height:calc(100% - 44px);background:rgba(255,255,255,.06)}
+.p-text h3{font-size:1rem;font-weight:700;margin-bottom:4px;color:#fff}
+.p-text p{font-size:.88rem;color:#94A3B8;line-height:1.6}
+
+/* ROI */
+.roi{padding:56px 20px;background:rgba(255,255,255,.02);border-top:1px solid rgba(255,255,255,.06);border-bottom:1px solid rgba(255,255,255,.06);text-align:center}
+.roi h2{font-family:var(--serif);font-size:clamp(1.5rem,4vw,2rem);margin-bottom:32px;font-weight:700;color:#fff}
+.roi-card{max-width:560px;margin:0 auto;background:rgba(255,255,255,.04);border:1px solid rgba(255,209,35,.15);border-radius:20px;padding:36px 28px}
+.roi-equation{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:28px}
+.roi-block{text-align:center}
+.roi-block .label{font-size:.72rem;color:#64748B;text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+.roi-block .value{font-family:var(--serif);font-size:1.6rem;font-weight:700}
+.roi-block .value.cost{color:var(--red)}
+.roi-block .value.gain{color:var(--green)}
+.roi-block .value.roi-num{color:var(--yellow)}
+.roi-op{font-size:1.4rem;color:#64748B;font-weight:300}
+.roi-note{font-size:.82rem;color:#94A3B8;line-height:1.7;max-width:480px;margin:0 auto;padding-top:20px;border-top:1px solid rgba(255,255,255,.06)}
+
+/* PROOF */
+.proof{padding:56px 20px}
+.proof h2{font-family:var(--serif);font-size:clamp(1.5rem,4vw,2rem);text-align:center;margin-bottom:32px;font-weight:700;color:#fff}
+.proof-grid{max-width:640px;margin:0 auto;display:grid;gap:14px}
+.proof-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:24px}
+.proof-card .stars{color:var(--yellow);font-size:.85rem;letter-spacing:2px;margin-bottom:10px}
+.proof-card .quote{font-family:var(--serif);font-size:.95rem;color:#94A3B8;line-height:1.7;margin-bottom:14px;font-style:italic}
+.proof-card .author{font-weight:700;font-size:.85rem;color:#fff}
+.proof-card .role{font-size:.78rem;color:#64748B}
+
+/* FINAL */
+.final{padding:64px 20px 56px;text-align:center;position:relative}
+.final::before{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:700px;height:500px;background:radial-gradient(circle,rgba(255,209,35,.06) 0%,transparent 65%);pointer-events:none}
+.final>*{position:relative;z-index:1}
+.final h2{font-family:var(--serif);font-size:clamp(1.6rem,4vw,2.4rem);margin-bottom:12px;font-weight:700;line-height:1.15;color:#fff}
+.final p{color:#94A3B8;margin-bottom:28px;font-size:.95rem;line-height:1.6}
+.final-benefits{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:32px}
+.f-benefit{display:flex;align-items:center;gap:6px;font-size:.82rem;color:#94A3B8;font-weight:500}
+.f-benefit::before{content:'✓';color:var(--green);font-weight:700}
+
+.sticky-bar{position:fixed;bottom:0;left:0;right:0;background:rgba(15,28,46,.95);backdrop-filter:blur(12px);border-top:1px solid rgba(255,209,35,.2);padding:12px 16px;z-index:999;display:flex;gap:10px;justify-content:center;transform:translateY(100%);transition:transform .4s}
+.sticky-bar.visible{transform:translateY(0)}
+.sticky-bar a{flex:1;max-width:200px;text-align:center;padding:14px 12px;border-radius:10px;font-weight:700;font-size:.82rem;text-decoration:none}
+.sticky-bar .s-wa{background:var(--whatsapp);color:#fff}
+.sticky-bar .s-cta{background:var(--yellow);color:var(--blue)}
+
+footer{text-align:center;padding:24px 20px 100px;font-size:.78rem;color:#64748B;border-top:1px solid rgba(255,255,255,.06)}
+footer a{color:#94A3B8;text-decoration:none}
+
+@media(max-width:600px){
+.hero{padding:48px 16px 40px}.hero-stats{grid-template-columns:1fr;gap:10px}
+.feature-grid{grid-template-columns:1fr}.roi-equation{flex-direction:column;gap:10px}
+.cta-primary,.cta-whatsapp{width:100%;justify-content:center}.badge-row{gap:8px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav-bar">
+<div class="nav-logo">Üspk <span>Empresarial</span></div>
+<a href="https://wa.me/523314352238?text=Quiero%20agendar%20una%20demo%20para%20mi%20empresa" class="nav-cta">Agendar demo gratis</a>
+</nav>
+
+<section class="hero"><div class="container">
+<div class="badge-row">
+<span class="badge">🏢 +30 años capacitando empresas</span>
+<span class="badge">⭐ 4.9/5 en Google</span>
+<span class="badge">🌎 Instructores nativos</span>
+</div>
+<h1>Tu equipo pierde dinero<br>cada día que <em>no habla inglés</em></h1>
+<p class="hero-sub">Capacitación corporativa diseñada para empresas que necesitan resultados medibles, no diplomas decorativos. Programas a medida, instructores nativos, reportes de avance.</p>
+<div class="hero-stats">
+<div class="stat"><div class="stat-num">30+</div><div class="stat-label">Años de experiencia</div></div>
+<div class="stat"><div class="stat-num">98%</div><div class="stat-label">Tasa de continuidad</div></div>
+<div class="stat"><div class="stat-num">10</div><div class="stat-label">Máx. por grupo</div></div>
+</div>
+<div class="cta-group">
+<a href="https://wa.me/523314352238?text=Quiero%20agendar%20una%20demo%20de%20inglés%20empresarial" class="cta-primary">Agendar demo gratuita para mi equipo →</a>
+<a href="https://wa.me/523314352238?text=Info%20inglés%20empresarial" class="cta-whatsapp">💬 Hablar con un asesor</a>
+<span class="cta-sub">Sin compromiso · Presupuesto en 24 horas</span>
+</div>
+</div></section>
+
+<section class="cost-section"><div class="container">
+<h2>El costo oculto de un equipo que<br><em style="font-family:var(--serif);color:var(--red)">no domina el inglés</em></h2>
+<p class="cost-sub">Estos problemas están pasando ahora mismo en tu empresa:</p>
+<div class="cost-grid">
+<div class="cost-item"><div class="cost-icon">💸</div><div class="cost-text"><h3>Negocios perdidos por barrera de idioma</h3><p>Tu equipo no puede cerrar con clientes internacionales ni negociar mejores términos con proveedores extranjeros.</p></div></div>
+<div class="cost-item"><div class="cost-icon">⏳</div><div class="cost-text"><h3>Horas desperdiciadas traduciendo</h3><p>Correos, reportes, manuales técnicos — todo toma el doble de tiempo cuando dependen de Google Translate.</p></div></div>
+<div class="cost-item"><div class="cost-icon">🚫</div><div class="cost-text"><h3>Talento que no crece (y se va)</h3><p>Tus mejores empleados se frustran al no poder acceder a capacitación internacional y oportunidades de crecimiento.</p></div></div>
+<div class="cost-item"><div class="cost-icon">📉</div><div class="cost-text"><h3>Reuniones donde tu equipo se queda callado</h3><p>En videollamadas con socios extranjeros, tu equipo asiente sin entender. Eso cuesta credibilidad y contratos.</p></div></div>
+</div>
+</div></section>
+
+<section class="solution"><div class="container">
+<h2>Lo que incluye el programa<br><em style="font-family:var(--serif);color:var(--yellow)">Üspk Empresarial</em></h2>
+<p class="solution-sub">Un sistema completo diseñado para equipos que necesitan resultados, no solo clases</p>
+<div class="feature-grid">
+<div class="feature-card"><div class="f-icon">🎯</div><h3>Programa 100% personalizado</h3><p>Contenido basado en las necesidades reales de tu industria y equipo.</p></div>
+<div class="feature-card"><div class="f-icon">👨‍🏫</div><h3>Instructores nativos certificados</h3><p>Capacitados semanalmente y supervisados mensualmente.</p></div>
+<div class="feature-card"><div class="f-icon">📊</div><h3>Reportes de avance mensuales</h3><p>Métricas claras de progreso por empleado. Sabe exactamente cuál es tu ROI.</p></div>
+<div class="feature-card"><div class="f-icon">💻</div><h3>Clases online o híbridas</h3><p>Se adapta a los horarios de tu equipo. Cero interrupciones en la operación.</p></div>
+<div class="feature-card"><div class="f-icon">🗣️</div><h3>Curso de fonética incluido</h3><p>Tu equipo no solo aprende gramática — aprende a comunicarse sin acento.</p></div>
+<div class="feature-card"><div class="f-icon">💬</div><h3>Club de Conversación semanal</h3><p>Práctica extra con nativos para mantener el ritmo entre clases.</p></div>
+</div>
+</div></section>
+
+<section class="process"><div class="container">
+<h2>Cómo funciona</h2>
+<div class="process-steps">
+<div class="p-step"><div class="p-num">1</div><div class="p-text"><h3>Demo gratuita (30 min)</h3><p>Nos cuentas las necesidades de tu empresa, el nivel actual y tus objetivos. Te mostramos cómo funciona el método en vivo.</p></div></div>
+<div class="p-step"><div class="p-num">2</div><div class="p-text"><h3>Propuesta personalizada en 24 horas</h3><p>Programa a medida con precios por persona, cronograma, métricas de éxito y ROI proyectado.</p></div></div>
+<div class="p-step"><div class="p-num">3</div><div class="p-text"><h3>Evaluación de nivel de tu equipo</h3><p>Evaluamos a cada participante y los agrupamos por nivel para maximizar el progreso.</p></div></div>
+<div class="p-step"><div class="p-num">4</div><div class="p-text"><h3>Tu equipo empieza a hablar inglés</h3><p>Desde la primera clase, práctica real aplicada a su trabajo. Reportes mensuales para medir resultados.</p></div></div>
+</div>
+</div></section>
+
+<section class="roi"><div class="container">
+<h2>Las cuentas son simples</h2>
+<div class="roi-card">
+<div class="roi-equation">
+<div class="roi-block"><div class="label">Inversión por persona</div><div class="value cost">~$1,500/mes</div></div>
+<div class="roi-op">vs</div>
+<div class="roi-block"><div class="label">1 negocio cerrado en inglés</div><div class="value gain">$50,000+</div></div>
+<div class="roi-op">=</div>
+<div class="roi-block"><div class="label">ROI estimado</div><div class="value roi-num">33x</div></div>
+</div>
+<p class="roi-note">Un solo contrato internacional, una negociación mejor ejecutada, o un proveedor que te da mejores condiciones porque tu equipo habla su idioma — con eso ya pagaste el programa completo del año.</p>
+</div>
+</div></section>
+
+<section class="proof"><div class="container">
+<h2>Lo que dicen nuestros clientes</h2>
+<div class="proof-grid">
+<div class="proof-card"><div class="stars">★★★★★</div><p class="quote">"Las clases son muy dinámicas y los profesores te ayudan super bien día a día. Me encantó el método de trabajo desde el inicio, las clases pruebas y toda la disponibilidad y atención."</p><div class="author">Karla Maya</div><div class="role">Reseña verificada en Google</div></div>
+<div class="proof-card"><div class="stars">★★★★★</div><p class="quote">"He tomado clases virtuales por varios meses y la calidad es excelente. Mi profesora es profesional, se preocupa porque realmente se comprendan los temas y se apliquen."</p><div class="author">Rocío Castañeda</div><div class="role">Reseña verificada en Google</div></div>
+</div>
+</div></section>
+
+<section class="final"><div class="container">
+<h2>Tu competencia ya está<br>capacitando a su equipo en inglés</h2>
+<p>Cada mes que esperas es un mes que tus competidores les llevan ventaja.<br>Agenda una demo de 30 minutos y descubre cómo podemos ayudar.</p>
+<div class="final-benefits">
+<span class="f-benefit">Demo 100% gratis</span>
+<span class="f-benefit">Propuesta en 24 hrs</span>
+<span class="f-benefit">Sin compromiso</span>
+</div>
+<div class="cta-group">
+<a href="https://wa.me/523314352238?text=Quiero%20agendar%20una%20demo%20de%20inglés%20para%20mi%20empresa" class="cta-primary">Agendar demo gratuita →</a>
+<a href="tel:+523314352238" style="color:#64748B;font-size:.88rem;text-decoration:none">📞 +52 33 1435 2238</a>
+</div>
+</div></section>
+
+<div class="sticky-bar" id="stickyBar">
+<a href="https://wa.me/523314352238?text=Info%20inglés%20empresarial" class="s-wa">💬 WhatsApp</a>
+<a href="https://wa.me/523314352238?text=Agendar%20demo%20empresarial" class="s-cta">Demo gratis →</a>
+</div>
+
+<footer>
+<p>© 2026 Üspk English · Capacitación corporativa en inglés · <a href="https://www.uspk.com.mx">uspk.com.mx</a></p>
+<p style="margin-top:6px">Guadalajara, México · +30 años de experiencia</p>
+</footer>
+
+<script>
+const sticky=document.getElementById('stickyBar');
+window.addEventListener('scroll',()=>{sticky.classList.toggle('visible',window.scrollY>500)});
+</script>
+</body>
+</html>

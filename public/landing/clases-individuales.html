@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clases de Inglés Personalizadas 1 a 1 | Üspk English</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--blue:#1D3557;--blue-light:#2A4A73;--blue-dark:#152841;
+--yellow:#FFD123;--yellow-bg:#FFF7DB;--yellow-dark:#E6BC1F;
+--green:#16A34A;--green-bg:#F0FDF4;--red:#DC2626;--red-bg:#FEF2F2;
+--bg:#FFFFFF;--dark:#0F1C2E;--text:#1C1917;--text-mid:#57534E;--text-light:#A8A29E;
+--border:#E7E5E4;--whatsapp:#25D366;
+--serif:'Playfair Display',Georgia,serif;--sans:'Montserrat',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.2;letter-spacing:-0.05em;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.container{max-width:720px;margin:0 auto;padding:0 20px}
+p,li,.body-text{line-height:1.6;letter-spacing:-0.01em}
+
+/* ANNOUNCEMENT */
+.announcement{background:var(--blue);text-align:center;padding:12px 16px;font-weight:700;font-size:.82rem;color:var(--yellow);letter-spacing:.04em;text-transform:uppercase}
+.announcement .pulse{animation:pulse-t 2s ease-in-out infinite}
+@keyframes pulse-t{0%,100%{opacity:1}50%{opacity:.7}}
+
+/* HERO */
+.hero{padding:56px 20px 44px;text-align:center;background:var(--yellow-bg);position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:60px;background:linear-gradient(to bottom,transparent,white)}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--border);color:var(--blue);padding:8px 20px;border-radius:100px;font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-bottom:24px}
+.eyebrow .dot{width:8px;height:8px;background:var(--red);border-radius:50%;animation:blink 1.4s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+h1{font-family:var(--serif);font-size:clamp(2.2rem,5.5vw,3.2rem);line-height:1.1;color:var(--blue);margin-bottom:20px;font-weight:700}
+h1 .accent{color:var(--blue);background:linear-gradient(to bottom,transparent 55%,rgba(255,209,35,.35) 55%);display:inline}
+.hero-sub{font-size:1.08rem;color:var(--text-mid);max-width:560px;margin:0 auto 14px;line-height:1.65;letter-spacing:-0.01em}
+.hero-proof{display:flex;align-items:center;justify-content:center;gap:8px;font-size:.85rem;color:var(--text-mid);margin-bottom:32px;font-weight:500}
+.stars{color:var(--yellow-dark);font-size:1.05rem;letter-spacing:2px}
+.exclusivity-tag{display:inline-flex;align-items:center;gap:8px;background:var(--red-bg);border:1px solid #FECACA;color:var(--red);padding:8px 18px;border-radius:100px;font-size:.8rem;font-weight:700;margin-bottom:28px}
+
+/* BUTTONS */
+.cta-primary{display:inline-flex;align-items:center;gap:10px;background:var(--yellow);color:var(--blue);font-weight:800;font-size:1.05rem;padding:18px 40px;border-radius:14px;text-decoration:none;border:none;cursor:pointer;transition:all .3s;box-shadow:0 4px 24px rgba(255,209,35,.3);letter-spacing:-0.02em}
+.cta-primary:hover{transform:translateY(-2px);box-shadow:0 8px 36px rgba(255,209,35,.4)}
+.cta-whatsapp{display:inline-flex;align-items:center;gap:8px;background:var(--whatsapp);color:#fff;font-weight:700;font-size:.95rem;padding:16px 32px;border-radius:14px;text-decoration:none;transition:all .3s;letter-spacing:-0.02em}
+.cta-whatsapp:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,211,102,.3)}
+.cta-group{display:flex;flex-direction:column;align-items:center;gap:12px}
+.cta-sub{font-size:.78rem;color:var(--text-light);letter-spacing:0}
+
+/* PROBLEM */
+.problem{padding:56px 20px}
+.problem h2{font-family:var(--serif);font-size:clamp(1.7rem,4vw,2.3rem);text-align:center;margin-bottom:36px;color:var(--blue);line-height:1.15;font-weight:700}
+.problem-list{list-style:none;max-width:600px;margin:0 auto}
+.problem-list li{display:flex;align-items:flex-start;gap:14px;padding:14px 0;font-size:1rem;color:var(--text-mid);border-bottom:1px solid var(--border);line-height:1.55}
+.problem-list li::before{content:'✕';color:var(--red);font-weight:700;font-size:1.1rem;flex-shrink:0;margin-top:1px}
+.problem-bottom{text-align:center;margin-top:28px;font-size:1.05rem;color:var(--text-mid);line-height:1.6}
+.problem-bottom strong{color:var(--blue)}
+
+/* OFFER STACK */
+.offer{padding:56px 20px;background:var(--yellow-bg)}
+.offer h2{font-family:var(--serif);font-size:clamp(1.7rem,4vw,2.4rem);text-align:center;margin-bottom:10px;color:var(--blue);line-height:1.15;font-weight:700}
+.offer-sub{text-align:center;color:var(--text-mid);font-size:1rem;margin-bottom:36px;line-height:1.6}
+.stack{max-width:620px;margin:0 auto}
+.stack-item{background:#fff;border:1px solid var(--border);border-radius:16px;padding:22px 24px;margin-bottom:12px;display:flex;align-items:flex-start;gap:16px;transition:all .25s}
+.stack-item:hover{border-color:var(--yellow);transform:translateX(4px)}
+.stack-icon{font-size:1.5rem;flex-shrink:0;width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:var(--yellow-bg);border-radius:12px}
+.stack-content h3{font-size:.95rem;font-weight:700;color:var(--blue);margin-bottom:3px;letter-spacing:-0.03em}
+.stack-content p{font-size:.85rem;color:var(--text-mid);line-height:1.5}
+.stack-value{margin-left:auto;font-size:.82rem;color:var(--text-light);text-decoration:line-through;white-space:nowrap;flex-shrink:0;align-self:center}
+
+/* PRICING */
+.pricing{padding:56px 20px}
+.pricing>.container>h2{font-family:var(--serif);font-size:clamp(1.6rem,4vw,2.2rem);text-align:center;color:var(--blue);margin-bottom:10px;font-weight:700;line-height:1.15}
+.pricing-sub{text-align:center;color:var(--text-mid);font-size:.95rem;margin-bottom:36px;line-height:1.6}
+.plans-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:680px;margin:0 auto}
+.plan-card{background:#fff;border:2px solid var(--border);border-radius:20px;padding:32px 24px;position:relative;transition:all .3s}
+.plan-card:hover{border-color:var(--blue)}
+.plan-card.featured{border-color:var(--yellow);box-shadow:0 12px 48px rgba(29,53,87,.1)}
+.plan-card.featured::before{content:'MEJOR OPCIÓN';position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--yellow);color:var(--blue);font-weight:800;font-size:.68rem;padding:5px 16px;border-radius:100px;letter-spacing:.08em;white-space:nowrap}
+.plan-name{font-family:var(--serif);font-size:1.3rem;font-weight:700;color:var(--blue);margin-bottom:6px}
+.plan-desc{font-size:.82rem;color:var(--text-mid);margin-bottom:18px;line-height:1.5}
+.plan-price{font-family:var(--serif);font-size:2.4rem;font-weight:700;color:var(--blue);line-height:1;margin-bottom:2px}
+.plan-per{font-size:.82rem;color:var(--text-mid);margin-bottom:6px;line-height:1.5}
+.plan-savings{display:inline-block;background:var(--green-bg);color:var(--green);font-weight:700;font-size:.75rem;padding:4px 12px;border-radius:100px;margin-bottom:18px}
+.plan-alts{background:#F8FAFC;border-radius:10px;padding:14px 16px;margin-bottom:18px}
+.plan-alts-title{font-size:.72rem;font-weight:700;color:var(--text-mid);text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px}
+.plan-alt-row{display:flex;justify-content:space-between;align-items:center;padding:4px 0;font-size:.82rem;color:var(--text-mid)}
+.plan-alt-row .alt-save{color:var(--green);font-weight:600;font-size:.75rem}
+.plan-features{list-style:none;margin-bottom:22px}
+.plan-features li{display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.85rem;color:var(--text-mid);line-height:1.5}
+.plan-features li::before{content:'✓';color:var(--green);font-weight:700;font-size:.95rem;flex-shrink:0}
+.plan-cta{display:block;width:100%;text-align:center;padding:14px 16px;border-radius:12px;font-weight:700;font-size:.9rem;text-decoration:none;transition:all .3s;letter-spacing:-0.02em}
+.plan-cta.primary{background:var(--yellow);color:var(--blue);box-shadow:0 4px 16px rgba(255,209,35,.25)}
+.plan-cta.primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,209,35,.35)}
+.plan-cta.secondary{background:var(--blue);color:#fff}
+.plan-cta.secondary:hover{background:var(--blue-light)}
+
+/* BENEFITS BAR */
+.benefits-bar{padding:36px 20px;background:var(--blue)}
+.benefits-row{display:flex;justify-content:center;gap:32px;flex-wrap:wrap;max-width:640px;margin:0 auto}
+.benefit-item{display:flex;align-items:center;gap:10px;color:#fff;font-size:.88rem;font-weight:600}
+.benefit-item .b-icon{font-size:1.3rem}
+
+/* GUARANTEE */
+.guarantee-section{padding:44px 20px;background:var(--green-bg);border-top:1px solid #BBF7D0;border-bottom:1px solid #BBF7D0}
+.guarantee-card{max-width:600px;margin:0 auto;display:flex;align-items:flex-start;gap:18px}
+.guarantee-icon{font-size:2.8rem;flex-shrink:0}
+.guarantee-text h3{font-family:var(--serif);font-size:1.2rem;color:var(--green);margin-bottom:6px;font-weight:700}
+.guarantee-text p{font-size:.9rem;color:var(--text-mid);line-height:1.65}
+
+/* TESTIMONIALS */
+.testimonials{padding:56px 20px}
+.testimonials h2{font-family:var(--serif);font-size:clamp(1.5rem,4vw,2rem);text-align:center;margin-bottom:32px;color:var(--blue);font-weight:700}
+.t-grid{max-width:640px;margin:0 auto;display:grid;gap:14px}
+.t-card{background:var(--yellow-bg);border:1px solid #F5E6A0;border-radius:16px;padding:24px}
+.t-stars{color:var(--yellow-dark);margin-bottom:10px;letter-spacing:2px;font-size:.9rem}
+.t-text{font-size:.9rem;color:var(--text-mid);line-height:1.7;margin-bottom:14px;font-style:italic}
+.t-author{font-weight:700;font-size:.85rem;color:var(--blue)}
+.t-source{font-size:.78rem;color:var(--text-light)}
+
+/* FAQ */
+.faq{padding:56px 20px;background:#FAFAF9}
+.faq h2{font-family:var(--serif);font-size:clamp(1.5rem,4vw,2rem);text-align:center;margin-bottom:32px;color:var(--blue);font-weight:700}
+.faq-item{max-width:620px;margin:0 auto 10px;background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.faq-q{padding:18px 24px;font-weight:700;font-size:.92rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:var(--blue);transition:background .2s}
+.faq-q:hover{background:var(--yellow-bg)}
+.faq-q::after{content:'+';font-size:1.4rem;color:var(--yellow-dark);transition:transform .3s}
+.faq-item.open .faq-q::after{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.faq-item.open .faq-a{max-height:300px}
+.faq-a-inner{padding:0 24px 18px;font-size:.88rem;color:var(--text-mid);line-height:1.7}
+
+/* FINAL CTA */
+.final-cta{padding:60px 20px 56px;text-align:center;background:var(--blue);color:#fff;position:relative;overflow:hidden}
+.final-cta::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:600px;height:400px;background:radial-gradient(circle,rgba(255,209,35,.08) 0%,transparent 65%);pointer-events:none}
+.final-cta>*{position:relative;z-index:1}
+.urgency-bar{display:inline-flex;align-items:center;gap:8px;background:rgba(220,38,38,.15);border:1px solid rgba(220,38,38,.35);color:#FCA5A5;padding:8px 20px;border-radius:100px;font-size:.82rem;font-weight:700;margin-bottom:24px}
+.urgency-bar .dot{width:8px;height:8px;background:#EF4444;border-radius:50%;animation:blink 1.4s infinite}
+.final-cta h2{font-family:var(--serif);font-size:clamp(1.7rem,4vw,2.3rem);margin-bottom:12px;line-height:1.15;font-weight:700}
+.final-cta p{color:#94A3B8;margin-bottom:28px;font-size:.95rem;line-height:1.6}
+
+/* STICKY */
+.sticky-bar{position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-top:2px solid var(--yellow);padding:10px 16px;z-index:999;display:flex;gap:10px;justify-content:center;transform:translateY(100%);transition:transform .4s}
+.sticky-bar.visible{transform:translateY(0)}
+.sticky-bar a{flex:1;max-width:190px;text-align:center;padding:14px 12px;border-radius:12px;font-weight:700;font-size:.82rem;text-decoration:none}
+.sticky-bar .s-wa{background:var(--whatsapp);color:#fff}
+.sticky-bar .s-cta{background:var(--yellow);color:var(--blue)}
+
+footer{text-align:center;padding:24px 20px 100px;background:var(--blue-dark);font-size:.78rem;color:#94A3B8}
+footer a{color:var(--yellow);text-decoration:none}
+
+@media(max-width:640px){
+.plans-grid{grid-template-columns:1fr}.hero{padding:40px 16px 36px}
+.cta-primary,.cta-whatsapp{width:100%;justify-content:center}
+.plan-price{font-size:2rem}.benefits-row{gap:16px}.benefit-item{font-size:.8rem}.stack-value{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="announcement"><span class="pulse">⚡ Solo aceptamos 10 alumnos nuevos por mes · Aplicación previa requerida</span></div>
+
+<section class="hero">
+<div class="container">
+<div class="eyebrow"><span class="dot"></span> Cupos limitados por agenda de profesores</div>
+<h1>Habla inglés con confianza<br>con un plan diseñado<br><span class="accent">solo para ti</span></h1>
+<p class="hero-sub">Clases privadas 1 a 1 con instructores nativos. Tú escoges el horario y la frecuencia. Un programa que se adapta a tus necesidades profesionales, no al revés.</p>
+<div class="hero-proof"><span class="stars">★★★★★</span><span>4.9/5 en Google · 70+ reseñas · +30 años de experiencia</span></div>
+<div class="exclusivity-tag"><span class="dot"></span>Solo aceptamos 10 alumnos por mes — Verifica disponibilidad</div>
+<div class="cta-group">
+<a href="https://wa.me/523323207866?text=Hola%2C%20quiero%20aplicar%20para%20clases%201%20a%201" class="cta-primary">Aplicar ahora — Verificar disponibilidad →</a>
+<span class="cta-sub">Clase muestra + diagnóstico profesional GRATIS (valor $500)</span>
+</div>
+</div>
+</section>
+
+<section class="problem"><div class="container">
+<h2>Si llevas meses intentando aprender<br>inglés y sigues <em style="color:var(--red)">trabado</em>...</h2>
+<ul class="problem-list">
+<li>Pagaste una escuela masiva donde eras uno más del montón</li>
+<li>Usaste Duolingo 6 meses y sigues sin poder tener una conversación real</li>
+<li>Te da pena hablar en inglés en juntas de trabajo</li>
+<li>Necesitas el inglés para un ascenso, un viaje o un negocio… y el tiempo se acaba</li>
+<li>Ya probaste clases grabadas y te aburriste a la segunda semana</li>
+</ul>
+<p class="problem-bottom">El problema no eres tú. <strong>Es el método.</strong></p>
+</div></section>
+
+<section class="offer"><div class="container">
+<h2>Lo que recibes con tu programa<br><em style="color:var(--blue)">One to One personalizado</em></h2>
+<p class="offer-sub">Todo lo que necesitas para hablar inglés con confianza — sin relleno</p>
+<div class="stack">
+<div class="stack-item"><div class="stack-icon">🎯</div><div class="stack-content"><h3>Clases privadas en vivo con instructor nativo</h3><p>Tú escoges el horario y la frecuencia. 100% personalizadas a tus metas profesionales.</p></div><span class="stack-value">$550/hr</span></div>
+<div class="stack-item"><div class="stack-icon">📋</div><div class="stack-content"><h3>Plan de estudio personalizado + seguimiento</h3><p>Evaluación de nivel, plan a medida y reportes de avance para que veas tu progreso real.</p></div><span class="stack-value">$2,500</span></div>
+<div class="stack-item"><div class="stack-icon">🗣️</div><div class="stack-content"><h3>Curso de fonética y pronunciación</h3><p>Elimina el acento que te da inseguridad. Pronuncia con confianza.</p></div><span class="stack-value">$2,400</span></div>
+<div class="stack-item"><div class="stack-icon">💬</div><div class="stack-content"><h3>Acceso al Club de Conversación</h3><p>Práctica semanal con otros estudiantes y maestro nativo. Desde nivel B1.</p></div><span class="stack-value">$2,400</span></div>
+<div class="stack-item"><div class="stack-icon">📱</div><div class="stack-content"><h3>Plataforma Pearson Connectivity + App Móvil</h3><p>Material digital, ejercicios interactivos y práctica 24/7 desde tu celular.</p></div><span class="stack-value">$1,200</span></div>
+<div class="stack-item"><div class="stack-icon">🎁</div><div class="stack-content"><h3>Bonuses profesionales exclusivos</h3><p>Contenido extra para inglés de negocios, presentaciones y negociaciones.</p></div><span class="stack-value">$1,500</span></div>
+</div>
+</div></section>
+
+<section class="pricing"><div class="container">
+<h2>Elige tu plan</h2>
+<p class="pricing-sub">Dos opciones. Mismo método probado. Tú decides la intensidad.</p>
+<div class="plans-grid">
+
+<div class="plan-card">
+<div class="plan-name">Standard</div>
+<p class="plan-desc">Ideal para empezar o mantener práctica constante</p>
+<div class="plan-price">$5,500</div>
+<p class="plan-per">10 horas de clases personalizadas</p>
+<div style="height:12px"></div>
+<ul class="plan-features">
+<li>10 horas de clase 1 a 1</li>
+<li>Instructor nativo dedicado</li>
+<li>Horarios 100% flexibles</li>
+<li>Online desde cualquier lugar</li>
+<li>Diagnóstico de nivel incluido</li>
+<li>Plataforma + App con ejercicios</li>
+</ul>
+<a href="https://wa.me/523323207866?text=Quiero%20info%20del%20plan%20Standard%20(10%20horas)" class="plan-cta secondary">Quiero este plan →</a>
+</div>
+
+<div class="plan-card featured">
+<div class="plan-name">Premium One to One</div>
+<p class="plan-desc">Transformación completa — máxima intensidad y resultados</p>
+<div class="plan-price">$28,900</div>
+<p class="plan-per">pago único · 60 horas 1 a 1</p>
+<div class="plan-savings">Ahorras $4,100</div>
+<div class="plan-alts">
+<div class="plan-alts-title">Opciones de pago</div>
+<div class="plan-alt-row"><span>2 pagos de $14,950</span><span class="alt-save">Ahorras $3,100</span></div>
+<div class="plan-alt-row"><span>3 pagos de $10,500</span><span class="alt-save">Ahorras $1,500</span></div>
+</div>
+<ul class="plan-features">
+<li>60 horas de clase 1 a 1</li>
+<li>Plan 100% personalizado</li>
+<li>Seguimiento + reportes de avance</li>
+<li>Bonuses profesionales exclusivos</li>
+<li>Club de Conversación incluido</li>
+<li>Curso de fonética incluido</li>
+<li>Plataforma + App ilimitada</li>
+<li>Horarios y frecuencia a tu medida</li>
+</ul>
+<a href="https://wa.me/523323207866?text=Quiero%20aplicar%20al%20plan%20Premium%20One%20to%20One" class="plan-cta primary">Aplicar al plan Premium →</a>
+</div>
+
+</div>
+</div></section>
+
+<section class="benefits-bar"><div class="benefits-row">
+<div class="benefit-item"><span class="b-icon">🕐</span> Tú escoges el horario</div>
+<div class="benefit-item"><span class="b-icon">🌍</span> 100% online</div>
+<div class="benefit-item"><span class="b-icon">🎙️</span> Instructores nativos</div>
+<div class="benefit-item"><span class="b-icon">📊</span> Reportes de avance</div>
+</div></section>
+
+<section class="guarantee-section"><div class="container">
+<div class="guarantee-card">
+<div class="guarantee-icon">🛡️</div>
+<div class="guarantee-text">
+<h3>Garantía de satisfacción total</h3>
+<p>Toma tu clase muestra + diagnóstico profesional completamente gratis (valor $500). Si después de experimentar nuestro método no sientes que es radicalmente diferente a todo lo que has probado, no te pedimos nada. Sin presión. Sin letra chica.</p>
+</div>
+</div>
+</div></section>
+
+<section class="testimonials"><div class="container">
+<h2>Lo que dicen nuestros estudiantes</h2>
+<div class="t-grid">
+<div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text">"Muy recomendable! He tomado clases virtuales por varios meses y la calidad es excelente. Mi profesora te motiva muchísimo, es profesional, se preocupa porque realmente comprendas los temas."</p><div class="t-author">Rocío Castañeda</div><div class="t-source">Reseña verificada en Google</div></div>
+<div class="t-card"><div class="t-stars">★★★★★</div><p class="t-text">"Las clases son muy dinámicas y los profesores te ayudan super bien día a día. Me encantó el método de trabajo desde el servicio que me dieron al inicio, las clases pruebas y toda la disponibilidad."</p><div class="t-author">Karla Maya</div><div class="t-source">Reseña verificada en Google</div></div>
+</div>
+</div></section>
+
+<section class="faq"><div class="container">
+<h2>Preguntas frecuentes</h2>
+<div class="faq-item"><div class="faq-q">¿Necesito algún nivel previo de inglés?</div><div class="faq-a"><div class="faq-a-inner">No. Tenemos estudiantes desde nivel cero hasta avanzado. En tu diagnóstico gratuito evaluamos tu nivel y diseñamos un plan personalizado.</div></div></div>
+<div class="faq-item"><div class="faq-q">¿Qué incluye la clase muestra gratis?</div><div class="faq-a"><div class="faq-a-inner">Una sesión de 30 minutos con un instructor nativo + un diagnóstico profesional de tu nivel actual (valor $500). Te mostramos cómo funciona el método. Sin compromiso.</div></div></div>
+<div class="faq-item"><div class="faq-q">¿Por qué solo aceptan 10 alumnos al mes?</div><div class="faq-a"><div class="faq-a-inner">Para garantizar calidad. Cada alumno recibe un instructor nativo dedicado con un plan 100% personalizado. Si aceptáramos más, no podríamos mantener ese nivel de atención.</div></div></div>
+<div class="faq-item"><div class="faq-q">¿Puedo elegir mi horario y frecuencia?</div><div class="faq-a"><div class="faq-a-inner">Sí. Tú decides cuándo y con qué frecuencia tomas tus clases. El programa se adapta completamente a tu agenda.</div></div></div>
+<div class="faq-item"><div class="faq-q">¿Cuáles son las opciones de pago del plan Premium?</div><div class="faq-a"><div class="faq-a-inner">Pago único de $28,900 (ahorras $4,100), 2 pagos de $14,950 (ahorras $3,100), o 3 pagos de $10,500 (ahorras $1,500). Todas incluyen lo mismo.</div></div></div>
+</div></section>
+
+<section class="final-cta"><div class="container">
+<div class="urgency-bar"><span class="dot"></span> Solo 10 lugares disponibles este mes</div>
+<h2>Tu inglés no va a mejorar<br>solo <em style="font-family:var(--serif)">leyendo esta página</em></h2>
+<p>El primer paso es simple: aplica, toma tu clase muestra gratis y descubre si este método es para ti.</p>
+<div class="cta-group">
+<a href="https://wa.me/523323207866?text=Quiero%20aplicar%20para%20clases%201%20a%201" class="cta-primary">Aplicar ahora — Clase muestra GRATIS →</a>
+<a href="https://wa.me/523323207866?text=Hola%2C%20quiero%20info%20de%20clases%201%20a%201" class="cta-whatsapp">💬 Escribir por WhatsApp</a>
+<a href="tel:+523323207866" style="color:#94A3B8;font-size:.85rem;text-decoration:none">📞 +52 33 2320 7866</a>
+</div>
+</div></section>
+
+<div class="sticky-bar" id="stickyBar">
+<a href="https://wa.me/523323207866?text=Info%20clases%201%20a%201" class="s-wa">💬 WhatsApp</a>
+<a href="https://wa.me/523323207866?text=Quiero%20aplicar" class="s-cta">Aplicar ahora →</a>
+</div>
+
+<footer>
+<p>© 2026 Üspk English · <a href="https://www.uspk.com.mx">uspk.com.mx</a> · Academia de inglés en Guadalajara</p>
+<p style="margin-top:6px">+30 años de experiencia · Instructores nativos certificados</p>
+</footer>
+
+<script>
+const sticky=document.getElementById('stickyBar');
+window.addEventListener('scroll',()=>{sticky.classList.toggle('visible',window.scrollY>600)});
+document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>q.parentElement.classList.toggle('open')));
+</script>
+</body>
+</html>

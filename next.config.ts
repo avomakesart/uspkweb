@@ -14,6 +14,23 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/landing/:slug.html",
+        destination: "/landing/:slug",
+        permanent: true,
+      },
+    ];
+  },
+  async rewrites() {
+    return [
+      {
+        source: "/landing/:slug",
+        destination: "/landing/:slug.html",
+      },
+    ];
+  },
 };
 
 export default nextConfig;
