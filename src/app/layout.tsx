@@ -3,13 +3,12 @@ import { Navbar } from "@/components/navbar/navbar";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { WhatsAppCTA } from "@/components/whats-app-cta";
 import { siteConfig } from "@/lib/config";
+import { AppScripts } from "@/components/app-scripts";
 import { GoogleTagManager } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { Montserrat, Playfair_Display } from "next/font/google";
-import Script from "next/script";
 import { Toaster } from "sonner";
 import "./globals.css";
-import { AppScripts } from "@/components/app-scripts";
 
 const monserratSans = Montserrat({
   variable: "--font-sans",
@@ -85,7 +84,6 @@ export default function RootLayout({
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <AppScripts />
       </head>
       <TooltipProvider>
         <body
@@ -97,6 +95,7 @@ export default function RootLayout({
             <Footer />
           </div>
           <Toaster richColors position="top-center" />
+          <AppScripts />
           <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID!} />
           {isWhatsAppEnabled ? <WhatsAppCTA /> : null}
         </body>
