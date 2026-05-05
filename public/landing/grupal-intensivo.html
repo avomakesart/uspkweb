@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Inglés Intensivo en Grupo · Desde $1,690 | Üspk English GDL</title>
+<title>Inglés Grupal Intensivo · Üspk English</title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -24,26 +24,17 @@ p,li{line-height:1.6;letter-spacing:-0.01em}
 .top-bar .dot{display:inline-block;width:7px;height:7px;background:var(--red);border-radius:50%;animation:blink 1.2s infinite;vertical-align:middle;margin-right:6px}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
 
-/* HERO */
 .hero{padding:56px 20px 44px;text-align:center;background:var(--yellow-bg);position:relative;overflow:hidden}
 .hero::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:60px;background:linear-gradient(to bottom,transparent,white)}
 .hero>*{position:relative;z-index:1}
 .trust-row{display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:20px;font-size:.82rem;color:var(--text-mid);font-weight:500}
 .trust-row .stars{color:var(--yellow-dark);letter-spacing:1px}
 h1{font-family:var(--serif);font-size:clamp(2.1rem,5.5vw,3.1rem);line-height:1.1;color:var(--blue);margin-bottom:18px;font-weight:700}
-h1 .price-hl{color:var(--blue);background:linear-gradient(to bottom,transparent 55%,rgba(255,209,35,.4) 55%)}
-.hero-sub{font-size:1.08rem;color:var(--text-mid);max-width:560px;margin:0 auto 16px;line-height:1.65}
-
-.value-pill{display:inline-flex;flex-direction:column;align-items:center;background:#fff;border:2px solid var(--yellow);border-radius:16px;padding:16px 28px;margin:8px 0 32px;box-shadow:0 4px 20px rgba(29,53,87,.06)}
-.value-pill .vp-top{font-size:.75rem;color:var(--text-light);text-decoration:line-through;margin-bottom:2px}
-.value-pill .vp-main{font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--blue);line-height:1}
-.value-pill .vp-per{font-size:.82rem;color:var(--text-mid);margin-top:2px}
-.value-pill .vp-note{font-size:.72rem;color:var(--text-light);margin-top:6px}
-
-.cta-primary{display:inline-flex;align-items:center;gap:10px;background:var(--yellow);color:var(--blue);font-weight:800;font-size:1.05rem;padding:18px 40px;border-radius:14px;text-decoration:none;transition:all .3s;box-shadow:0 4px 24px rgba(255,209,35,.3);letter-spacing:-0.02em}
+.hero-sub{font-size:1.08rem;color:var(--text-mid);max-width:560px;margin:0 auto 32px;line-height:1.65}
+.cta-primary{display:inline-flex;align-items:center;gap:10px;background:var(--yellow);color:var(--blue);font-weight:800;font-size:1.05rem;padding:18px 40px;border-radius:14px;text-decoration:none;transition:all .3s;box-shadow:0 4px 24px rgba(255,209,35,.3);letter-spacing:-0.02em;border:none;cursor:pointer}
 .cta-primary:hover{transform:translateY(-2px);box-shadow:0 8px 36px rgba(255,209,35,.4)}
 .cta-whatsapp{display:inline-flex;align-items:center;gap:8px;background:var(--whatsapp);color:#fff;font-weight:700;font-size:.95rem;padding:16px 32px;border-radius:14px;text-decoration:none;transition:all .3s}
-.cta-whatsapp:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(37,211,102,.3)}
+.cta-whatsapp:hover{transform:translateY(-2px)}
 .cta-group{display:flex;flex-direction:column;align-items:center;gap:12px}
 .cta-sub{font-size:.78rem;color:var(--text-light)}
 
@@ -66,39 +57,22 @@ h1 .price-hl{color:var(--blue);background:linear-gradient(to bottom,transparent 
 .value-section{padding:56px 20px;background:var(--yellow-bg)}
 .value-section h2{font-family:var(--serif);font-size:clamp(1.6rem,4vw,2.2rem);text-align:center;margin-bottom:10px;color:var(--blue);font-weight:700;line-height:1.15}
 .value-sub{text-align:center;color:var(--text-mid);font-size:.95rem;margin-bottom:32px;line-height:1.6}
-
 .value-stack{max-width:560px;margin:0 auto}
-.vs-item{display:flex;justify-content:space-between;align-items:center;background:#fff;border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin-bottom:10px;transition:all .25s}
+.vs-item{display:flex;align-items:flex-start;gap:14px;background:#fff;border:1px solid var(--border);border-radius:12px;padding:16px 20px;margin-bottom:10px;transition:all .25s}
 .vs-item:hover{border-color:var(--yellow);transform:translateX(4px)}
-.vs-label{font-size:.9rem;font-weight:600;color:var(--blue)}
-.vs-price{font-weight:700;font-size:.9rem;color:var(--text-mid)}
+.vs-icon{font-size:1.3rem;flex-shrink:0;margin-top:2px}
+.vs-content h3{font-size:.9rem;font-weight:700;color:var(--blue);margin-bottom:2px}
+.vs-content p{font-size:.82rem;color:var(--text-mid);line-height:1.5}
 
-.vs-total{display:flex;justify-content:space-between;align-items:center;background:var(--blue);border-radius:12px;padding:18px 20px;margin-top:16px;color:#fff}
-.vs-total .vs-label{color:#fff;font-size:1rem}
-.vs-total .vs-price{color:var(--yellow);font-size:1rem;text-decoration:line-through}
-
-.vs-you-pay{text-align:center;margin-top:24px}
-.vs-you-pay .label{font-size:.85rem;color:var(--text-mid);margin-bottom:4px}
-.vs-you-pay .amount{font-family:var(--serif);font-size:3.2rem;color:var(--blue);font-weight:700;line-height:1}
-.vs-you-pay .note{font-size:.78rem;color:var(--text-light);margin-top:6px}
-.vs-you-pay .savings{display:inline-block;background:var(--green-bg);color:var(--green);font-weight:700;font-size:.82rem;padding:6px 16px;border-radius:100px;margin-top:10px}
-
-/* PRICING CARD */
+/* PRICING BOX — sin precios, solo features */
 .pricing{padding:56px 20px;text-align:center}
 .price-box{max-width:520px;margin:0 auto;background:#fff;border:2px solid var(--yellow);border-radius:24px;padding:40px 32px;position:relative;box-shadow:0 16px 48px rgba(29,53,87,.08)}
 .price-box::before{content:'MÁS POPULAR';position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--yellow);color:var(--blue);font-weight:800;font-size:.72rem;padding:6px 20px;border-radius:100px;letter-spacing:.1em}
 .pb-name{font-family:var(--serif);font-size:1.6rem;font-weight:700;color:var(--blue);margin-bottom:4px}
-.pb-desc{color:var(--text-mid);font-size:.9rem;margin-bottom:20px;line-height:1.5}
-.pb-price-row{display:flex;align-items:baseline;justify-content:center;gap:8px;margin-bottom:4px}
-.pb-price{font-family:var(--serif);font-size:3rem;color:var(--blue);font-weight:700;line-height:1}
-.pb-per{font-size:.85rem;color:var(--text-mid)}
-.pb-note{font-size:.78rem;color:var(--text-light);margin-bottom:4px}
-.pb-monthly{display:inline-block;background:var(--yellow-bg);color:var(--blue);font-weight:700;font-size:.82rem;padding:6px 16px;border-radius:100px;margin-bottom:24px;border:1px solid rgba(255,209,35,.5)}
-
+.pb-desc{color:var(--text-mid);font-size:.9rem;margin-bottom:28px;line-height:1.5}
 .pb-features{list-style:none;text-align:left;margin-bottom:28px}
 .pb-features li{display:flex;align-items:center;gap:10px;padding:7px 0;font-size:.9rem;color:var(--text-mid)}
 .pb-features li::before{content:'✓';color:var(--green);font-weight:700;font-size:1.1rem;flex-shrink:0}
-
 .guarantee-box{display:flex;align-items:flex-start;gap:12px;background:var(--green-bg);border:1px solid #86EFAC;border-radius:14px;padding:16px 20px;margin-top:24px;text-align:left}
 .guarantee-box .g-icon{font-size:1.6rem;flex-shrink:0}
 .guarantee-box p{font-size:.82rem;color:var(--text-mid);line-height:1.6}
@@ -115,7 +89,7 @@ h1 .price-hl{color:var(--blue);background:linear-gradient(to bottom,transparent 
 .step-text h3{font-size:1rem;font-weight:700;color:var(--blue);margin-bottom:4px}
 .step-text p{font-size:.88rem;color:var(--text-mid);line-height:1.6}
 
-/* TESTIMONIALS */
+/* REVIEWS */
 .reviews{padding:56px 20px}
 .reviews h2{font-family:var(--serif);font-size:clamp(1.5rem,4vw,2rem);text-align:center;margin-bottom:32px;font-weight:700;color:var(--blue)}
 .review-grid{max-width:640px;margin:0 auto;display:grid;gap:14px}
@@ -125,16 +99,96 @@ h1 .price-hl{color:var(--blue);background:linear-gradient(to bottom,transparent 
 .review-author{font-weight:700;font-size:.85rem;color:var(--blue)}
 .review-source{font-size:.78rem;color:var(--text-light)}
 
+/* FORM */
+.form-section{padding:60px 20px;background:var(--blue);position:relative;overflow:hidden}
+.form-section::before{content:'';position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:700px;height:500px;background:radial-gradient(circle,rgba(255,209,35,.07) 0%,transparent 65%);pointer-events:none}
+.form-section>*{position:relative;z-index:1}
+.form-headline{font-family:var(--serif);font-size:clamp(1.7rem,4vw,2.3rem);color:#fff;text-align:center;margin-bottom:8px;font-weight:700;line-height:1.15}
+.form-headline em{color:var(--yellow);font-style:italic}
+.form-subline{text-align:center;color:rgba(255,255,255,.5);font-size:.88rem;margin-bottom:36px}
+
+.form-card{background:#fff;border-radius:20px;max-width:560px;margin:0 auto;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+.form-card-head{background:var(--yellow-bg);border-bottom:1px solid var(--border);padding:16px 20px;display:flex;align-items:center;gap:12px}
+.form-card-icon{width:36px;height:36px;background:var(--yellow);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.form-card-title{font-family:var(--serif);font-size:.95rem;font-weight:700;color:var(--blue)}
+.form-card-sub{font-size:.72rem;color:var(--text-mid)}
+
+.fsteps{display:flex;background:#FAFAF9;border-bottom:1px solid var(--border)}
+.fstep{flex:1;padding:9px 4px;text-align:center;font-size:.62rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.03em;border-bottom:2px solid transparent;transition:all .3s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fstep.active{color:var(--blue);border-bottom-color:var(--blue)}
+.fstep.done{color:var(--green);border-bottom-color:var(--green)}
+
+.fprogress{height:3px;background:#eee}
+.fprogress-fill{height:100%;background:linear-gradient(90deg,var(--blue),var(--yellow));transition:width .4s cubic-bezier(.16,1,.3,1)}
+
+.fbody{padding:20px}
+.fslide{display:none}
+.fslide.active{display:block;animation:sIn .3s ease both}
+@keyframes sIn{from{opacity:0;transform:translateX(12px)}to{opacity:1;transform:translateX(0)}}
+
+.q-label{font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--blue);margin-bottom:4px}
+.q-hint{font-size:.76rem;color:var(--text-light);margin-bottom:14px}
+
+.opts{display:grid;gap:7px}
+.opts.two{grid-template-columns:1fr 1fr}
+.opt{display:flex;align-items:flex-start;gap:10px;padding:11px 13px;border:1.5px solid var(--border);border-radius:12px;cursor:pointer;background:#fff;text-align:left;font-family:var(--sans);transition:all .18s;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.opt:active{border-color:var(--blue);background:var(--yellow-bg)}
+.opt.sel{border-color:var(--blue);background:var(--yellow-bg)}
+.opt.sel .radio{background:var(--blue);border-color:var(--blue)}
+.opt.sel .radio::after{opacity:1}
+.radio{width:18px;height:18px;border-radius:50%;border:1.5px solid var(--border);flex-shrink:0;margin-top:2px;position:relative;transition:all .2s}
+.radio::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:#fff;opacity:0;transition:opacity .2s}
+.opt-t{font-size:.83rem;font-weight:700;color:var(--blue);display:block;line-height:1.2}
+.opt-d{font-size:.72rem;color:var(--text-mid);font-weight:400}
+
+.fg{margin-bottom:12px}
+.fl{display:block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text-mid);margin-bottom:4px}
+.fi{width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:10px;font-family:var(--sans);font-size:16px;color:var(--text);outline:none;transition:border-color .2s;background:#fff;-webkit-appearance:none}
+.fi:focus{border-color:var(--blue)}
+.fi::placeholder{color:var(--border)}
+
+.fnav{display:flex;align-items:center;justify-content:space-between;margin-top:16px;gap:8px}
+.fbtn-prev{background:none;border:none;font-family:var(--sans);font-size:.8rem;color:var(--text-light);cursor:pointer;padding:8px 0;min-height:44px;-webkit-tap-highlight-color:transparent}
+.fbtn-prev.inv{visibility:hidden}
+.fbtn-next{margin-left:auto;background:var(--yellow);color:var(--blue);border:none;padding:13px 24px;border-radius:12px;font-family:var(--sans);font-size:.86rem;font-weight:800;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:6px;min-height:44px;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.fbtn-next:disabled{opacity:.35;cursor:not-allowed}
+
+.sum-head{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.sum-check{width:36px;height:36px;background:var(--green-bg);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem}
+.sum-title{font-family:var(--serif);font-size:1.05rem;font-weight:700;color:var(--blue)}
+.sum-sub{font-size:.74rem;color:var(--text-light)}
+.sum-table{background:#FAFAF9;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:14px}
+.sum-row{display:flex;justify-content:space-between;padding:9px 14px;border-bottom:1px solid var(--border);gap:10px}
+.sum-row:last-child{border-bottom:none}
+.sum-k{font-size:.72rem;color:var(--text-light);flex-shrink:0}
+.sum-v{font-size:.78rem;color:var(--blue);font-weight:700;text-align:right}
+
+.btn-wa{width:100%;padding:15px;background:var(--whatsapp);color:#fff;border:none;border-radius:12px;font-family:var(--sans);font-size:.93rem;font-weight:700;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:8px;min-height:48px;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.btn-wa:disabled{opacity:.5;cursor:not-allowed}
+
+.sending{text-align:center;padding:10px 0;font-size:.8rem;color:var(--text-light);display:none}
+.sending.show{display:block}
+@keyframes spin{to{transform:rotate(360deg)}}
+.spin-icon{display:inline-block;animation:spin 1s linear infinite;vertical-align:middle;margin-right:6px}
+
+.success-card{text-align:center;padding:12px 0}
+.suc-icon{font-size:2.2rem;margin-bottom:10px}
+.suc-title{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--blue);margin-bottom:6px}
+.suc-desc{font-size:.83rem;color:var(--text-mid);line-height:1.7;max-width:320px;margin:0 auto 14px}
+.suc-note{background:var(--yellow-bg);border:1px solid #F5E6A0;border-radius:10px;padding:12px 14px;font-size:.78rem;color:var(--text-mid);line-height:1.6}
+
+.ferr{font-size:.74rem;color:var(--red);margin-top:6px;display:none}
+.ferr.show{display:block}
+
 /* FINAL */
 .final{padding:60px 20px 56px;text-align:center;background:var(--blue);color:#fff}
 .final .urgency{display:inline-flex;align-items:center;gap:8px;background:rgba(220,38,38,.15);border:1px solid rgba(220,38,38,.35);color:#FCA5A5;padding:8px 18px;border-radius:100px;font-size:.82rem;font-weight:700;margin-bottom:24px}
 .final h2{font-family:var(--serif);font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:12px;line-height:1.15;font-weight:700}
 .final p{color:#94A3B8;margin-bottom:28px;font-size:.95rem;line-height:1.6}
 
-/* STICKY */
 .sticky-bar{position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-top:2px solid var(--yellow);padding:10px 16px;z-index:999;display:flex;gap:10px;justify-content:center;transform:translateY(100%);transition:transform .4s}
 .sticky-bar.visible{transform:translateY(0)}
-.sticky-bar a{flex:1;max-width:190px;text-align:center;padding:14px 12px;border-radius:12px;font-weight:700;font-size:.82rem;text-decoration:none}
+.sticky-bar a{flex:1;max-width:190px;text-align:center;padding:14px 12px;border-radius:12px;font-weight:700;font-size:.82rem;text-decoration:none;min-height:44px;display:flex;align-items:center;justify-content:center}
 .sticky-bar .s-wa{background:var(--whatsapp);color:#fff}
 .sticky-bar .s-cta{background:var(--yellow);color:var(--blue)}
 
@@ -144,36 +198,21 @@ footer a{color:var(--yellow);text-decoration:none}
 @media(max-width:640px){
 .compare-grid{grid-template-columns:1fr}.hero{padding:40px 16px 36px}
 .cta-primary,.cta-whatsapp{width:100%;justify-content:center}
-.pb-price{font-size:2.4rem}.vs-you-pay .amount{font-size:2.4rem}
-.value-pill{padding:14px 22px}.value-pill .vp-main{font-size:1.6rem}
+.opts.two{grid-template-columns:1fr}.fbody{padding:16px}
+.fstep{font-size:.58rem;padding:8px 2px}
 }
 </style>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-P956LK8W');</script>
-<!-- End Google Tag Manager -->
 </head>
 <body>
 
-<div class="top-bar"><span class="dot"></span>Próximo grupo inicia el 14 de Abril · Cupo limitado</div>
+<div class="top-bar"><span class="dot"></span>Cupo limitado · Máximo 10 personas por grupo</div>
 
 <section class="hero"><div class="container">
 <div class="trust-row"><span class="stars">★★★★★</span><span>4.9/5 · 70+ reseñas en Google · +30 años enseñando</span></div>
-<h1>3 meses de inmersión en inglés<br>por solo <span class="price-hl">$1,690*</span></h1>
-<p class="hero-sub">Clases en vivo, instructores nativos, grupos de máximo 10 personas. Incluye diagnóstico profesional, clase muestra gratis, curso de fonética y Club de Conversación.</p>
-
-<div class="value-pill">
-<span class="vp-top">Valor total: $9,649</span>
-<span class="vp-main">Accede por $1,690*</span>
-<span class="vp-per">o pago trimestral de $4,349</span>
-<span class="vp-note">* Cargo mensual a tu tarjeta de crédito</span>
-</div>
-
+<h1>3 meses de inmersión en inglés.<br>Grupos pequeños.<br>Instructores nativos.</h1>
+<p class="hero-sub">Clases en vivo, grupos de máximo 10 personas. Incluye diagnóstico profesional, clase muestra gratis, curso de fonética y Club de Conversación. Hablas desde el día 1.</p>
 <div class="cta-group">
-<a href="https://wa.me/523323207866?text=Quiero%20unirme%20al%20grupo%20intensivo" class="cta-primary">Reserva tu lugar ahora →</a>
+<a href="#form" class="cta-primary">Reservar mi lugar — clase muestra GRATIS →</a>
 <a href="https://wa.me/523323207866?text=Info%20clases%20grupales" class="cta-whatsapp">💬 Preguntar por WhatsApp</a>
 <span class="cta-sub">Clase muestra + diagnóstico GRATIS (valor $500) · Sin compromiso</span>
 </div>
@@ -190,7 +229,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li>Avanzas cuando el grupo avanza</li>
 <li>Método basado en gramática</li>
 <li>2-3 años para ver resultados</li>
-<li>$2,000-$4,000/mes</li>
 </ul>
 </div>
 <div class="compare-col good">
@@ -201,55 +239,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <li>Hablas desde la primera clase</li>
 <li>Método conversacional + funcional</li>
 <li>Resultados visibles en 90 días</li>
-<li>Todo incluido desde $1,690/mes*</li>
 </ul>
 </div>
 </div>
 </div></section>
 
 <section class="value-section"><div class="container">
-<h2>Esto es todo lo que incluye tu inversión</h2>
-<p class="value-sub">Mira cuánto pagarías si compraras cada componente por separado:</p>
+<h2>Todo lo que incluye tu programa</h2>
+<p class="value-sub">Un programa completo diseñado para que hables inglés en 90 días</p>
 <div class="value-stack">
-<div class="vs-item"><span class="vs-label">Curso grupal intensivo (3 meses)</span><span class="vs-price">$4,349</span></div>
-<div class="vs-item"><span class="vs-label">Club de Conversación (3 meses)</span><span class="vs-price">$2,400</span></div>
-<div class="vs-item"><span class="vs-label">Curso de fonética y pronunciación</span><span class="vs-price">$2,400</span></div>
-<div class="vs-item"><span class="vs-label">Diagnóstico profesional + clase muestra</span><span class="vs-price">$500</span></div>
-<div class="vs-total"><span class="vs-label">Valor total</span><span class="vs-price">$9,649</span></div>
-</div>
-<div class="vs-you-pay">
-<div class="label">Tú pagas hoy:</div>
-<div class="amount">$1,690*</div>
-<div class="note">*Cargo mensual a tu TC · o pago trimestral de $4,349</div>
-<div class="savings">Accedes a $9,649 de valor por $1,690 al mes</div>
+<div class="vs-item"><div class="vs-icon">🎙️</div><div class="vs-content"><h3>Clases en vivo 2 veces por semana</h3><p>Con instructor nativo certificado. Online o híbrido en Zapopan, GDL.</p></div></div>
+<div class="vs-item"><div class="vs-icon">👥</div><div class="vs-content"><h3>Grupos reducidos — máximo 10 personas</h3><p>Atención real. No eres uno más del montón — el instructor te conoce y te corrige.</p></div></div>
+<div class="vs-item"><div class="vs-icon">🗣️</div><div class="vs-content"><h3>Curso de fonética y pronunciación</h3><p>Elimina el acento que te da inseguridad. Habla con confianza desde el inicio.</p></div></div>
+<div class="vs-item"><div class="vs-icon">💬</div><div class="vs-content"><h3>Club de Conversación incluido</h3><p>Práctica extra semanal con nativos. Porque hablar requiere práctica constante.</p></div></div>
+<div class="vs-item"><div class="vs-icon">📱</div><div class="vs-content"><h3>Plataforma Pearson + App con práctica ilimitada</h3><p>Material digital y ejercicios interactivos disponibles las 24 horas desde tu celular.</p></div></div>
+<div class="vs-item"><div class="vs-icon">🔬</div><div class="vs-content"><h3>Diagnóstico profesional + clase muestra GRATIS</h3><p>Evaluación de tu nivel real antes de empezar. Sin compromiso, valor $500.</p></div></div>
 </div>
 </div></section>
 
 <section class="pricing"><div class="container">
 <div class="price-box">
 <div class="pb-name">Plan Grupal Intensivo</div>
-<p class="pb-desc">3 meses de inmersión completa con todo incluido</p>
-<div class="pb-price-row"><span class="pb-price">$4,349</span></div>
-<p class="pb-per">pago trimestral</p>
-<p class="pb-note">o</p>
-<div class="pb-monthly">$1,690/mes* a tu TC</div>
-
+<p class="pb-desc">3 meses de inmersión completa con todo incluido — hablas desde la primera semana</p>
 <ul class="pb-features">
 <li>Clases en vivo 2x por semana · instructores nativos</li>
 <li>Grupos reducidos de máximo 10 personas</li>
 <li>Online o híbrido en Zapopan, GDL</li>
-<li>Curso de fonética incluido (valor $2,400)</li>
-<li>Club de Conversación incluido (valor $2,400)</li>
+<li>Curso de fonética incluido</li>
+<li>Club de Conversación incluido</li>
 <li>Diagnóstico profesional + clase muestra GRATIS</li>
 <li>Plataforma Pearson + App con práctica ilimitada</li>
 <li>Método conversacional — hablas desde el día 1</li>
 </ul>
-
 <div class="cta-group">
-<a href="https://wa.me/523323207866?text=Quiero%20inscribirme%20al%20plan%20grupal%20intensivo" class="cta-primary" style="width:100%;justify-content:center">Quiero mi lugar en el grupo →</a>
+<button class="cta-primary" style="width:100%;justify-content:center" onclick="document.getElementById('form').scrollIntoView({behavior:'smooth'})">Quiero mi lugar en el grupo →</button>
 <a href="https://wa.me/523323207866?text=Info%20plan%20grupal" class="cta-whatsapp">💬 Preguntar por WhatsApp</a>
 </div>
-
 <div class="guarantee-box">
 <div class="g-icon">🛡️</div>
 <div><p><strong>Garantía "Hablas o no pagas":</strong> Asiste a tu primera semana de clases. Si no sientes que nuestro método es radicalmente diferente a todo lo que has probado, te devolvemos tu dinero. Sin preguntas.</p></div>
@@ -260,9 +285,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <section class="how"><div class="container">
 <h2>Empezar es más fácil de lo que crees</h2>
 <div class="steps">
-<div class="step"><div class="step-num">1</div><div class="step-text"><h3>Escríbenos por WhatsApp</h3><p>Cuéntanos tu nivel actual y tus metas. Te respondemos en menos de 5 minutos.</p></div></div>
-<div class="step"><div class="step-num">2</div><div class="step-text"><h3>Toma tu clase muestra + diagnóstico GRATIS</h3><p>Conoce al instructor, experimenta el método y recibe tu evaluación de nivel profesional (valor $500). Sin compromiso.</p></div></div>
-<div class="step"><div class="step-num">3</div><div class="step-text"><h3>Únete al próximo grupo y empieza a hablar</h3><p>Desde la primera clase real practicas conversación con tu grupo e instructor nativo.</p></div></div>
+<div class="step"><div class="step-num">1</div><div class="step-text"><h3>Llena el formulario de abajo</h3><p>Cuéntanos tu nivel y tus metas en 4 preguntas. Tu asesor recibe tu perfil antes de contactarte.</p></div></div>
+<div class="step"><div class="step-num">2</div><div class="step-text"><h3>Toma tu clase muestra + diagnóstico GRATIS</h3><p>Conoce al instructor, experimenta el método y recibe tu evaluación de nivel (valor $500). Sin compromiso.</p></div></div>
+<div class="step"><div class="step-num">3</div><div class="step-text"><h3>Únete al próximo grupo y empieza a hablar</h3><p>Desde la primera clase practicas conversación real con tu grupo e instructor nativo.</p></div></div>
 </div>
 </div></section>
 
@@ -274,30 +299,144 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 </div></section>
 
+<!-- FORM -->
+<section class="form-section" id="form"><div class="container">
+<div class="form-headline">Reserva tu lugar.<br><em>Clase muestra gratis incluida.</em></div>
+<p class="form-subline">4 preguntas · menos de 2 minutos · cupo limitado a 10 personas</p>
+
+<div class="form-card">
+<div class="form-card-head"><div class="form-card-icon">🎯</div><div><div class="form-card-title">Aplicación — Grupal Intensivo</div><div class="form-card-sub">Clase muestra + diagnóstico GRATIS (valor $500)</div></div></div>
+<div class="fsteps"><div class="fstep active" id="st1">Nivel</div><div class="fstep" id="st2">Meta</div><div class="fstep" id="st3">Horario</div><div class="fstep" id="st4">Contacto</div></div>
+<div class="fprogress"><div class="fprogress-fill" id="fpf" style="width:25%"></div></div>
+
+<div class="fbody">
+
+<div class="fslide active" id="sl1">
+<div class="q-label">¿Cuál es tu nivel de inglés hoy?</div>
+<div class="q-hint">Tenemos grupos para cada nivel.</div>
+<div class="opts">
+<button class="opt" onclick="pick(this,'nivel','Básico / Cero')"><div class="radio"></div><div><span class="opt-t">Básico / Cero</span><span class="opt-d">Quiero empezar desde el principio</span></div></button>
+<button class="opt" onclick="pick(this,'nivel','Pre-Intermedio')"><div class="radio"></div><div><span class="opt-t">Pre-Intermedio</span><span class="opt-d">Entiendo algo pero no logro hablar</span></div></button>
+<button class="opt" onclick="pick(this,'nivel','Intermedio')"><div class="radio"></div><div><span class="opt-t">Intermedio</span><span class="opt-d">Me expreso pero con errores frecuentes</span></div></button>
+<button class="opt" onclick="pick(this,'nivel','Avanzado')"><div class="radio"></div><div><span class="opt-t">Avanzado</span><span class="opt-d">Quiero pulir fluidez y acento</span></div></button>
+</div>
+<div class="ferr" id="e1">Selecciona una opción para continuar.</div>
+<div class="fnav"><button class="fbtn-prev inv">← Atrás</button><button class="fbtn-next" onclick="next(1)">Siguiente →</button></div>
+</div>
+
+<div class="fslide" id="sl2">
+<div class="q-label">¿Para qué necesitas el inglés?</div>
+<div class="q-hint">Orientamos el vocabulario a tu contexto real.</div>
+<div class="opts">
+<button class="opt" onclick="pick(this,'meta','Trabajo / Ascenso')"><div class="radio"></div><div><span class="opt-t">Trabajo / Ascenso</span><span class="opt-d">Juntas, correos, presentaciones</span></div></button>
+<button class="opt" onclick="pick(this,'meta','Negocio propio')"><div class="radio"></div><div><span class="opt-t">Negocio propio</span><span class="opt-d">Clientes o socios internacionales</span></div></button>
+<button class="opt" onclick="pick(this,'meta','Viaje / Residencia')"><div class="radio"></div><div><span class="opt-t">Viaje / Residencia</span><span class="opt-d">Vivir, estudiar o viajar fuera</span></div></button>
+<button class="opt" onclick="pick(this,'meta','Confianza personal')"><div class="radio"></div><div><span class="opt-t">Confianza personal</span><span class="opt-d">Hablar sin vergüenza ni bloqueos</span></div></button>
+</div>
+<div class="ferr" id="e2">Selecciona una opción para continuar.</div>
+<div class="fnav"><button class="fbtn-prev" onclick="prev(2)">← Atrás</button><button class="fbtn-next" onclick="next(2)">Siguiente →</button></div>
+</div>
+
+<div class="fslide" id="sl3">
+<div class="q-label">¿En qué horario puedes tomar clases?</div>
+<div class="q-hint">Formamos grupos según disponibilidad · 2 veces por semana.</div>
+<div class="opts">
+<button class="opt" onclick="pick(this,'horario','Mañanas (7am–12pm)')"><div class="radio"></div><div><span class="opt-t">Mañanas</span><span class="opt-d">7am – 12pm</span></div></button>
+<button class="opt" onclick="pick(this,'horario','Mediodía (12pm–3pm)')"><div class="radio"></div><div><span class="opt-t">Mediodía</span><span class="opt-d">12pm – 3pm</span></div></button>
+<button class="opt" onclick="pick(this,'horario','Tardes (3pm–7pm)')"><div class="radio"></div><div><span class="opt-t">Tardes</span><span class="opt-d">3pm – 7pm</span></div></button>
+<button class="opt" onclick="pick(this,'horario','Noches (7pm–9pm)')"><div class="radio"></div><div><span class="opt-t">Noches</span><span class="opt-d">7pm – 9pm</span></div></button>
+</div>
+<div class="ferr" id="e3">Selecciona una opción para continuar.</div>
+<div class="fnav"><button class="fbtn-prev" onclick="prev(3)">← Atrás</button><button class="fbtn-next" onclick="next(3)">Siguiente →</button></div>
+</div>
+
+<div class="fslide" id="sl4">
+<div class="q-label">¿Cómo te contactamos?</div>
+<div class="q-hint">Tu asesor te confirma disponibilidad en menos de 5 minutos.</div>
+<div class="fg"><label class="fl" for="iN">Nombre completo</label><input class="fi" type="text" id="iN" placeholder="Ej. Carlos Mendoza" autocomplete="name" oninput="chk()"></div>
+<div class="fg"><label class="fl" for="iP">WhatsApp</label><input class="fi" type="tel" id="iP" placeholder="33XXXXXXXX" maxlength="15" autocomplete="tel" oninput="chk()"></div>
+<div class="fg"><label class="fl" for="iC">¿Cuándo quieres empezar?</label>
+<select class="fi" id="iC" onchange="chk()">
+<option value="">— Selecciona —</option>
+<option>Esta semana</option>
+<option>Este mes</option>
+<option>En el próximo grupo disponible</option>
+<option>Solo explorando por ahora</option>
+</select></div>
+<div class="ferr" id="e4">Completa todos los campos para continuar.</div>
+<div class="fnav"><button class="fbtn-prev" onclick="prev(4)">← Atrás</button><button class="fbtn-next" id="btnSum" onclick="showSum()" disabled>Ver mi perfil →</button></div>
+</div>
+
+<div class="fslide" id="sl5">
+<div class="sum-head"><div class="sum-check">✅</div><div><div class="sum-title">¡Lugar casi reservado!</div><div class="sum-sub">Confirma y te conectamos con tu asesor</div></div></div>
+<div class="sum-table" id="sumTable"></div>
+<div class="sending" id="sendDiv"><svg class="spin-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#ddd" stroke-width="2"/><path d="M12 2a10 10 0 0110 10" stroke="var(--blue)" stroke-width="2" stroke-linecap="round"/></svg>Registrando...</div>
+<button class="btn-wa" id="btnWA" onclick="submit()"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Confirmar y hablar con un asesor</button>
+<div style="text-align:center;margin-top:10px"><button onclick="goTo(1)" style="background:none;border:none;font-family:var(--sans);font-size:.73rem;color:var(--text-light);cursor:pointer;text-decoration:underline;min-height:44px">Corregir mis respuestas</button></div>
+</div>
+
+<div class="fslide" id="sl6">
+<div class="success-card"><div class="suc-icon">🎉</div><div class="suc-title">¡Lugar pre-reservado!</div><p class="suc-desc">Tu asesor te contactará en menos de <strong>5 minutos</strong> para confirmar disponibilidad en tu horario y agendar tu clase muestra.</p><div class="suc-note">📌 Si no recibes respuesta en 10 minutos, escríbenos al <strong>33 2320 7866</strong></div></div>
+</div>
+
+</div></div></div>
+</section>
+
 <section class="final"><div class="container">
-<div class="urgency"><span class="dot"></span>Próximo grupo: 14 de Abril · Cupo limitado</div>
+<div class="urgency"><span class="dot"></span>Cupo limitado · 10 personas por grupo</div>
 <h2>Dentro de 90 días puedes estar<br>hablando inglés con confianza</h2>
-<p style="color: #F0FDF4;">O puedes seguir posponiendo. La diferencia es una decisión.</p>
+<p>O puedes seguir posponiendo. La diferencia es una decisión.</p>
 <div class="cta-group">
-<a href="https://wa.me/523323207866?text=Quiero%20reservar%20mi%20lugar%20en%20el%20grupo" class="cta-primary">Reserva tu lugar ahora →</a>
-<a href="tel:+523323207866" style="color:#F0FDF4;font-size:.88rem;text-decoration:none">📞 +52 33 2320 7866</a>
+<a href="#form" class="cta-primary">Reserva tu lugar ahora →</a>
+<a href="tel:+523323207866" style="color:#94A3B8;font-size:.88rem;text-decoration:none">📞 +52 33 2320 7866</a>
 </div>
 </div></section>
 
 <div class="sticky-bar" id="stickyBar">
 <a href="https://wa.me/523323207866?text=Info%20grupal%20intensivo" class="s-wa">💬 WhatsApp</a>
-<a href="https://wa.me/523323207866?text=Quiero%20unirme%20al%20grupo" class="s-cta">Reservar lugar →</a>
+<a href="#form" class="s-cta">Reservar lugar →</a>
 </div>
 
-<footer style="color: #F0FDF4;"><p>© 2026 Üspk English · <a href="https://www.uspk.com.mx">uspk.com.mx</a> · Academia de inglés en Guadalajara</p></footer>
+<footer><p>© 2026 Üspk English · <a href="https://www.uspk.com.mx">uspk.com.mx</a> · Academia de inglés en Guadalajara</p></footer>
 
 <script>
+const N8N='https://uspkpro9.app.n8n.cloud/webhook/form';
+const WA='523323207866';
+const st={nivel:'',meta:'',horario:'',nombre:'',telefono:'',cuando:''};
+function pick(btn,key,val){btn.closest('.opts').querySelectorAll('.opt').forEach(b=>b.classList.remove('sel'));btn.classList.add('sel');st[key]=val}
+function next(n){const keys=['nivel','meta','horario'];if(!st[keys[n-1]]){show('e'+n);return}hide('e'+n);goTo(n+1)}
+function prev(n){goTo(n-1)}
+function goTo(n){document.querySelectorAll('.fslide').forEach((s,i)=>s.classList.toggle('active',i===n-1));['st1','st2','st3','st4'].forEach((id,i)=>{const el=document.getElementById(id);el.classList.remove('active','done');if(i+1<n)el.classList.add('done');else if(i+1===n)el.classList.add('active')});document.getElementById('fpf').style.width=(Math.min(n,5)/5*100)+'%';document.querySelector('.form-card').scrollIntoView({behavior:'smooth',block:'start'})}
+function chk(){const n=document.getElementById('iN').value.trim();const p=document.getElementById('iP').value.trim();const c=document.getElementById('iC').value;st.nombre=n;st.telefono=p;st.cuando=c;document.getElementById('btnSum').disabled=!(n.length>=2&&p.length>=7&&c)}
+function showSum(){if(!st.nombre||!st.telefono||!st.cuando){show('e4');return}hide('e4');const rows=[['Nombre',st.nombre],['WhatsApp',st.telefono],['Nivel',st.nivel],['Objetivo',st.meta],['Horario',st.horario],['Inicio',st.cuando]];document.getElementById('sumTable').innerHTML=rows.map(([k,v])=>`<div class="sum-row"><span class="sum-k">${k}</span><span class="sum-v">${v}</span></div>`).join('');goTo(5)}
+async function submit(){const btn=document.getElementById('btnWA');btn.disabled=true;document.getElementById('sendDiv').classList.add('show');
+const payload={producto:'Grupal Intensivo',nombre:st.nombre,telefono:st.telefono,nivel:st.nivel,meta:st.meta,horario:st.horario,cuando:st.cuando,timestamp:new Date().toISOString(),fuente:'landing-grupal'};
+try{await fetch(N8N,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload),mode:'no-cors'})}catch(e){}
+document.getElementById('sendDiv').classList.remove('show');goTo(6);
+const msg=`Hola, acabo de llenar el formulario para el Grupal Intensivo.\n\n📋 *Mi perfil:*\n• *Nombre:* ${st.nombre}\n• *Nivel:* ${st.nivel}\n• *Objetivo:* ${st.meta}\n• *Horario:* ${st.horario}\n• *Inicio:* ${st.cuando}\n\n¿Tienen lugar en mi horario?`;
+setTimeout(()=>window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`,'_blank'),800)}
+function show(id){document.getElementById(id).classList.add('show')}
+function hide(id){document.getElementById(id).classList.remove('show')}
 const sticky=document.getElementById('stickyBar');
-window.addEventListener('scroll',()=>{sticky.classList.toggle('visible',window.scrollY>500)});
+window.addEventListener('scroll',()=>sticky.classList.toggle('visible',window.scrollY>500));
 </script>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P956LK8W"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '816590284855422');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=816590284855422&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </body>
 </html>

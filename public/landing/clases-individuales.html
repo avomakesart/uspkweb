@@ -11,34 +11,31 @@
 --blue:#1D3557;--blue-light:#2A4A73;--blue-dark:#152841;
 --yellow:#FFD123;--yellow-bg:#FFF7DB;--yellow-dark:#E6BC1F;
 --green:#16A34A;--green-bg:#F0FDF4;--red:#DC2626;--red-bg:#FEF2F2;
---bg:#FFFFFF;--dark:#0F1C2E;--text:#1C1917;--text-mid:#57534E;--text-light:#A8A29E;
+--bg:#FFFFFF;--text:#1C1917;--text-mid:#57534E;--text-light:#A8A29E;
 --border:#E7E5E4;--whatsapp:#25D366;
 --serif:'Playfair Display',Georgia,serif;--sans:'Montserrat',system-ui,sans-serif;
 }
 html{scroll-behavior:smooth}
 body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.2;letter-spacing:-0.05em;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 .container{max-width:720px;margin:0 auto;padding:0 20px}
-p,li,.body-text{line-height:1.6;letter-spacing:-0.01em}
+p,li{line-height:1.6;letter-spacing:-0.01em}
 
-/* ANNOUNCEMENT */
 .announcement{background:var(--blue);text-align:center;padding:12px 16px;font-weight:700;font-size:.82rem;color:var(--yellow);letter-spacing:.04em;text-transform:uppercase}
 .announcement .pulse{animation:pulse-t 2s ease-in-out infinite}
 @keyframes pulse-t{0%,100%{opacity:1}50%{opacity:.7}}
 
-/* HERO */
 .hero{padding:56px 20px 44px;text-align:center;background:var(--yellow-bg);position:relative;overflow:hidden}
 .hero::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:60px;background:linear-gradient(to bottom,transparent,white)}
 .eyebrow{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--border);color:var(--blue);padding:8px 20px;border-radius:100px;font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-bottom:24px}
 .eyebrow .dot{width:8px;height:8px;background:var(--red);border-radius:50%;animation:blink 1.4s infinite}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
 h1{font-family:var(--serif);font-size:clamp(2.2rem,5.5vw,3.2rem);line-height:1.1;color:var(--blue);margin-bottom:20px;font-weight:700}
-h1 .accent{color:var(--blue);background:linear-gradient(to bottom,transparent 55%,rgba(255,209,35,.35) 55%);display:inline}
+h1 .accent{color:var(--red)}
 .hero-sub{font-size:1.08rem;color:var(--text-mid);max-width:560px;margin:0 auto 14px;line-height:1.65;letter-spacing:-0.01em}
 .hero-proof{display:flex;align-items:center;justify-content:center;gap:8px;font-size:.85rem;color:var(--text-mid);margin-bottom:32px;font-weight:500}
 .stars{color:var(--yellow-dark);font-size:1.05rem;letter-spacing:2px}
 .exclusivity-tag{display:inline-flex;align-items:center;gap:8px;background:var(--red-bg);border:1px solid #FECACA;color:var(--red);padding:8px 18px;border-radius:100px;font-size:.8rem;font-weight:700;margin-bottom:28px}
 
-/* BUTTONS */
 .cta-primary{display:inline-flex;align-items:center;gap:10px;background:var(--yellow);color:var(--blue);font-weight:800;font-size:1.05rem;padding:18px 40px;border-radius:14px;text-decoration:none;border:none;cursor:pointer;transition:all .3s;box-shadow:0 4px 24px rgba(255,209,35,.3);letter-spacing:-0.02em}
 .cta-primary:hover{transform:translateY(-2px);box-shadow:0 8px 36px rgba(255,209,35,.4)}
 .cta-whatsapp{display:inline-flex;align-items:center;gap:8px;background:var(--whatsapp);color:#fff;font-weight:700;font-size:.95rem;padding:16px 32px;border-radius:14px;text-decoration:none;transition:all .3s;letter-spacing:-0.02em}
@@ -65,34 +62,6 @@ h1 .accent{color:var(--blue);background:linear-gradient(to bottom,transparent 55
 .stack-icon{font-size:1.5rem;flex-shrink:0;width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:var(--yellow-bg);border-radius:12px}
 .stack-content h3{font-size:.95rem;font-weight:700;color:var(--blue);margin-bottom:3px;letter-spacing:-0.03em}
 .stack-content p{font-size:.85rem;color:var(--text-mid);line-height:1.5}
-.stack-value{margin-left:auto;font-size:.82rem;color:var(--text-light);text-decoration:line-through;white-space:nowrap;flex-shrink:0;align-self:center}
-
-/* PRICING */
-.pricing{padding:56px 20px}
-.pricing>.container>h2{font-family:var(--serif);font-size:clamp(1.6rem,4vw,2.2rem);text-align:center;color:var(--blue);margin-bottom:10px;font-weight:700;line-height:1.15}
-.pricing-sub{text-align:center;color:var(--text-mid);font-size:.95rem;margin-bottom:36px;line-height:1.6}
-.plans-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:680px;margin:0 auto}
-.plan-card{background:#fff;border:2px solid var(--border);border-radius:20px;padding:32px 24px;position:relative;transition:all .3s}
-.plan-card:hover{border-color:var(--blue)}
-.plan-card.featured{border-color:var(--yellow);box-shadow:0 12px 48px rgba(29,53,87,.1)}
-.plan-card.featured::before{content:'MEJOR OPCIÓN';position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--yellow);color:var(--blue);font-weight:800;font-size:.68rem;padding:5px 16px;border-radius:100px;letter-spacing:.08em;white-space:nowrap}
-.plan-name{font-family:var(--serif);font-size:1.3rem;font-weight:700;color:var(--blue);margin-bottom:6px}
-.plan-desc{font-size:.82rem;color:var(--text-mid);margin-bottom:18px;line-height:1.5}
-.plan-price{font-family:var(--serif);font-size:2.4rem;font-weight:700;color:var(--blue);line-height:1;margin-bottom:2px}
-.plan-per{font-size:.82rem;color:var(--text-mid);margin-bottom:6px;line-height:1.5}
-.plan-savings{display:inline-block;background:var(--green-bg);color:var(--green);font-weight:700;font-size:.75rem;padding:4px 12px;border-radius:100px;margin-bottom:18px}
-.plan-alts{background:#F8FAFC;border-radius:10px;padding:14px 16px;margin-bottom:18px}
-.plan-alts-title{font-size:.72rem;font-weight:700;color:var(--text-mid);text-transform:uppercase;letter-spacing:.04em;margin-bottom:8px}
-.plan-alt-row{display:flex;justify-content:space-between;align-items:center;padding:4px 0;font-size:.82rem;color:var(--text-mid)}
-.plan-alt-row .alt-save{color:var(--green);font-weight:600;font-size:.75rem}
-.plan-features{list-style:none;margin-bottom:22px}
-.plan-features li{display:flex;align-items:flex-start;gap:8px;padding:5px 0;font-size:.85rem;color:var(--text-mid);line-height:1.5}
-.plan-features li::before{content:'✓';color:var(--green);font-weight:700;font-size:.95rem;flex-shrink:0}
-.plan-cta{display:block;width:100%;text-align:center;padding:14px 16px;border-radius:12px;font-weight:700;font-size:.9rem;text-decoration:none;transition:all .3s;letter-spacing:-0.02em}
-.plan-cta.primary{background:var(--yellow);color:var(--blue);box-shadow:0 4px 16px rgba(255,209,35,.25)}
-.plan-cta.primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(255,209,35,.35)}
-.plan-cta.secondary{background:var(--blue);color:#fff}
-.plan-cta.secondary:hover{background:var(--blue-light)}
 
 /* BENEFITS BAR */
 .benefits-bar{padding:36px 20px;background:var(--blue)}
@@ -117,13 +86,93 @@ h1 .accent{color:var(--blue);background:linear-gradient(to bottom,transparent 55
 .t-author{font-weight:700;font-size:.85rem;color:var(--blue)}
 .t-source{font-size:.78rem;color:var(--text-light)}
 
+/* FORM SECTION */
+.form-section{padding:60px 20px;background:var(--blue);position:relative;overflow:hidden}
+.form-section::before{content:'';position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:700px;height:500px;background:radial-gradient(circle,rgba(255,209,35,.07) 0%,transparent 65%);pointer-events:none}
+.form-section>*{position:relative;z-index:1}
+.form-headline{font-family:var(--serif);font-size:clamp(1.7rem,4vw,2.3rem);color:#fff;text-align:center;margin-bottom:8px;font-weight:700;line-height:1.15}
+.form-headline em{color:var(--yellow);font-style:italic}
+.form-subline{text-align:center;color:rgba(255,255,255,.55);font-size:.88rem;margin-bottom:36px}
+
+.form-card{background:#fff;border-radius:20px;max-width:560px;margin:0 auto;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+.form-card-head{background:var(--yellow-bg);border-bottom:1px solid var(--border);padding:16px 20px;display:flex;align-items:center;gap:12px}
+.form-card-icon{width:36px;height:36px;background:var(--yellow);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.form-card-title{font-family:var(--serif);font-size:.95rem;font-weight:700;color:var(--blue)}
+.form-card-sub{font-size:.72rem;color:var(--text-mid)}
+
+.fsteps{display:flex;background:#FAFAF9;border-bottom:1px solid var(--border)}
+.fstep{flex:1;padding:9px 4px;text-align:center;font-size:.62rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.03em;border-bottom:2px solid transparent;transition:all .3s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fstep.active{color:var(--blue);border-bottom-color:var(--blue)}
+.fstep.done{color:var(--green);border-bottom-color:var(--green)}
+
+.fprogress{height:3px;background:#eee}
+.fprogress-fill{height:100%;background:linear-gradient(90deg,var(--blue),var(--yellow));transition:width .4s cubic-bezier(.16,1,.3,1)}
+
+.fbody{padding:20px}
+.fslide{display:none}
+.fslide.active{display:block;animation:sIn .3s ease both}
+@keyframes sIn{from{opacity:0;transform:translateX(12px)}to{opacity:1;transform:translateX(0)}}
+
+.q-label{font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--blue);margin-bottom:4px}
+.q-hint{font-size:.76rem;color:var(--text-light);margin-bottom:14px}
+
+.opts{display:grid;gap:7px}
+.opt{display:flex;align-items:flex-start;gap:10px;padding:11px 13px;border:1.5px solid var(--border);border-radius:12px;cursor:pointer;background:#fff;text-align:left;font-family:var(--sans);transition:all .18s;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.opt:active{border-color:var(--blue);background:var(--yellow-bg)}
+.opt.sel{border-color:var(--blue);background:var(--yellow-bg)}
+.opt.sel .radio{background:var(--blue);border-color:var(--blue)}
+.opt.sel .radio::after{opacity:1}
+.radio{width:18px;height:18px;border-radius:50%;border:1.5px solid var(--border);flex-shrink:0;margin-top:2px;position:relative;transition:all .2s}
+.radio::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:#fff;opacity:0;transition:opacity .2s}
+.opt-t{font-size:.83rem;font-weight:700;color:var(--blue);display:block;line-height:1.2}
+.opt-d{font-size:.72rem;color:var(--text-mid);font-weight:400}
+
+.fg{margin-bottom:12px}
+.fl{display:block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text-mid);margin-bottom:4px}
+.fi{width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:10px;font-family:var(--sans);font-size:16px;color:var(--text);outline:none;transition:border-color .2s;background:#fff;-webkit-appearance:none}
+.fi:focus{border-color:var(--blue)}
+.fi::placeholder{color:var(--border)}
+
+.fnav{display:flex;align-items:center;justify-content:space-between;margin-top:16px;gap:8px}
+.fbtn-prev{background:none;border:none;font-family:var(--sans);font-size:.8rem;color:var(--text-light);cursor:pointer;padding:8px 0;min-height:44px;-webkit-tap-highlight-color:transparent}
+.fbtn-prev.inv{visibility:hidden}
+.fbtn-next{margin-left:auto;background:var(--yellow);color:var(--blue);border:none;padding:13px 24px;border-radius:12px;font-family:var(--sans);font-size:.86rem;font-weight:800;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:6px;min-height:44px;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.fbtn-next:disabled{opacity:.35;cursor:not-allowed}
+
+.sum-head{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.sum-check{width:36px;height:36px;background:var(--green-bg);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem}
+.sum-title{font-family:var(--serif);font-size:1.05rem;font-weight:700;color:var(--blue)}
+.sum-sub{font-size:.74rem;color:var(--text-light)}
+.sum-table{background:#FAFAF9;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:14px}
+.sum-row{display:flex;justify-content:space-between;padding:9px 14px;border-bottom:1px solid var(--border);gap:10px}
+.sum-row:last-child{border-bottom:none}
+.sum-k{font-size:.72rem;color:var(--text-light);flex-shrink:0}
+.sum-v{font-size:.78rem;color:var(--blue);font-weight:700;text-align:right}
+
+.btn-wa{width:100%;padding:15px;background:var(--whatsapp);color:#fff;border:none;border-radius:12px;font-family:var(--sans);font-size:.93rem;font-weight:700;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:8px;min-height:48px;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.btn-wa:disabled{opacity:.5;cursor:not-allowed}
+
+.sending{text-align:center;padding:10px 0;font-size:.8rem;color:var(--text-light);display:none}
+.sending.show{display:block}
+@keyframes spin{to{transform:rotate(360deg)}}
+.spin-icon{display:inline-block;animation:spin 1s linear infinite;vertical-align:middle;margin-right:6px}
+
+.success-card{text-align:center;padding:12px 0}
+.suc-icon{font-size:2.2rem;margin-bottom:10px}
+.suc-title{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--blue);margin-bottom:6px}
+.suc-desc{font-size:.83rem;color:var(--text-mid);line-height:1.7;max-width:320px;margin:0 auto 14px}
+.suc-note{background:var(--yellow-bg);border:1px solid #F5E6A0;border-radius:10px;padding:12px 14px;font-size:.78rem;color:var(--text-mid);line-height:1.6}
+
+.ferr{font-size:.74rem;color:var(--red);margin-top:6px;display:none}
+.ferr.show{display:block}
+
 /* FAQ */
 .faq{padding:56px 20px;background:#FAFAF9}
 .faq h2{font-family:var(--serif);font-size:clamp(1.5rem,4vw,2rem);text-align:center;margin-bottom:32px;color:var(--blue);font-weight:700}
 .faq-item{max-width:620px;margin:0 auto 10px;background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden}
-.faq-q{padding:18px 24px;font-weight:700;font-size:.92rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:var(--blue);transition:background .2s}
+.faq-q{padding:18px 24px;font-weight:700;font-size:.92rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center;color:var(--blue);transition:background .2s;min-height:44px}
 .faq-q:hover{background:var(--yellow-bg)}
-.faq-q::after{content:'+';font-size:1.4rem;color:var(--yellow-dark);transition:transform .3s}
+.faq-q::after{content:'+';font-size:1.4rem;color:var(--yellow-dark);transition:transform .3s;flex-shrink:0;margin-left:8px}
 .faq-item.open .faq-q::after{transform:rotate(45deg)}
 .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
 .faq-item.open .faq-a{max-height:300px}
@@ -138,10 +187,9 @@ h1 .accent{color:var(--blue);background:linear-gradient(to bottom,transparent 55
 .final-cta h2{font-family:var(--serif);font-size:clamp(1.7rem,4vw,2.3rem);margin-bottom:12px;line-height:1.15;font-weight:700}
 .final-cta p{color:#94A3B8;margin-bottom:28px;font-size:.95rem;line-height:1.6}
 
-/* STICKY */
 .sticky-bar{position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-top:2px solid var(--yellow);padding:10px 16px;z-index:999;display:flex;gap:10px;justify-content:center;transform:translateY(100%);transition:transform .4s}
 .sticky-bar.visible{transform:translateY(0)}
-.sticky-bar a{flex:1;max-width:190px;text-align:center;padding:14px 12px;border-radius:12px;font-weight:700;font-size:.82rem;text-decoration:none}
+.sticky-bar a{flex:1;max-width:190px;text-align:center;padding:14px 12px;border-radius:12px;font-weight:700;font-size:.82rem;text-decoration:none;min-height:44px;display:flex;align-items:center;justify-content:center}
 .sticky-bar .s-wa{background:var(--whatsapp);color:#fff}
 .sticky-bar .s-cta{background:var(--yellow);color:var(--blue)}
 
@@ -149,18 +197,13 @@ footer{text-align:center;padding:24px 20px 100px;background:var(--blue-dark);fon
 footer a{color:var(--yellow);text-decoration:none}
 
 @media(max-width:640px){
-.plans-grid{grid-template-columns:1fr}.hero{padding:40px 16px 36px}
+.hero{padding:40px 16px 36px}
 .cta-primary,.cta-whatsapp{width:100%;justify-content:center}
-.plan-price{font-size:2rem}.benefits-row{gap:16px}.benefit-item{font-size:.8rem}.stack-value{display:none}
+.benefits-row{gap:16px}.benefit-item{font-size:.8rem}
+.fbody{padding:16px}
+.fstep{font-size:.58rem;padding:8px 2px}
 }
 </style>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-P956LK8W');</script>
-<!-- End Google Tag Manager -->
 </head>
 <body>
 
@@ -172,9 +215,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <h1>Habla inglés con confianza<br>con un plan diseñado<br><span class="accent">solo para ti</span></h1>
 <p class="hero-sub">Clases privadas 1 a 1 con instructores nativos. Tú escoges el horario y la frecuencia. Un programa que se adapta a tus necesidades profesionales, no al revés.</p>
 <div class="hero-proof"><span class="stars">★★★★★</span><span>4.9/5 en Google · 70+ reseñas · +30 años de experiencia</span></div>
-<div class="exclusivity-tag"><span class="dot"></span>Solo aceptamos 10 alumnos por mes — Verifica disponibilidad</div>
+<div class="exclusivity-tag"><span class="dot"></span> Solo aceptamos 10 alumnos por mes — Verifica disponibilidad</div>
 <div class="cta-group">
-<a href="https://wa.me/523323207866?text=Hola%2C%20quiero%20aplicar%20para%20clases%201%20a%201" class="cta-primary">Aplicar ahora — Verificar disponibilidad →</a>
+<a href="#form" class="cta-primary">Verificar si califico — es gratis →</a>
 <span class="cta-sub">Clase muestra + diagnóstico profesional GRATIS (valor $500)</span>
 </div>
 </div>
@@ -183,74 +226,25 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <section class="problem"><div class="container">
 <h2>Si llevas meses intentando aprender<br>inglés y sigues <em style="color:var(--red)">trabado</em>...</h2>
 <ul class="problem-list">
-<li>Pagaste una escuela masiva donde eras uno más del montón</li>
-<li>Usaste Duolingo 6 meses y sigues sin poder tener una conversación real</li>
-<li>Te da pena hablar en inglés en juntas de trabajo</li>
-<li>Necesitas el inglés para un ascenso, un viaje o un negocio… y el tiempo se acaba</li>
-<li>Ya probaste clases grabadas y te aburriste a la segunda semana</li>
+<li>Pagaste una escuela masiva donde eras uno más del montón y el ritmo nunca fue el tuyo</li>
+<li>Usaste Duolingo 6 meses y sigues sin poder tener una conversación real en el trabajo</li>
+<li>Te da pena hablar en inglés en juntas — y eso ya te ha costado oportunidades</li>
+<li>Necesitas el inglés para un ascenso, un contrato o un negocio… y el tiempo se acaba</li>
+<li>Ya probaste clases grabadas o grupos masivos y te aburriste o te perdiste en la tercera semana</li>
 </ul>
-<p class="problem-bottom">El problema no eres tú. <strong>Es el método.</strong></p>
+<p class="problem-bottom">El problema no eres tú. <strong>Es que ningún método anterior fue diseñado para ti.</strong></p>
 </div></section>
 
 <section class="offer"><div class="container">
 <h2>Lo que recibes con tu programa<br><em style="color:var(--blue)">One to One personalizado</em></h2>
-<p class="offer-sub">Todo lo que necesitas para hablar inglés con confianza — sin relleno</p>
+<p class="offer-sub">Todo lo que necesitas para hablar inglés con confianza — diseñado 100% para ti, sin relleno</p>
 <div class="stack">
-<div class="stack-item"><div class="stack-icon">🎯</div><div class="stack-content"><h3>Clases privadas en vivo con instructor nativo</h3><p>Tú escoges el horario y la frecuencia. 100% personalizadas a tus metas profesionales.</p></div><span class="stack-value">$550/hr</span></div>
-<div class="stack-item"><div class="stack-icon">📋</div><div class="stack-content"><h3>Plan de estudio personalizado + seguimiento</h3><p>Evaluación de nivel, plan a medida y reportes de avance para que veas tu progreso real.</p></div><span class="stack-value">$2,500</span></div>
-<div class="stack-item"><div class="stack-icon">🗣️</div><div class="stack-content"><h3>Curso de fonética y pronunciación</h3><p>Elimina el acento que te da inseguridad. Pronuncia con confianza.</p></div><span class="stack-value">$2,400</span></div>
-<div class="stack-item"><div class="stack-icon">💬</div><div class="stack-content"><h3>Acceso al Club de Conversación</h3><p>Práctica semanal con otros estudiantes y maestro nativo. Desde nivel B1.</p></div><span class="stack-value">$2,400</span></div>
-<div class="stack-item"><div class="stack-icon">📱</div><div class="stack-content"><h3>Plataforma Pearson Connectivity + App Móvil</h3><p>Material digital, ejercicios interactivos y práctica 24/7 desde tu celular.</p></div><span class="stack-value">$1,200</span></div>
-<div class="stack-item"><div class="stack-icon">🎁</div><div class="stack-content"><h3>Bonuses profesionales exclusivos</h3><p>Contenido extra para inglés de negocios, presentaciones y negociaciones.</p></div><span class="stack-value">$1,500</span></div>
-</div>
-</div></section>
-
-<section class="pricing"><div class="container">
-<h2>Elige tu plan</h2>
-<p class="pricing-sub">Dos opciones. Mismo método probado. Tú decides la intensidad.</p>
-<div class="plans-grid">
-
-<div class="plan-card">
-<div class="plan-name">Standard</div>
-<p class="plan-desc">Ideal para empezar o mantener práctica constante</p>
-<div class="plan-price">$5,500</div>
-<p class="plan-per">10 horas de clases personalizadas</p>
-<div style="height:12px"></div>
-<ul class="plan-features">
-<li>10 horas de clase 1 a 1</li>
-<li>Instructor nativo dedicado</li>
-<li>Horarios 100% flexibles</li>
-<li>Online desde cualquier lugar</li>
-<li>Diagnóstico de nivel incluido</li>
-<li>Plataforma + App con ejercicios</li>
-</ul>
-<a href="https://wa.me/523323207866?text=Quiero%20info%20del%20plan%20Standard%20(10%20horas)" class="plan-cta secondary">Quiero este plan →</a>
-</div>
-
-<div class="plan-card featured">
-<div class="plan-name">Premium One to One</div>
-<p class="plan-desc">Transformación completa — máxima intensidad y resultados</p>
-<div class="plan-price">$28,900</div>
-<p class="plan-per">pago único · 60 horas 1 a 1</p>
-<div class="plan-savings">Ahorras $4,100</div>
-<div class="plan-alts">
-<div class="plan-alts-title">Opciones de pago</div>
-<div class="plan-alt-row"><span>2 pagos de $14,950</span><span class="alt-save">Ahorras $3,100</span></div>
-<div class="plan-alt-row"><span>3 pagos de $10,500</span><span class="alt-save">Ahorras $1,500</span></div>
-</div>
-<ul class="plan-features">
-<li>60 horas de clase 1 a 1</li>
-<li>Plan 100% personalizado</li>
-<li>Seguimiento + reportes de avance</li>
-<li>Bonuses profesionales exclusivos</li>
-<li>Club de Conversación incluido</li>
-<li>Curso de fonética incluido</li>
-<li>Plataforma + App ilimitada</li>
-<li>Horarios y frecuencia a tu medida</li>
-</ul>
-<a href="https://wa.me/523323207866?text=Quiero%20aplicar%20al%20plan%20Premium%20One%20to%20One" class="plan-cta primary">Aplicar al plan Premium →</a>
-</div>
-
+<div class="stack-item"><div class="stack-icon">🎯</div><div class="stack-content"><h3>Clases privadas en vivo con instructor nativo</h3><p>Tú escoges el horario y la frecuencia. 100% personalizadas a tus metas profesionales, no a las de un grupo.</p></div></div>
+<div class="stack-item"><div class="stack-icon">📋</div><div class="stack-content"><h3>Plan de estudio personalizado + seguimiento</h3><p>Evaluación de nivel, plan a medida y reportes de avance para que veas tu progreso real — no solo lo sientas.</p></div></div>
+<div class="stack-item"><div class="stack-icon">🗣️</div><div class="stack-content"><h3>Curso de fonética y pronunciación</h3><p>Elimina el acento que te da inseguridad. Pronuncia con la confianza de alguien que lleva años hablando inglés.</p></div></div>
+<div class="stack-item"><div class="stack-icon">💬</div><div class="stack-content"><h3>Acceso al Club de Conversación</h3><p>Práctica semanal con otros estudiantes y maestro nativo. Porque hablar requiere práctica real.</p></div></div>
+<div class="stack-item"><div class="stack-icon">📱</div><div class="stack-content"><h3>Plataforma Pearson Connectivity + App Móvil</h3><p>Material digital, ejercicios interactivos y práctica 24/7 desde tu celular. Aprende donde sea.</p></div></div>
+<div class="stack-item"><div class="stack-icon">🎁</div><div class="stack-content"><h3>Bonuses profesionales exclusivos</h3><p>Contenido extra para inglés de negocios, presentaciones ejecutivas y negociaciones internacionales.</p></div></div>
 </div>
 </div></section>
 
@@ -279,44 +273,172 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 </div></section>
 
+<!-- FORM -->
+<section class="form-section" id="form">
+<div class="container">
+<div class="form-headline">Verifica si <em>calificas</em><br>para la clase muestra</div>
+<p class="form-subline">4 preguntas · menos de 2 minutos · sin compromiso</p>
+
+<div class="form-card">
+<div class="form-card-head">
+<div class="form-card-icon">✅</div>
+<div><div class="form-card-title">Aplicación — Clases 1 a 1</div><div class="form-card-sub">Clase muestra + diagnóstico GRATIS (valor $500)</div></div>
+</div>
+<div class="fsteps">
+<div class="fstep active" id="st1">Nivel</div>
+<div class="fstep" id="st2">Meta</div>
+<div class="fstep" id="st3">Tiempo</div>
+<div class="fstep" id="st4">Contacto</div>
+</div>
+<div class="fprogress"><div class="fprogress-fill" id="fpf" style="width:25%"></div></div>
+
+<div class="fbody">
+
+<div class="fslide active" id="sl1">
+<div class="q-label">¿Cuál es tu nivel de inglés hoy?</div>
+<div class="q-hint">Diseñamos el plan para donde estás, no donde quisieras estar.</div>
+<div class="opts">
+<button class="opt" onclick="pick(this,'nivel','Básico / Cero')"><div class="radio"></div><div><span class="opt-t">Básico / Cero</span><span class="opt-d">Apenas conozco algunas palabras</span></div></button>
+<button class="opt" onclick="pick(this,'nivel','Pre-Intermedio')"><div class="radio"></div><div><span class="opt-t">Pre-Intermedio</span><span class="opt-d">Entiendo algo pero no logro hablar</span></div></button>
+<button class="opt" onclick="pick(this,'nivel','Intermedio')"><div class="radio"></div><div><span class="opt-t">Intermedio</span><span class="opt-d">Me expreso pero cometo muchos errores</span></div></button>
+<button class="opt" onclick="pick(this,'nivel','Avanzado')"><div class="radio"></div><div><span class="opt-t">Avanzado</span><span class="opt-d">Quiero afinar pronunciación y fluidez</span></div></button>
+</div>
+<div class="ferr" id="e1">Selecciona una opción para continuar.</div>
+<div class="fnav"><button class="fbtn-prev inv">← Atrás</button><button class="fbtn-next" onclick="next(1)">Siguiente →</button></div>
+</div>
+
+<div class="fslide" id="sl2">
+<div class="q-label">¿Para qué necesitas el inglés?</div>
+<div class="q-hint">Personalizamos el programa a tu contexto real desde el día 1.</div>
+<div class="opts">
+<button class="opt" onclick="pick(this,'meta','Trabajo / Ascenso')"><div class="radio"></div><div><span class="opt-t">Trabajo / Ascenso</span><span class="opt-d">Juntas, correos, presentaciones ejecutivas</span></div></button>
+<button class="opt" onclick="pick(this,'meta','Negocio propio')"><div class="radio"></div><div><span class="opt-t">Negocio propio</span><span class="opt-d">Clientes, proveedores o socios en el extranjero</span></div></button>
+<button class="opt" onclick="pick(this,'meta','Viaje / Residencia')"><div class="radio"></div><div><span class="opt-t">Viaje / Residencia</span><span class="opt-d">Vivir, estudiar o viajar fuera del país</span></div></button>
+<button class="opt" onclick="pick(this,'meta','Confianza personal')"><div class="radio"></div><div><span class="opt-t">Confianza personal</span><span class="opt-d">Hablar sin vergüenza ni bloqueos</span></div></button>
+</div>
+<div class="ferr" id="e2">Selecciona una opción para continuar.</div>
+<div class="fnav"><button class="fbtn-prev" onclick="prev(2)">← Atrás</button><button class="fbtn-next" onclick="next(2)">Siguiente →</button></div>
+</div>
+
+<div class="fslide" id="sl3">
+<div class="q-label">¿Cuánto tiempo puedes dedicar?</div>
+<div class="q-hint">Tu programa se adapta a tu vida real.</div>
+<div class="opts">
+<button class="opt" onclick="pick(this,'horas','1–2 hrs por semana')"><div class="radio"></div><div><span class="opt-t">1–2 horas por semana</span><span class="opt-d">Ritmo constante</span></div></button>
+<button class="opt" onclick="pick(this,'horas','3–4 hrs por semana')"><div class="radio"></div><div><span class="opt-t">3–4 horas por semana</span><span class="opt-d">Progreso acelerado</span></div></button>
+<button class="opt" onclick="pick(this,'horas','5+ hrs por semana')"><div class="radio"></div><div><span class="opt-t">5+ horas por semana</span><span class="opt-d">Inmersión total</span></div></button>
+<button class="opt" onclick="pick(this,'horas','Variable')"><div class="radio"></div><div><span class="opt-t">Variable</span><span class="opt-d">Necesito flexibilidad total</span></div></button>
+</div>
+<div class="ferr" id="e3">Selecciona una opción para continuar.</div>
+<div class="fnav"><button class="fbtn-prev" onclick="prev(3)">← Atrás</button><button class="fbtn-next" onclick="next(3)">Siguiente →</button></div>
+</div>
+
+<div class="fslide" id="sl4">
+<div class="q-label">¿Cómo te contactamos?</div>
+<div class="q-hint">Tu asesor te escribe en menos de 5 minutos.</div>
+<div class="fg"><label class="fl" for="iN">Nombre completo</label><input class="fi" type="text" id="iN" placeholder="Ej. Daniela Morales" autocomplete="name" oninput="chk()"></div>
+<div class="fg"><label class="fl" for="iP">WhatsApp</label><input class="fi" type="tel" id="iP" placeholder="33XXXXXXXX" maxlength="15" autocomplete="tel" oninput="chk()"></div>
+<div class="fg"><label class="fl" for="iC">¿Cuándo quieres empezar?</label>
+<select class="fi" id="iC" onchange="chk()">
+<option value="">— Selecciona —</option>
+<option>Esta semana</option>
+<option>Este mes</option>
+<option>En 1–2 meses</option>
+<option>Solo explorando por ahora</option>
+</select></div>
+<div class="ferr" id="e4">Completa todos los campos para continuar.</div>
+<div class="fnav"><button class="fbtn-prev" onclick="prev(4)">← Atrás</button><button class="fbtn-next" id="btnSum" onclick="showSum()" disabled>Ver mi perfil →</button></div>
+</div>
+
+<div class="fslide" id="sl5">
+<div class="sum-head"><div class="sum-check">✅</div><div><div class="sum-title">¡Tu perfil está listo!</div><div class="sum-sub">Confirma y te conectamos con tu asesor</div></div></div>
+<div class="sum-table" id="sumTable"></div>
+<div class="sending" id="sendDiv"><svg class="spin-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#ddd" stroke-width="2"/><path d="M12 2a10 10 0 0110 10" stroke="var(--blue)" stroke-width="2" stroke-linecap="round"/></svg>Registrando...</div>
+<button class="btn-wa" id="btnWA" onclick="submit()"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Confirmar y hablar con un asesor</button>
+<div style="text-align:center;margin-top:10px"><button onclick="goTo(1)" style="background:none;border:none;font-family:var(--sans);font-size:.73rem;color:var(--text-light);cursor:pointer;text-decoration:underline;min-height:44px">Corregir mis respuestas</button></div>
+</div>
+
+<div class="fslide" id="sl6">
+<div class="success-card"><div class="suc-icon">🎉</div><div class="suc-title">¡Información registrada!</div><p class="suc-desc">Tu asesor ya tiene tu perfil y te contactará en menos de <strong>5 minutos</strong> por WhatsApp para agendar tu clase muestra gratuita.</p><div class="suc-note">📌 Si no recibes respuesta en 10 minutos, escríbenos al <strong>33 2320 7866</strong></div></div>
+</div>
+
+</div></div></div>
+</section>
+
 <section class="faq"><div class="container">
 <h2>Preguntas frecuentes</h2>
-<div class="faq-item"><div class="faq-q">¿Necesito algún nivel previo de inglés?</div><div class="faq-a"><div class="faq-a-inner">No. Tenemos estudiantes desde nivel cero hasta avanzado. En tu diagnóstico gratuito evaluamos tu nivel y diseñamos un plan personalizado.</div></div></div>
-<div class="faq-item"><div class="faq-q">¿Qué incluye la clase muestra gratis?</div><div class="faq-a"><div class="faq-a-inner">Una sesión de 30 minutos con un instructor nativo + un diagnóstico profesional de tu nivel actual (valor $500). Te mostramos cómo funciona el método. Sin compromiso.</div></div></div>
-<div class="faq-item"><div class="faq-q">¿Por qué solo aceptan 10 alumnos al mes?</div><div class="faq-a"><div class="faq-a-inner">Para garantizar calidad. Cada alumno recibe un instructor nativo dedicado con un plan 100% personalizado. Si aceptáramos más, no podríamos mantener ese nivel de atención.</div></div></div>
-<div class="faq-item"><div class="faq-q">¿Puedo elegir mi horario y frecuencia?</div><div class="faq-a"><div class="faq-a-inner">Sí. Tú decides cuándo y con qué frecuencia tomas tus clases. El programa se adapta completamente a tu agenda.</div></div></div>
-<div class="faq-item"><div class="faq-q">¿Cuáles son las opciones de pago del plan Premium?</div><div class="faq-a"><div class="faq-a-inner">Pago único de $28,900 (ahorras $4,100), 2 pagos de $14,950 (ahorras $3,100), o 3 pagos de $10,500 (ahorras $1,500). Todas incluyen lo mismo.</div></div></div>
+<div class="faq-item"><div class="faq-q">¿Necesito algún nivel previo de inglés?</div><div class="faq-a"><div class="faq-a-inner">No. Tenemos estudiantes desde nivel cero hasta avanzado. En tu diagnóstico gratuito evaluamos tu nivel y diseñamos un plan personalizado desde ahí.</div></div></div>
+<div class="faq-item"><div class="faq-q">¿Qué incluye la clase muestra gratis?</div><div class="faq-a"><div class="faq-a-inner">Una sesión de 30 minutos con un instructor nativo + un diagnóstico profesional de tu nivel actual (valor $500). Te mostramos cómo funciona el método en vivo. Sin compromiso, sin presión de compra.</div></div></div>
+<div class="faq-item"><div class="faq-q">¿Por qué solo aceptan 10 alumnos al mes?</div><div class="faq-a"><div class="faq-a-inner">Para garantizar calidad. Cada alumno nuevo requiere un instructor nativo dedicado y un plan 100% personalizado. Si aceptáramos más, la atención se diluiría.</div></div></div>
+<div class="faq-item"><div class="faq-q">¿Puedo elegir mi horario y frecuencia?</div><div class="faq-a"><div class="faq-a-inner">Sí. Tú decides cuándo y con qué frecuencia tomas tus clases. El programa se adapta completamente a tu agenda — no al revés.</div></div></div>
 </div></section>
 
 <section class="final-cta"><div class="container">
 <div class="urgency-bar"><span class="dot"></span> Solo 10 lugares disponibles este mes</div>
-<h2>Tu inglés no va a mejorar<br>solo <em style="font-family:var(--serif)">leyendo esta página</em></h2>
-<p style="color: #F0FDF4;">El primer paso es simple: aplica, toma tu clase muestra gratis y descubre si este método es para ti.</p>
+<h2>Tu inglés no va a mejorar<br>solo <em style="font-family:var(--serif)">esperando el momento perfecto</em></h2>
+<p>El primer paso es simple: aplica, toma tu clase muestra gratis y descubre si este método es para ti.</p>
 <div class="cta-group">
-<a href="https://wa.me/523323207866?text=Quiero%20aplicar%20para%20clases%201%20a%201" class="cta-primary">Aplicar ahora — Clase muestra GRATIS →</a>
+<a href="#form" class="cta-primary">Aplicar ahora — Clase muestra GRATIS →</a>
 <a href="https://wa.me/523323207866?text=Hola%2C%20quiero%20info%20de%20clases%201%20a%201" class="cta-whatsapp">💬 Escribir por WhatsApp</a>
-<a href="tel:+523323207866" style="color:#F0FDF4;font-size:.85rem;text-decoration:none">📞 +52 33 2320 7866</a>
+<a href="tel:+523323207866" style="color:#94A3B8;font-size:.85rem;text-decoration:none">📞 +52 33 2320 7866</a>
 </div>
 </div></section>
 
 <div class="sticky-bar" id="stickyBar">
 <a href="https://wa.me/523323207866?text=Info%20clases%201%20a%201" class="s-wa">💬 WhatsApp</a>
-<a href="https://wa.me/523323207866?text=Quiero%20aplicar" class="s-cta">Aplicar ahora →</a>
+<a href="#form" class="s-cta">Aplicar ahora →</a>
 </div>
 
-<footer style="color: #F0FDF4;">
+<footer>
 <p>© 2026 Üspk English · <a href="https://www.uspk.com.mx">uspk.com.mx</a> · Academia de inglés en Guadalajara</p>
 <p style="margin-top:6px">+30 años de experiencia · Instructores nativos certificados</p>
 </footer>
 
 <script>
+const N8N='https://uspkpro9.app.n8n.cloud/webhook/form';
+const WA='523323207866';
+const st={nivel:'',meta:'',horas:'',nombre:'',telefono:'',cuando:''};
+
+function pick(btn,key,val){btn.closest('.opts').querySelectorAll('.opt').forEach(b=>b.classList.remove('sel'));btn.classList.add('sel');st[key]=val}
+function next(n){const keys=['nivel','meta','horas'];if(!st[keys[n-1]]){show('e'+n);return}hide('e'+n);goTo(n+1)}
+function prev(n){goTo(n-1)}
+function goTo(n){
+  document.querySelectorAll('.fslide').forEach((s,i)=>s.classList.toggle('active',i===n-1));
+  ['st1','st2','st3','st4'].forEach((id,i)=>{const el=document.getElementById(id);el.classList.remove('active','done');if(i+1<n)el.classList.add('done');else if(i+1===n)el.classList.add('active')});
+  document.getElementById('fpf').style.width=(Math.min(n,5)/5*100)+'%';
+  document.querySelector('.form-card').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function chk(){const n=document.getElementById('iN').value.trim();const p=document.getElementById('iP').value.trim();const c=document.getElementById('iC').value;st.nombre=n;st.telefono=p;st.cuando=c;document.getElementById('btnSum').disabled=!(n.length>=2&&p.length>=7&&c)}
+function showSum(){if(!st.nombre||!st.telefono||!st.cuando){show('e4');return}hide('e4');const rows=[['Nombre',st.nombre],['WhatsApp',st.telefono],['Nivel',st.nivel],['Objetivo',st.meta],['Disponibilidad',st.horas],['Inicio',st.cuando]];document.getElementById('sumTable').innerHTML=rows.map(([k,v])=>`<div class="sum-row"><span class="sum-k">${k}</span><span class="sum-v">${v}</span></div>`).join('');goTo(5)}
+async function submit(){const btn=document.getElementById('btnWA');btn.disabled=true;document.getElementById('sendDiv').classList.add('show');
+const payload={producto:'Clases Individuales 1 a 1',nombre:st.nombre,telefono:st.telefono,nivel:st.nivel,meta:st.meta,horas:st.horas,cuando:st.cuando,timestamp:new Date().toISOString(),fuente:'landing-individuales'};
+try{await fetch(N8N,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload),mode:'no-cors'})}catch(e){}
+document.getElementById('sendDiv').classList.remove('show');goTo(6);
+const msg=`Hola, acabo de llenar el formulario para Clases 1 a 1.\n\n📋 *Mi perfil:*\n• *Nombre:* ${st.nombre}\n• *Nivel:* ${st.nivel}\n• *Objetivo:* ${st.meta}\n• *Disponibilidad:* ${st.horas}\n• *Inicio:* ${st.cuando}\n\n¿Puedo agendar mi clase muestra gratuita?`;
+setTimeout(()=>window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`,'_blank'),800)}
+function show(id){document.getElementById(id).classList.add('show')}
+function hide(id){document.getElementById(id).classList.remove('show')}
 const sticky=document.getElementById('stickyBar');
-window.addEventListener('scroll',()=>{sticky.classList.toggle('visible',window.scrollY>600)});
+window.addEventListener('scroll',()=>sticky.classList.toggle('visible',window.scrollY>500));
 document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>q.parentElement.classList.toggle('open')));
 </script>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P956LK8W"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '816590284855422');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=816590284855422&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </body>
 </html>
