@@ -351,7 +351,7 @@ footer a{color:#94A3B8;text-decoration:none}
 <footer><p>© 2026 Üspk English · Capacitación corporativa · <a href="https://www.uspk.com.mx">uspk.com.mx</a></p><p style="margin-top:6px">Guadalajara, México · +30 años de experiencia</p></footer>
 
 <script>
-const N8N='https://uspkpro9.app.n8n.cloud/webhook/form';
+const N8N='https://cloud.10xgrow.io/webhook/uspk-form';
 const WA='523314352238';
 const st={equipo:'',objetivo:'',historial:'',nombre:'',empresa:'',telefono:''};
 function pick(btn,key,val){btn.closest('.opts').querySelectorAll('.opt').forEach(b=>b.classList.remove('sel'));btn.classList.add('sel');st[key]=val}
@@ -360,18 +360,29 @@ function prev(n){goTo(n-1)}
 function goTo(n){document.querySelectorAll('.fslide').forEach((s,i)=>s.classList.toggle('active',i===n-1));['st1','st2','st3','st4'].forEach((id,i)=>{const el=document.getElementById(id);el.classList.remove('active','done');if(i+1<n)el.classList.add('done');else if(i+1===n)el.classList.add('active')});document.getElementById('fpf').style.width=(Math.min(n,5)/5*100)+'%';document.querySelector('.form-card').scrollIntoView({behavior:'smooth',block:'start'})}
 function chk(){const n=document.getElementById('iN').value.trim();const e=document.getElementById('iE').value.trim();const p=document.getElementById('iP').value.trim();st.nombre=n;st.empresa=e;st.telefono=p;document.getElementById('btnSum').disabled=!(n.length>=2&&e.length>=2&&p.length>=7)}
 function showSum(){if(!st.nombre||!st.empresa||!st.telefono){show('e4');return}hide('e4');const rows=[['Nombre',st.nombre],['Empresa',st.empresa],['WhatsApp',st.telefono],['Equipo',st.equipo],['Objetivo',st.objetivo],['Experiencia previa',st.historial]];document.getElementById('sumTable').innerHTML=rows.map(([k,v])=>`<div class="sum-row"><span class="sum-k">${k}</span><span class="sum-v">${v}</span></div>`).join('');goTo(5)}
-async function submit(){const btn=document.getElementById('btnWA');btn.disabled=true;document.getElementById('sendDiv').classList.add('show');
-const payload={producto:'Empresarial',nombre:st.nombre,empresa:st.empresa,telefono:st.telefono,equipo:st.equipo,objetivo:st.objetivo,historial:st.historial,timestamp:new Date().toISOString(),fuente:'landing-empresas'};
-try{await fetch(N8N,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload),mode:'no-cors'})}catch(e){}
-document.getElementById('sendDiv').classList.remove('show');goTo(6);
+function submit(){
+const btn=document.getElementById('btnWA');btn.disabled=true;
+document.getElementById('sendDiv').classList.add('show');
 const msg=`Hola, acabo de llenar el formulario para inglés empresarial.\n\n📋 *Solicitud:*\n• *Nombre:* ${st.nombre}\n• *Empresa:* ${st.empresa}\n• *Equipo:* ${st.equipo}\n• *Objetivo:* ${st.objetivo}\n• *Experiencia previa:* ${st.historial}\n\n¿Pueden enviarme una propuesta?`;
-setTimeout(()=>window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`,'_blank'),800)}
+const waUrl=`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
+const form=document.createElement('form');
+form.method='POST';form.action=N8N;form.target='n8n_frame';
+const fields={producto:'Empresarial',nombre:st.nombre,empresa:st.empresa,telefono:st.telefono,equipo:st.equipo,objetivo:st.objetivo,historial:st.historial,timestamp:new Date().toISOString(),fuente:'landing-empresas'};
+Object.entries(fields).forEach(([k,v])=>{const i=document.createElement('input');i.type='hidden';i.name=k;i.value=v;form.appendChild(i);});
+const frame=document.createElement('iframe');
+frame.name='n8n_frame';frame.style.display='none';
+document.body.appendChild(frame);
+document.body.appendChild(form);
+form.submit();
+document.getElementById('sendDiv').classList.remove('show');
+goTo(6);
+setTimeout(()=>{window.open(waUrl,'_blank');},800);
+}
 function show(id){document.getElementById(id).classList.add('show')}
 function hide(id){document.getElementById(id).classList.remove('show')}
 const sticky=document.getElementById('stickyBar');
 window.addEventListener('scroll',()=>sticky.classList.toggle('visible',window.scrollY>500));
 </script>
-
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)

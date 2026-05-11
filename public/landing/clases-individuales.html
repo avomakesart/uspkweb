@@ -395,7 +395,7 @@ footer a{color:var(--yellow);text-decoration:none}
 </footer>
 
 <script>
-const N8N='https://uspkpro9.app.n8n.cloud/webhook/form';
+const N8N='https://cloud.10xgrow.io/webhook/uspk-form';
 const WA='523323207866';
 const st={nivel:'',meta:'',horas:'',nombre:'',telefono:'',cuando:''};
 
@@ -410,19 +410,34 @@ function goTo(n){
 }
 function chk(){const n=document.getElementById('iN').value.trim();const p=document.getElementById('iP').value.trim();const c=document.getElementById('iC').value;st.nombre=n;st.telefono=p;st.cuando=c;document.getElementById('btnSum').disabled=!(n.length>=2&&p.length>=7&&c)}
 function showSum(){if(!st.nombre||!st.telefono||!st.cuando){show('e4');return}hide('e4');const rows=[['Nombre',st.nombre],['WhatsApp',st.telefono],['Nivel',st.nivel],['Objetivo',st.meta],['Disponibilidad',st.horas],['Inicio',st.cuando]];document.getElementById('sumTable').innerHTML=rows.map(([k,v])=>`<div class="sum-row"><span class="sum-k">${k}</span><span class="sum-v">${v}</span></div>`).join('');goTo(5)}
-async function submit(){const btn=document.getElementById('btnWA');btn.disabled=true;document.getElementById('sendDiv').classList.add('show');
-const payload={producto:'Clases Individuales 1 a 1',nombre:st.nombre,telefono:st.telefono,nivel:st.nivel,meta:st.meta,horas:st.horas,cuando:st.cuando,timestamp:new Date().toISOString(),fuente:'landing-individuales'};
-try{await fetch(N8N,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload),mode:'no-cors'})}catch(e){}
-document.getElementById('sendDiv').classList.remove('show');goTo(6);
+function submit(){
+const btn=document.getElementById('btnWA');btn.disabled=true;
+document.getElementById('sendDiv').classList.add('show');
 const msg=`Hola, acabo de llenar el formulario para Clases 1 a 1.\n\n📋 *Mi perfil:*\n• *Nombre:* ${st.nombre}\n• *Nivel:* ${st.nivel}\n• *Objetivo:* ${st.meta}\n• *Disponibilidad:* ${st.horas}\n• *Inicio:* ${st.cuando}\n\n¿Puedo agendar mi clase muestra gratuita?`;
-setTimeout(()=>window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`,'_blank'),800)}
+const waUrl=`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
+// Enviar via form hidden — sin restricciones CORS en iOS
+const form=document.createElement('form');
+form.method='POST';
+form.action=N8N;
+form.target='n8n_frame';
+const fields={producto:'Clases Individuales 1 a 1',nombre:st.nombre,telefono:st.telefono,nivel:st.nivel,meta:st.meta,horas:st.horas,cuando:st.cuando,timestamp:new Date().toISOString(),fuente:'landing-individuales'};
+Object.entries(fields).forEach(([k,v])=>{const i=document.createElement('input');i.type='hidden';i.name=k;i.value=v;form.appendChild(i);});
+// iframe oculto para que el form no navegue la página
+const frame=document.createElement('iframe');
+frame.name='n8n_frame';frame.style.display='none';
+document.body.appendChild(frame);
+document.body.appendChild(form);
+form.submit();
+document.getElementById('sendDiv').classList.remove('show');
+goTo(6);
+setTimeout(()=>{window.open(waUrl,'_blank');},800);
+}
 function show(id){document.getElementById(id).classList.add('show')}
 function hide(id){document.getElementById(id).classList.remove('show')}
 const sticky=document.getElementById('stickyBar');
 window.addEventListener('scroll',()=>sticky.classList.toggle('visible',window.scrollY>500));
 document.querySelectorAll('.faq-q').forEach(q=>q.addEventListener('click',()=>q.parentElement.classList.toggle('open')));
 </script>
-
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
