@@ -3,413 +3,779 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Inglés para Empresas · Capacitación Corporativa | Üspk English</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<title>Capacitación en Inglés para Empresas en Latinoamérica | Üspk English</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
---blue:#1D3557;--blue-light:#2A4A73;--blue-dark:#152841;
---yellow:#FFD123;--yellow-bg:#FFF7DB;--yellow-dark:#E6BC1F;
---green:#16A34A;--green-bg:#F0FDF4;--red:#DC2626;
---text:#1C1917;--text-mid:#57534E;--text-light:#A8A29E;--border:#E7E5E4;--whatsapp:#25D366;
---serif:'Playfair Display',Georgia,serif;--sans:'Montserrat',system-ui,sans-serif;
+  --blue:#1D3557;
+  --blue-mid:#244067;
+  --blue-light:#2A4A73;
+  --yellow:#FFD123;
+  --yellow-dark:#E6BC1F;
+  --yellow-bg:#FFF7DB;
+  --green:#16A34A;
+  --green-bg:#F0FDF4;
+  --red:#A0172A;
+  --surface:#F8FAFC;
+  --border:#E2E8F0;
+  --text:#1E293B;
+  --text-mid:#374151;
+  --text-light:#6B7280;
+  --white:#FFFFFF;
+  --whatsapp:#25D366;
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'Montserrat',system-ui,sans-serif;
 }
 html{scroll-behavior:smooth}
-body{font-family:var(--sans);background:#152841;color:#E2E8F0;line-height:1.2;letter-spacing:-0.05em;overflow-x:hidden;-webkit-font-smoothing:antialiased}
-.container{max-width:740px;margin:0 auto;padding:0 20px}
-p,li{line-height:1.6;letter-spacing:-0.01em}
+body{font-family:var(--sans);background:var(--white);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased;line-height:1.2;letter-spacing:-0.03em}
+p,li,blockquote{line-height:1.65;letter-spacing:-0.01em}
 
-.nav-bar{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;border-bottom:1px solid rgba(255,255,255,.06)}
-.nav-logo{font-weight:800;font-size:1.1rem;color:#fff;letter-spacing:-0.03em}
-.nav-logo span{color:var(--yellow)}
-.nav-cta{background:var(--yellow);color:var(--blue);font-weight:700;font-size:.82rem;padding:10px 20px;border-radius:8px;text-decoration:none;transition:all .2s;min-height:44px;display:flex;align-items:center}
+/* ─── LAYOUT ─── */
+.container{max-width:760px;margin:0 auto;padding:0 20px}
+.container--wide{max-width:900px;margin:0 auto;padding:0 20px}
+section{padding:72px 20px}
+
+/* ─── NAV ─── */
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;background:var(--blue);position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(255,255,255,.08)}
+.nav-logo{font-weight:800;font-size:1.05rem;color:#fff;letter-spacing:-0.04em}
+.nav-logo em{color:var(--yellow);font-style:normal}
+.nav-cta{background:var(--yellow);color:var(--blue);font-weight:800;font-size:.88rem;padding:10px 22px;border-radius:8px;text-decoration:none;transition:background .2s;white-space:nowrap}
 .nav-cta:hover{background:var(--yellow-dark)}
 
-.hero{padding:72px 20px 56px;text-align:center;position:relative}
-.hero::after{content:'';position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:700px;height:600px;background:radial-gradient(ellipse,rgba(255,209,35,.06) 0%,transparent 65%);pointer-events:none}
+/* ─── ANNOUNCEMENT ─── */
+.announce{background:var(--yellow);text-align:center;padding:11px 16px;font-size:.88rem;font-weight:700;color:var(--blue);letter-spacing:.02em}
+.announce span{animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.7}}
+
+/* ─── HERO ─── */
+.hero{padding:64px 20px 56px;background:var(--blue);text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 120% 80% at 50% -10%,rgba(255,209,35,.07) 0%,transparent 60%);pointer-events:none}
 .hero>*{position:relative;z-index:1}
-.badge-row{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:24px;flex-wrap:wrap}
-.badge{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);padding:6px 14px;border-radius:100px;font-size:.75rem;font-weight:600;color:#94A3B8}
-h1{font-family:var(--serif);font-size:clamp(2rem,5vw,3rem);line-height:1.12;font-weight:700;color:#fff;margin-bottom:20px}
-h1 em{color:var(--yellow);font-style:italic}
-.hero-sub{font-size:1.08rem;color:#94A3B8;max-width:580px;margin:0 auto 36px;line-height:1.75}
-.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:560px;margin:0 auto 40px}
-.stat{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:20px 16px;text-align:center}
-.stat-num{font-family:var(--serif);font-size:1.8rem;font-weight:700;color:var(--yellow);line-height:1;margin-bottom:4px}
-.stat-label{font-size:.75rem;color:#64748B;font-weight:500}
 
-.cta-group{display:flex;flex-direction:column;align-items:center;gap:12px}
-.cta-primary{display:inline-flex;align-items:center;gap:10px;background:var(--yellow);color:var(--blue);font-weight:800;font-size:1.05rem;padding:18px 40px;border-radius:12px;text-decoration:none;transition:all .3s;box-shadow:0 4px 32px rgba(255,209,35,.2);letter-spacing:-0.02em;border:none;cursor:pointer}
-.cta-primary:hover{transform:translateY(-2px);box-shadow:0 8px 40px rgba(255,209,35,.3)}
-.cta-whatsapp{display:inline-flex;align-items:center;gap:8px;background:var(--whatsapp);color:#fff;font-weight:700;font-size:.95rem;padding:14px 30px;border-radius:12px;text-decoration:none;transition:all .3s}
-.cta-sub{font-size:.78rem;color:#64748B}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.85);padding:7px 18px;border-radius:100px;font-size:.86rem;font-weight:600;letter-spacing:.03em;text-transform:uppercase;margin-bottom:28px}
+.hero-eyebrow .dot{width:7px;height:7px;background:var(--yellow);border-radius:50%;animation:blink 1.5s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
 
-/* COST */
-.cost-section{padding:56px 20px;border-top:1px solid rgba(255,255,255,.06)}
-.cost-section h2{font-family:var(--serif);font-size:clamp(1.6rem,4vw,2.2rem);text-align:center;margin-bottom:12px;font-weight:700;color:#fff;line-height:1.15}
-.cost-sub{text-align:center;color:#94A3B8;font-size:.95rem;margin-bottom:36px}
-.cost-grid{max-width:640px;margin:0 auto;display:grid;gap:12px}
-.cost-item{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:22px 24px;display:flex;align-items:flex-start;gap:16px;transition:all .25s}
-.cost-item:hover{border-color:rgba(220,38,38,.3);background:rgba(255,255,255,.05)}
-.cost-icon{width:40px;height:40px;background:rgba(220,38,38,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0}
-.cost-text h3{font-size:.95rem;font-weight:700;margin-bottom:2px;color:#fff}
-.cost-text p{font-size:.82rem;color:#94A3B8;line-height:1.6}
+.hero h1{font-family:var(--serif);font-size:clamp(2.1rem,5.5vw,3.4rem);line-height:1.08;font-weight:800;color:#fff;margin-bottom:22px}
+.hero h1 em{color:var(--yellow);font-style:italic}
+.hero-sub{font-size:1.08rem;color:rgba(255,255,255,.88);max-width:600px;margin:0 auto 40px;line-height:1.72}
 
-/* SOLUTION */
-.solution{padding:56px 20px;background:rgba(255,255,255,.02);border-top:1px solid rgba(255,255,255,.06)}
-.solution h2{font-family:var(--serif);font-size:clamp(1.6rem,4vw,2.2rem);text-align:center;margin-bottom:12px;font-weight:700;color:#fff;line-height:1.15}
-.solution-sub{text-align:center;color:#94A3B8;font-size:.95rem;margin-bottom:36px}
-.feature-grid{max-width:640px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.feature-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:24px 20px;transition:all .25s}
-.feature-card:hover{border-color:rgba(255,209,35,.3);transform:translateY(-2px)}
-.feature-card .f-icon{font-size:1.6rem;margin-bottom:12px}
-.feature-card h3{font-size:.92rem;font-weight:700;margin-bottom:6px;color:#fff}
-.feature-card p{font-size:.8rem;color:#94A3B8;line-height:1.6}
+/* Hero stats row */
+.hero-stats{display:flex;justify-content:center;gap:0;max-width:560px;margin:0 auto 44px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden}
+.h-stat{flex:1;padding:20px 12px;text-align:center;border-right:1px solid rgba(255,255,255,.08)}
+.h-stat:last-child{border-right:none}
+.h-stat-num{font-family:var(--serif);font-size:1.9rem;font-weight:700;color:var(--yellow);line-height:1;margin-bottom:4px}
+.h-stat-lbl{font-size:.84rem;color:rgba(255,255,255,.75);font-weight:600;letter-spacing:.02em;line-height:1.4}
 
-/* PROCESS */
-.process{padding:56px 20px}
-.process h2{font-family:var(--serif);font-size:clamp(1.5rem,4vw,2rem);text-align:center;margin-bottom:36px;font-weight:700;color:#fff}
-.process-steps{max-width:560px;margin:0 auto}
-.p-step{display:flex;gap:20px;padding-bottom:32px;position:relative}
-.p-step:last-child{padding-bottom:0}
-.p-num{width:44px;height:44px;background:var(--yellow);color:var(--blue);border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.9rem;flex-shrink:0;z-index:1}
-.p-step:not(:last-child)::after{content:'';position:absolute;top:44px;left:22px;width:2px;height:calc(100% - 44px);background:rgba(255,255,255,.06)}
-.p-text h3{font-size:1rem;font-weight:700;margin-bottom:4px;color:#fff}
-.p-text p{font-size:.88rem;color:#94A3B8;line-height:1.6}
+/* Hero CTA */
+.btn-yellow{display:inline-flex;align-items:center;gap:10px;background:var(--yellow);color:var(--blue);font-weight:800;font-size:1.05rem;padding:18px 40px;border-radius:12px;text-decoration:none;transition:all .3s;box-shadow:0 4px 28px rgba(255,209,35,.25);letter-spacing:-0.02em;border:none;cursor:pointer}
+.btn-yellow:hover{transform:translateY(-2px);box-shadow:0 8px 36px rgba(255,209,35,.35)}
+.btn-wa{display:inline-flex;align-items:center;gap:9px;background:var(--whatsapp);color:#fff;font-weight:700;font-size:.95rem;padding:15px 30px;border-radius:12px;text-decoration:none;transition:all .3s}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(37,211,102,.3)}
+.cta-stack{display:flex;flex-direction:column;align-items:center;gap:12px}
+.cta-note{}font-size:.88rem;color:rgba(255,255,255,.7)}
 
-/* PROOF */
-.proof{padding:56px 20px;background:rgba(255,255,255,.02);border-top:1px solid rgba(255,255,255,.06)}
-.proof h2{font-family:var(--serif);font-size:clamp(1.5rem,4vw,2rem);text-align:center;margin-bottom:32px;font-weight:700;color:#fff}
-.proof-grid{max-width:640px;margin:0 auto;display:grid;gap:14px}
-.proof-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:24px}
-.proof-card .stars{color:var(--yellow);font-size:.85rem;letter-spacing:2px;margin-bottom:10px}
-.proof-card .quote{font-family:var(--serif);font-size:.95rem;color:#94A3B8;line-height:1.7;margin-bottom:14px;font-style:italic}
-.proof-card .author{font-weight:700;font-size:.85rem;color:#fff}
-.proof-card .role{font-size:.78rem;color:#64748B}
+/* ─── HERO VIDEO (A/B) ─── */
+.hero-vsl{width:100%;max-width:680px;margin:32px auto 36px}
+.hero-vsl .vsl-frame{position:relative;width:100%;padding-bottom:56.25%;background:#0B1624;border-radius:14px;overflow:hidden;border:2px solid rgba(255,209,35,.2);box-shadow:0 24px 64px rgba(0,0,0,.5)}
+.hero-vsl .vsl-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:none}
+.ab-badge{text-align:center;margin-top:10px;font-size:.78rem;color:rgba(255,255,255,.35);letter-spacing:.04em}
 
-/* FORM */
-.form-section{padding:64px 20px;border-top:1px solid rgba(255,255,255,.06);position:relative}
-.form-section::before{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:700px;height:500px;background:radial-gradient(circle,rgba(255,209,35,.05) 0%,transparent 65%);pointer-events:none}
-.form-section>*{position:relative;z-index:1}
-.form-headline{font-family:var(--serif);font-size:clamp(1.7rem,4vw,2.3rem);color:#fff;text-align:center;margin-bottom:8px;font-weight:700;line-height:1.15}
-.form-headline em{color:var(--yellow);font-style:italic}
-.form-subline{text-align:center;color:#64748B;font-size:.88rem;margin-bottom:36px}
+/* ─── LOGOS ─── */
+.logos-section{padding:48px 20px;background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.logos-label{text-align:center;font-size:.88rem;font-weight:700;color:var(--text-mid);text-transform:uppercase;letter-spacing:.1em;margin-bottom:28px}
+.logos-grid{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:12px 20px;max-width:680px;margin:0 auto}
+.logo-pill{display:inline-flex;align-items:center;justify-content:center;background:var(--white);border:1px solid var(--border);border-radius:10px;padding:12px 22px;font-weight:800;font-size:.92rem;color:var(--blue);letter-spacing:-0.03em;transition:all .2s}
+.logo-pill:hover{border-color:var(--yellow);box-shadow:0 4px 16px rgba(29,53,87,.08)}
+.logo-pill .ind{font-weight:500;font-size:.84rem;color:var(--text-mid);margin-left:6px}
 
-.form-card{background:#fff;border-radius:20px;max-width:560px;margin:0 auto;overflow:hidden;box-shadow:0 20px 80px rgba(0,0,0,.4)}
-.form-card-head{background:var(--blue);border-bottom:1px solid rgba(255,255,255,.08);padding:16px 20px;display:flex;align-items:center;gap:12px}
-.form-card-icon{width:36px;height:36px;background:var(--yellow);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
-.form-card-title{font-family:var(--serif);font-size:.95rem;font-weight:700;color:#fff}
-.form-card-sub{font-size:.72rem;color:rgba(255,255,255,.55)}
+/* ─── PROBLEM ─── */
+.problem-section{background:var(--white)}
+.problem-section h2{font-family:var(--serif);font-size:clamp(1.7rem,4vw,2.4rem);color:var(--blue);margin-bottom:12px;font-weight:800;line-height:1.12;text-align:center}
+.problem-section .sec-sub{text-align:center;color:var(--text-mid);font-size:1rem;margin-bottom:44px;line-height:1.6}
+.problem-grid{max-width:680px;margin:0 auto;display:grid;gap:14px}
+.prob-card{display:flex;gap:18px;align-items:flex-start;padding:24px;background:var(--surface);border:1px solid var(--border);border-radius:14px;transition:all .25s}
+.prob-card:hover{border-color:#F0C4C7;background:#FEF9F9}
+.prob-icon{width:44px;height:44px;background:#FEE2E2;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.prob-text h3{font-size:1.02rem;font-weight:700;color:var(--text);margin-bottom:4px}
+.prob-text p{font-size:.96rem;color:var(--text-mid);line-height:1.65}
+.prob-cost{display:inline-block;background:#FEE2E2;color:var(--red);font-weight:700;font-size:.84rem;padding:3px 10px;border-radius:100px;margin-top:8px;letter-spacing:.02em}
 
-.fsteps{display:flex;background:#FAFAF9;border-bottom:1px solid var(--border)}
-.fstep{flex:1;padding:9px 4px;text-align:center;font-size:.62rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.03em;border-bottom:2px solid transparent;transition:all .3s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.fstep.active{color:var(--blue);border-bottom-color:var(--blue)}
-.fstep.done{color:var(--green);border-bottom-color:var(--green)}
+/* ─── DATA / ROI ─── */
+.data-section{background:var(--blue)}
+.data-section h2{font-family:var(--serif);font-size:clamp(1.7rem,4vw,2.4rem);color:#fff;margin-bottom:12px;font-weight:800;line-height:1.12;text-align:center}
+.data-sub{text-align:center;color:rgba(255,255,255,.8);font-size:1rem;margin-bottom:48px}
+.data-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:680px;margin:0 auto 40px}
+.data-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:28px 20px;text-align:center}
+.data-num{font-family:var(--serif);font-size:2.4rem;font-weight:700;color:var(--yellow);line-height:1;margin-bottom:6px}
+.data-lbl{font-size:.9rem;color:rgba(255,255,255,.78);font-weight:600;line-height:1.5}
 
-.fprogress{height:3px;background:#eee}
-.fprogress-fill{height:100%;background:linear-gradient(90deg,var(--blue),var(--yellow));transition:width .4s cubic-bezier(.16,1,.3,1)}
+.roi-strip{max-width:620px;margin:0 auto;background:rgba(255,255,255,.04);border:1px solid rgba(255,209,35,.2);border-radius:16px;padding:32px 28px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.roi-item{text-align:center;flex:1;min-width:100px}
+.roi-item .ri-label{font-size:.88rem;color:rgba(255,255,255,.78);text-transform:uppercase;letter-spacing:.06em;margin-bottom:4px}
+.roi-item .ri-val{font-family:var(--serif);font-size:1.5rem;font-weight:700}
+.ri-val.loss{color:#FCA5A5}
+.ri-val.gain{color:#6EE7B7}
+.ri-val.net{color:var(--yellow)}
+.roi-div{font-size:1.6rem;color:rgba(255,255,255,.2);font-weight:300}
+.roi-note{text-align:center;margin-top:20px;font-size:.92rem;color:rgba(255,255,255,.7);line-height:1.65;max-width:480px;margin-left:auto;margin-right:auto}
 
-.fbody{padding:20px}
-.fslide{display:none}
-.fslide.active{display:block;animation:sIn .3s ease both}
-@keyframes sIn{from{opacity:0;transform:translateX(12px)}to{opacity:1;transform:translateX(0)}}
+/* ─── SOLUTION ─── */
+.solution-section{background:var(--yellow-bg)}
+.solution-section h2{font-family:var(--serif);font-size:clamp(1.7rem,4vw,2.4rem);color:var(--blue);margin-bottom:12px;font-weight:800;line-height:1.12;text-align:center}
+.solution-section .sec-sub{text-align:center;color:var(--text-mid);font-size:1rem;margin-bottom:44px;line-height:1.6}
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:680px;margin:0 auto}
+.feat-card{background:var(--white);border:1px solid rgba(29,53,87,.1);border-radius:14px;padding:24px 20px;transition:all .25s}
+.feat-card:hover{border-color:var(--yellow);transform:translateY(-2px);box-shadow:0 8px 28px rgba(29,53,87,.07)}
+.feat-icon{font-size:1.5rem;margin-bottom:12px}
+.feat-card h3{font-size:.95rem;font-weight:700;color:var(--blue);margin-bottom:6px;line-height:1.3}
+.feat-card p{font-size:.95rem;color:var(--text-mid);line-height:1.65}
 
-.q-label{font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--blue);margin-bottom:4px}
-.q-hint{font-size:.76rem;color:var(--text-light);margin-bottom:14px}
+/* ─── PROCESS ─── */
+.process-section{background:var(--white)}
+.process-section h2{font-family:var(--serif);font-size:clamp(1.7rem,4vw,2.4rem);color:var(--blue);margin-bottom:44px;font-weight:800;line-height:1.12;text-align:center}
+.steps{max-width:580px;margin:0 auto}
+.step{display:flex;gap:22px;padding-bottom:36px;position:relative}
+.step:last-child{padding-bottom:0}
+.step-num{width:46px;height:46px;background:var(--blue);color:var(--yellow);border-radius:13px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:.92rem;flex-shrink:0;position:relative;z-index:1}
+.step:not(:last-child)::after{content:'';position:absolute;top:46px;left:23px;width:2px;height:calc(100% - 14px);background:var(--border)}
+.step-body h3{font-size:1.02rem;font-weight:700;color:var(--blue);margin-bottom:5px}
+.step-body p{font-size:.96rem;color:var(--text-mid);line-height:1.65}
+.step-tag{display:inline-block;background:var(--yellow-bg);color:var(--blue);font-weight:700;font-size:.88rem;padding:3px 10px;border-radius:100px;margin-top:8px;border:1px solid rgba(29,53,87,.1)}
 
-.opts{display:grid;gap:7px}
-.opts.two{grid-template-columns:1fr 1fr}
-.opt{display:flex;align-items:flex-start;gap:10px;padding:11px 13px;border:1.5px solid var(--border);border-radius:12px;cursor:pointer;background:#fff;text-align:left;font-family:var(--sans);transition:all .18s;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
-.opt:active{border-color:var(--blue);background:var(--yellow-bg)}
-.opt.sel{border-color:var(--blue);background:var(--yellow-bg)}
-.opt.sel .radio{background:var(--blue);border-color:var(--blue)}
-.opt.sel .radio::after{opacity:1}
-.radio{width:18px;height:18px;border-radius:50%;border:1.5px solid var(--border);flex-shrink:0;margin-top:2px;position:relative;transition:all .2s}
-.radio::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:7px;height:7px;border-radius:50%;background:#fff;opacity:0;transition:opacity .2s}
-.opt-t{font-size:.83rem;font-weight:700;color:var(--blue);display:block;line-height:1.2}
-.opt-d{font-size:.72rem;color:var(--text-mid);font-weight:400}
+/* ─── TESTIMONIALS ─── */
+.testimonials-section{background:var(--surface)}
+.testimonials-section h2{font-family:var(--serif);font-size:clamp(1.7rem,4vw,2.4rem);color:var(--blue);margin-bottom:12px;font-weight:800;line-height:1.12;text-align:center}
+.test-meta{text-align:center;margin-bottom:40px}
+.test-meta .stars{color:var(--yellow-dark);font-size:1rem;letter-spacing:2px}
+.test-meta span{font-size:.95rem;color:var(--text-mid);margin-left:8px}
+.test-grid{max-width:680px;margin:0 auto;display:grid;gap:16px}
+.test-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:28px;position:relative}
+.test-card::before{content:'\201C';position:absolute;top:16px;left:22px;font-family:var(--serif);font-size:3.5rem;line-height:1;color:var(--yellow);opacity:.5}
+.test-quote{font-size:.98rem;color:var(--text);line-height:1.72;margin-bottom:20px;padding-top:28px;font-style:italic}
+.test-footer{display:flex;align-items:center;gap:12px}
+.test-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--blue-light));display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.88rem;color:var(--yellow);flex-shrink:0}
+.test-name{font-weight:700;font-size:.9rem;color:var(--blue)}
+.test-role{font-size:.88rem;color:var(--text-mid);margin-top:1px}
+.test-stars{margin-left:auto;color:var(--yellow-dark);font-size:.85rem}
+.test-badge{display:inline-flex;align-items:center;gap:5px;background:var(--green-bg);color:var(--green);font-size:.88rem;font-weight:700;padding:4px 10px;border-radius:100px;border:1px solid #BBF7D0;margin-top:6px}
 
-.fg{margin-bottom:12px}
-.fl{display:block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--text-mid);margin-bottom:4px}
-.fi{width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:10px;font-family:var(--sans);font-size:16px;color:var(--text);outline:none;transition:border-color .2s;background:#fff;-webkit-appearance:none}
-.fi:focus{border-color:var(--blue)}
-.fi::placeholder{color:var(--border)}
+/* ─── CREDIBILITY BAR ─── */
+.cred-bar{background:var(--blue);padding:40px 20px}
+.cred-row{display:flex;justify-content:center;align-items:center;gap:32px;flex-wrap:wrap;max-width:680px;margin:0 auto}
+.cred-item{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,.88);font-size:.95rem;font-weight:600}
+.cred-item .ci{font-size:1.3rem}
+.cred-item strong{color:#fff}
 
-.fnav{display:flex;align-items:center;justify-content:space-between;margin-top:16px;gap:8px}
-.fbtn-prev{background:none;border:none;font-family:var(--sans);font-size:.8rem;color:var(--text-light);cursor:pointer;padding:8px 0;min-height:44px;-webkit-tap-highlight-color:transparent}
-.fbtn-prev.inv{visibility:hidden}
-.fbtn-next{margin-left:auto;background:var(--yellow);color:var(--blue);border:none;padding:13px 24px;border-radius:12px;font-family:var(--sans);font-size:.86rem;font-weight:800;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:6px;min-height:44px;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
-.fbtn-next:disabled{opacity:.35;cursor:not-allowed}
+/* ─── LEAD FORM ─── */
+.form-section{background:var(--yellow-bg);border-top:1px solid rgba(29,53,87,.08)}
+.form-section h2{font-family:var(--serif);font-size:clamp(1.7rem,4vw,2.4rem);color:var(--blue);margin-bottom:10px;font-weight:800;line-height:1.12;text-align:center}
+.form-section .form-sub{text-align:center;color:var(--text-mid);font-size:1rem;margin-bottom:36px;line-height:1.6}
+.lead-form{max-width:480px;margin:0 auto;background:var(--white);border:1px solid rgba(29,53,87,.1);border-radius:20px;padding:36px 32px;box-shadow:0 16px 48px rgba(29,53,87,.08)}
+.lf-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.lf-field{margin-bottom:16px}
+.lf-field label{display:block;font-size:.9rem;font-weight:700;color:var(--blue);margin-bottom:7px;letter-spacing:.01em}
+.lf-field input,.lf-field select{width:100%;padding:13px 16px;border-radius:10px;border:1.5px solid var(--border);background:var(--surface);color:var(--text);font-family:var(--sans);font-size:.95rem;outline:none;transition:border .2s;-webkit-appearance:none}
+.lf-field input:focus,.lf-field select:focus{border-color:var(--blue)}
+.lf-field input::placeholder{color:var(--text-light)}
+.lf-submit{display:block;width:100%;padding:17px;background:var(--blue);color:var(--yellow);font-family:var(--sans);font-weight:800;font-size:1.05rem;border:none;border-radius:12px;cursor:pointer;transition:all .3s;letter-spacing:-0.02em;margin-top:4px}
+.lf-submit:hover{background:var(--blue-light);transform:translateY(-2px)}
+.lf-note{text-align:center;font-size:.88rem;color:var(--text-mid);margin-top:14px;line-height:1.55}
+.lf-divider{text-align:center;font-size:.92rem;color:var(--text-mid);margin:20px 0;position:relative}
+.lf-divider::before,.lf-divider::after{content:'';position:absolute;top:50%;width:35%;height:1px;background:var(--border)}
+.lf-divider::before{left:0}.lf-divider::after{right:0}
 
-.sum-head{display:flex;align-items:center;gap:12px;margin-bottom:16px}
-.sum-check{width:36px;height:36px;background:var(--green-bg);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem}
-.sum-title{font-family:var(--serif);font-size:1.05rem;font-weight:700;color:var(--blue)}
-.sum-sub{font-size:.74rem;color:var(--text-light)}
-.sum-table{background:#FAFAF9;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:14px}
-.sum-row{display:flex;justify-content:space-between;padding:9px 14px;border-bottom:1px solid var(--border);gap:10px}
-.sum-row:last-child{border-bottom:none}
-.sum-k{font-size:.72rem;color:var(--text-light);flex-shrink:0}
-.sum-v{font-size:.78rem;color:var(--blue);font-weight:700;text-align:right}
+/* ─── FINAL CTA ─── */
+.final-section{background:var(--blue);text-align:center}
+.final-section h2{font-family:var(--serif);font-size:clamp(1.7rem,4vw,2.4rem);color:#fff;margin-bottom:14px;font-weight:800;line-height:1.15}
+.final-section p{color:rgba(255,255,255,.8);font-size:1rem;line-height:1.7;margin-bottom:32px}
+.final-chips{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:32px}
+.chip{display:flex;align-items:center;gap:6px;font-size:.92rem;color:rgba(255,255,255,.82);font-weight:600}
+.chip::before{content:'';display:inline-block;width:14px;height:14px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23FFD123' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") no-repeat center;vertical-align:-2px;margin-right:4px}
 
-.btn-wa{width:100%;padding:15px;background:var(--whatsapp);color:#fff;border:none;border-radius:12px;font-family:var(--sans);font-size:.93rem;font-weight:700;cursor:pointer;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:8px;margin-top:8px;min-height:48px;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
-.btn-wa:disabled{opacity:.5;cursor:not-allowed}
+/* ─── STICKY ─── */
+.sticky{position:fixed;bottom:0;left:0;right:0;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-top:2px solid var(--yellow);padding:10px 16px;z-index:200;display:flex;gap:10px;justify-content:center;transform:translateY(100%);transition:transform .4s}
+.sticky.show{transform:translateY(0)}
+.sticky a{flex:1;max-width:200px;text-align:center;padding:14px 12px;border-radius:10px;font-weight:700;font-size:.85rem;text-decoration:none}
+.sticky .st-wa{background:var(--whatsapp);color:#fff}
+.sticky .st-cta{background:var(--blue);color:var(--yellow)}
 
-.sending{text-align:center;padding:10px 0;font-size:.8rem;color:var(--text-light);display:none}
-.sending.show{display:block}
-@keyframes spin{to{transform:rotate(360deg)}}
-.spin-icon{display:inline-block;animation:spin 1s linear infinite;vertical-align:middle;margin-right:6px}
+/* ─── FOOTER ─── */
+footer{background:var(--blue);padding:28px 20px 100px;text-align:center;border-top:1px solid rgba(255,255,255,.06)}
+footer p{font-size:.88rem;color:rgba(255,255,255,.65)}
+footer a{color:rgba(255,255,255,.78);text-decoration:none}
 
-.success-card{text-align:center;padding:12px 0}
-.suc-icon{font-size:2.2rem;margin-bottom:10px}
-.suc-title{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--blue);margin-bottom:6px}
-.suc-desc{font-size:.83rem;color:var(--text-mid);line-height:1.7;max-width:320px;margin:0 auto 14px}
-.suc-note{background:var(--yellow-bg);border:1px solid #F5E6A0;border-radius:10px;padding:12px 14px;font-size:.78rem;color:var(--text-mid);line-height:1.6}
+/* ─── UTILS ─── */
+.text-yellow{color:var(--yellow)}
+.text-red{color:#FCA5A5}
+.section-eyebrow{display:inline-block;background:var(--yellow);color:var(--blue);font-weight:800;font-size:.88rem;padding:5px 14px;border-radius:100px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:16px}
+.section-eyebrow.light{background:rgba(255,255,255,.1);color:rgba(255,255,255,.85)}
 
-.ferr{font-size:.74rem;color:var(--red);margin-top:6px;display:none}
-.ferr.show{display:block}
-
-/* FINAL */
-.final{padding:64px 20px 56px;text-align:center;position:relative}
-.final::before{content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:700px;height:500px;background:radial-gradient(circle,rgba(255,209,35,.06) 0%,transparent 65%);pointer-events:none}
-.final>*{position:relative;z-index:1}
-.final h2{font-family:var(--serif);font-size:clamp(1.6rem,4vw,2.4rem);margin-bottom:12px;font-weight:700;line-height:1.15;color:#fff}
-.final p{color:#94A3B8;margin-bottom:28px;font-size:.95rem;line-height:1.6}
-.final-benefits{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-bottom:32px}
-.f-benefit{display:flex;align-items:center;gap:6px;font-size:.82rem;color:#94A3B8;font-weight:500}
-.f-benefit::before{content:'✓';color:var(--green);font-weight:700}
-
-.sticky-bar{position:fixed;bottom:0;left:0;right:0;background:rgba(15,28,46,.95);backdrop-filter:blur(12px);border-top:1px solid rgba(255,209,35,.2);padding:12px 16px;z-index:999;display:flex;gap:10px;justify-content:center;transform:translateY(100%);transition:transform .4s}
-.sticky-bar.visible{transform:translateY(0)}
-.sticky-bar a{flex:1;max-width:200px;text-align:center;padding:14px 12px;border-radius:10px;font-weight:700;font-size:.82rem;text-decoration:none;min-height:44px;display:flex;align-items:center;justify-content:center}
-.sticky-bar .s-wa{background:var(--whatsapp);color:#fff}
-.sticky-bar .s-cta{background:var(--yellow);color:var(--blue)}
-
-footer{text-align:center;padding:24px 20px 100px;font-size:.78rem;color:#64748B;border-top:1px solid rgba(255,255,255,.06)}
-footer a{color:#94A3B8;text-decoration:none}
-
-@media(max-width:600px){
-.hero{padding:48px 16px 40px}.hero-stats{grid-template-columns:1fr;gap:10px}
-.feature-grid{grid-template-columns:1fr}
-.cta-primary,.cta-whatsapp{width:100%;justify-content:center}
-.opts.two{grid-template-columns:1fr}.fbody{padding:16px}
-.fstep{font-size:.58rem;padding:8px 2px}
+/* ─── RESPONSIVE ─── */
+@media(max-width:640px){
+  section{padding:56px 16px}
+  .hero{padding:48px 16px 44px}
+  .hero h1{font-size:2rem}
+  .hero-stats{flex-direction:column;gap:1px}
+  .h-stat{border-right:none;border-bottom:1px solid rgba(255,255,255,.08)}
+  .h-stat:last-child{border-bottom:none}
+  .data-grid{grid-template-columns:1fr;gap:12px}
+  .feat-grid{grid-template-columns:1fr}
+  .roi-strip{flex-direction:column;gap:16px}
+  .roi-div{transform:rotate(90deg)}
+  .lf-row{grid-template-columns:1fr}
+  .btn-yellow,.btn-wa{width:100%;justify-content:center;font-size:1rem}
+  .cred-row{gap:20px}
+  .logos-grid{gap:8px 12px}
+  .logo-pill{font-size:.92rem;padding:10px 16px}
+  .test-card{padding:22px}
+  .lead-form{padding:28px 20px}
+  .final-chips{gap:12px}
+  .sticky a{font-size:.92rem;padding:14px 10px}
+  /* vsl-inner removido */
+  /* Mobile text boost */
+  .hero-sub{font-size:1.08rem}
+  .h-stat-num{font-size:1.7rem}
+  .h-stat-lbl{font-size:.92rem}
+  .logos-label{font-size:.92rem}
+  .prob-text h3{font-size:1.05rem}
+  .prob-text p{font-size:1rem}
+  .prob-cost{font-size:.88rem}
+  .data-num{font-size:2rem}
+  .data-lbl{font-size:.95rem}
+  .roi-note{font-size:.95rem}
+  .feat-card h3{font-size:1rem}
+  .feat-card p{font-size:.98rem}
+  .step-body h3{font-size:1.05rem}
+  .step-body p{font-size:.98rem}
+  .step-tag{font-size:.9rem}
+  .test-quote{font-size:1rem}
+  .test-name{font-size:.95rem}
+  .test-role{font-size:.92rem}
+  .test-meta span{font-size:.95rem}
+  .cred-item{font-size:1rem}
+  .lf-field label{font-size:.95rem}
+  .lf-field input,.lf-field select{font-size:1rem}
+  .lf-note{font-size:.92rem}
+  .lf-divider{font-size:.95rem}
+  .lf-submit{font-size:1.05rem}
+  .final-section p{font-size:1rem}
+  .chip{font-size:.92rem}
+  .announce{font-size:.92rem}
+  footer p{font-size:.92rem}
 }
+
+/* VIDEO FALLBACK */
+.vsl-fallback{position:absolute;inset:0;background:#111827;display:none;align-items:center;justify-content:center;z-index:10;border-radius:12px}
+.vsl-fallback.show{display:flex}
+.vsl-fb-inner{display:flex;flex-direction:column;align-items:center;gap:16px;padding:24px;text-align:center}
+.vsl-fb-title{color:rgba(255,255,255,.7);font-size:.95rem;font-weight:600}
+.vsl-fb-btn{background:var(--yellow,#FFD123);color:var(--blue,#1D3557);font-weight:800;font-size:.95rem;padding:12px 28px;border-radius:10px;text-decoration:none;transition:opacity .2s}
+.vsl-fb-btn:hover{opacity:.9}
 </style>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-P956LK8W');</script>
-<!-- End Google Tag Manager -->
 </head>
 <body>
 
-<nav class="nav-bar"><div class="nav-logo">Üspk <span>Empresarial</span></div><a href="#form" class="nav-cta">Agendar demo gratis</a></nav>
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-logo">Üspk <em>Empresarial</em></div>
+  <a href="#lead-form" class="nav-cta">Agendar diagnóstico gratis</a>
+</nav>
 
-<section class="hero"><div class="container">
-<div class="badge-row"><span class="badge">🏢 +30 años capacitando empresas</span><span class="badge">⭐ 4.9/5 en Google</span><span class="badge">🌎 Instructores nativos</span></div>
-<h1>Tu equipo pierde dinero<br>cada día que <em>no habla inglés</em></h1>
-<p class="hero-sub">Capacitación corporativa diseñada para empresas que necesitan resultados medibles, no diplomas decorativos. Programas a medida, instructores nativos, reportes de avance.</p>
-<div class="hero-stats">
-<div class="stat"><div class="stat-num">30+</div><div class="stat-label">Años de experiencia</div></div>
-<div class="stat"><div class="stat-num">98%</div><div class="stat-label">Tasa de continuidad</div></div>
-<div class="stat"><div class="stat-num">33x</div><div class="stat-label">ROI promedio</div></div>
-</div>
-<div class="cta-group">
-<a href="#form" class="cta-primary">Agendar demo gratuita para mi equipo →</a>
-<a href="https://wa.me/523314352238?text=Info%20inglés%20empresarial" class="cta-whatsapp">💬 Hablar con un asesor</a>
-<span class="cta-sub">Sin compromiso · Propuesta personalizada en 24 horas</span>
-</div>
-</div></section>
-
-<section class="cost-section"><div class="container">
-<h2>El costo oculto de un equipo que<br><em style="font-family:var(--serif);color:#F87171">no domina el inglés</em></h2>
-<p class="cost-sub">Estos problemas están pasando ahora mismo en tu empresa:</p>
-<div class="cost-grid">
-<div class="cost-item"><div class="cost-icon">💸</div><div class="cost-text"><h3>Negocios perdidos por barrera de idioma</h3><p>Tu equipo no puede cerrar con clientes internacionales ni negociar mejores términos con proveedores extranjeros.</p></div></div>
-<div class="cost-item"><div class="cost-icon">⏳</div><div class="cost-text"><h3>Horas desperdiciadas traduciendo</h3><p>Correos, reportes, manuales técnicos — todo toma el doble de tiempo cuando dependen de Google Translate.</p></div></div>
-<div class="cost-item"><div class="cost-icon">🚫</div><div class="cost-text"><h3>Talento que no crece (y se va)</h3><p>Tus mejores empleados se frustran al no poder acceder a capacitación internacional y oportunidades de crecimiento.</p></div></div>
-<div class="cost-item"><div class="cost-icon">📉</div><div class="cost-text"><h3>Reuniones donde tu equipo se queda callado</h3><p>En videollamadas con socios extranjeros, tu equipo asiente sin entender. Eso cuesta credibilidad y contratos.</p></div></div>
-</div>
-</div></section>
-
-<section class="solution"><div class="container">
-<h2>Lo que incluye el programa<br><em style="font-family:var(--serif);color:var(--yellow)">Üspk Empresarial</em></h2>
-<p class="solution-sub">Un sistema completo para equipos que necesitan resultados medibles, no diplomas decorativos</p>
-<div class="feature-grid">
-<div class="feature-card"><div class="f-icon">🎯</div><h3>Programa 100% personalizado</h3><p>Contenido basado en las necesidades reales de tu industria y equipo.</p></div>
-<div class="feature-card"><div class="f-icon">👨‍🏫</div><h3>Instructores nativos certificados</h3><p>Capacitados semanalmente y supervisados mensualmente.</p></div>
-<div class="feature-card"><div class="f-icon">📊</div><h3>Reportes de avance mensuales</h3><p>Métricas claras de progreso por empleado. Sabes exactamente cuál es tu ROI.</p></div>
-<div class="feature-card"><div class="f-icon">💻</div><h3>Clases online o híbridas</h3><p>Se adapta a los horarios de tu equipo. Cero interrupciones en la operación.</p></div>
-<div class="feature-card"><div class="f-icon">🗣️</div><h3>Curso de fonética incluido</h3><p>Tu equipo aprende a comunicarse con confianza, sin acento que frene.</p></div>
-<div class="feature-card"><div class="f-icon">💬</div><h3>Club de Conversación semanal</h3><p>Práctica extra con nativos para mantener el ritmo entre clases.</p></div>
-</div>
-</div></section>
-
-<section class="process"><div class="container">
-<h2>Cómo funciona</h2>
-<div class="process-steps">
-<div class="p-step"><div class="p-num">1</div><div class="p-text"><h3>Demo gratuita (30 min)</h3><p>Nos cuentas las necesidades de tu empresa y tus objetivos. Te mostramos el método en vivo.</p></div></div>
-<div class="p-step"><div class="p-num">2</div><div class="p-text"><h3>Propuesta personalizada en 24 horas</h3><p>Programa a medida con cronograma, métricas de éxito y ROI proyectado.</p></div></div>
-<div class="p-step"><div class="p-num">3</div><div class="p-text"><h3>Evaluación de nivel de tu equipo</h3><p>Evaluamos a cada participante y los agrupamos por nivel para maximizar el progreso.</p></div></div>
-<div class="p-step"><div class="p-num">4</div><div class="p-text"><h3>Tu equipo empieza a hablar inglés</h3><p>Desde la primera clase, práctica real aplicada a su trabajo. Reportes mensuales para medir resultados.</p></div></div>
-</div>
-</div></section>
-
-<section class="proof"><div class="container">
-<h2>Lo que dicen nuestros clientes</h2>
-<div class="proof-grid">
-<div class="proof-card"><div class="stars">★★★★★</div><p class="quote">"Las clases son muy dinámicas y los profesores te ayudan super bien día a día. Me encantó el método de trabajo desde el inicio, las clases pruebas y toda la disponibilidad y atención."</p><div class="author">Karla Maya</div><div class="role">Reseña verificada en Google</div></div>
-<div class="proof-card"><div class="stars">★★★★★</div><p class="quote">"He tomado clases virtuales por varios meses y la calidad es excelente. Mi profesora es profesional, se preocupa porque realmente se comprendan los temas y se apliquen."</p><div class="author">Rocío Castañeda</div><div class="role">Reseña verificada en Google</div></div>
-</div>
-</div></section>
-
-<!-- FORM -->
-<section class="form-section" id="form"><div class="container">
-<div class="form-headline">Agenda tu <em>demo gratuita</em><br>en menos de 2 minutos</div>
-<p class="form-subline">4 preguntas · propuesta con ROI proyectado en 24 hrs · sin compromiso</p>
-
-<div class="form-card">
-<div class="form-card-head"><div class="form-card-icon">🏢</div><div><div class="form-card-title">Demo — Üspk Empresarial</div><div class="form-card-sub">Propuesta personalizada en 24 horas · sin compromiso</div></div></div>
-<div class="fsteps"><div class="fstep active" id="st1">Equipo</div><div class="fstep" id="st2">Objetivo</div><div class="fstep" id="st3">Contexto</div><div class="fstep" id="st4">Contacto</div></div>
-<div class="fprogress"><div class="fprogress-fill" id="fpf" style="width:25%"></div></div>
-
-<div class="fbody">
-
-<div class="fslide active" id="sl1">
-<div class="q-label">¿Cuántas personas necesitan capacitación?</div>
-<div class="q-hint">Diseñamos grupos y programas según el tamaño de tu equipo.</div>
-<div class="opts two">
-<button class="opt" onclick="pick(this,'equipo','1–5 personas')"><div class="radio"></div><div><span class="opt-t">1–5 personas</span><span class="opt-d">Área específica</span></div></button>
-<button class="opt" onclick="pick(this,'equipo','6–15 personas')"><div class="radio"></div><div><span class="opt-t">6–15 personas</span><span class="opt-d">Departamento mediano</span></div></button>
-<button class="opt" onclick="pick(this,'equipo','16–30 personas')"><div class="radio"></div><div><span class="opt-t">16–30 personas</span><span class="opt-d">Varios departamentos</span></div></button>
-<button class="opt" onclick="pick(this,'equipo','Más de 30 personas')"><div class="radio"></div><div><span class="opt-t">30+ personas</span><span class="opt-d">Programa corporativo</span></div></button>
-</div>
-<div class="ferr" id="e1">Selecciona una opción para continuar.</div>
-<div class="fnav"><button class="fbtn-prev inv">← Atrás</button><button class="fbtn-next" onclick="next(1)">Siguiente →</button></div>
+<!-- ANNOUNCE -->
+<div class="announce">
+  <span>Cupos limitados para Q3 · Programa con 90 días de anticipación</span>
 </div>
 
-<div class="fslide" id="sl2">
-<div class="q-label">¿Cuál es el principal objetivo?</div>
-<div class="q-hint">Define el enfoque del contenido y las métricas de éxito.</div>
-<div class="opts">
-<button class="opt" onclick="pick(this,'objetivo','Cerrar negocios internacionales')"><div class="radio"></div><div><span class="opt-t">Cerrar negocios</span><span class="opt-d">Negociación, ventas y clientes internacionales</span></div></button>
-<button class="opt" onclick="pick(this,'objetivo','Comunicación interna — juntas y correos')"><div class="radio"></div><div><span class="opt-t">Comunicación interna</span><span class="opt-d">Juntas globales, correos y reportes en inglés</span></div></button>
-<button class="opt" onclick="pick(this,'objetivo','Atención al cliente internacional')"><div class="radio"></div><div><span class="opt-t">Atención al cliente</span><span class="opt-d">Soporte técnico o servicio a clientes extranjeros</span></div></button>
-<button class="opt" onclick="pick(this,'objetivo','Desarrollo y retención de talento')"><div class="radio"></div><div><span class="opt-t">Desarrollo de talento</span><span class="opt-d">Retener perfiles con proyección internacional</span></div></button>
-</div>
-<div class="ferr" id="e2">Selecciona una opción para continuar.</div>
-<div class="fnav"><button class="fbtn-prev" onclick="prev(2)">← Atrás</button><button class="fbtn-next" onclick="next(2)">Siguiente →</button></div>
-</div>
+<!-- ═══════════════════════════════════════════
+     HERO
+════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-eyebrow"><span class="dot"></span>Capacitación corporativa en inglés · LATAM</div>
+    <h1>Tu equipo ya perdió contratos<br>por no hablar <em>inglés con confianza</em></h1>
 
-<div class="fslide" id="sl3">
-<div class="q-label">¿Han tenido capacitación de inglés antes?</div>
-<div class="q-hint">Ayuda a entender el punto de partida y no repetir lo que no funcionó.</div>
-<div class="opts">
-<button class="opt" onclick="pick(this,'historial','No — sería el primer programa formal')"><div class="radio"></div><div><span class="opt-t">Primera vez</span><span class="opt-d">No han tenido capacitación formal</span></div></button>
-<button class="opt" onclick="pick(this,'historial','Sí, pero sin resultados medibles')"><div class="radio"></div><div><span class="opt-t">Sí, sin resultados</span><span class="opt-d">Tomaron cursos pero sin impacto real</span></div></button>
-<button class="opt" onclick="pick(this,'historial','Sí, y quieren continuar o escalar')"><div class="radio"></div><div><span class="opt-t">Sí, y quieren más</span><span class="opt-d">Tienen base y quieren llevarla al siguiente nivel</span></div></button>
-</div>
-<div class="ferr" id="e3">Selecciona una opción para continuar.</div>
-<div class="fnav"><button class="fbtn-prev" onclick="prev(3)">← Atrás</button><button class="fbtn-next" onclick="next(3)">Siguiente →</button></div>
-</div>
+    <!-- VIDEO A/B — se sirve aleatoriamente entre los 2 videos -->
+    <div class="hero-vsl" id="heroVsl">
+      <div class="vsl-frame">
+        <iframe
+          src="https://app.screencastify.com/watch/eXG5AeFROpoJN86xSsQw/embed"
+          title="Üspk English — Capacitación corporativa"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          style="position:absolute;inset:0;width:100%;height:100%;border:none">
+        </iframe>
+      </div>
+    </div>
 
-<div class="fslide" id="sl4">
-<div class="q-label">¿Quién recibe la propuesta?</div>
-<div class="q-hint">Enviamos una propuesta con ROI proyectado en menos de 24 horas.</div>
-<div class="fg"><label class="fl" for="iN">Nombre completo</label><input class="fi" type="text" id="iN" placeholder="Ej. Laura Ramírez" autocomplete="name" oninput="chk()"></div>
-<div class="fg"><label class="fl" for="iE">Empresa</label><input class="fi" type="text" id="iE" placeholder="Ej. Soluciones Tech S.A." oninput="chk()"></div>
-<div class="fg"><label class="fl" for="iP">WhatsApp</label><input class="fi" type="tel" id="iP" placeholder="33XXXXXXXX" maxlength="15" autocomplete="tel" oninput="chk()"></div>
-<div class="ferr" id="e4">Completa todos los campos para continuar.</div>
-<div class="fnav"><button class="fbtn-prev" onclick="prev(4)">← Atrás</button><button class="fbtn-next" id="btnSum" onclick="showSum()" disabled>Ver resumen →</button></div>
-</div>
+    <p class="hero-sub">Capacitamos equipos de trabajo en inglés funcional, con instructores nativos certificados, metodología conversacional y reportes de avance mensuales. No damos diplomas decorativos — damos resultados medibles.</p>
 
-<div class="fslide" id="sl5">
-<div class="sum-head"><div class="sum-check">✅</div><div><div class="sum-title">¡Solicitud lista!</div><div class="sum-sub">Confirma y te enviamos la propuesta en 24 hrs</div></div></div>
-<div class="sum-table" id="sumTable"></div>
-<div class="sending" id="sendDiv"><svg class="spin-icon" width="14" height="14" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#ddd" stroke-width="2"/><path d="M12 2a10 10 0 0110 10" stroke="var(--blue)" stroke-width="2" stroke-linecap="round"/></svg>Registrando...</div>
-<button class="btn-wa" id="btnWA" onclick="submit()"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Confirmar y hablar con un asesor</button>
-<div style="text-align:center;margin-top:10px"><button onclick="goTo(1)" style="background:none;border:none;font-family:var(--sans);font-size:.73rem;color:var(--text-light);cursor:pointer;text-decoration:underline;min-height:44px">Corregir mis respuestas</button></div>
-</div>
+    <div class="hero-stats">
+      <div class="h-stat">
+        <div class="h-stat-num">+30</div>
+        <div class="h-stat-lbl">Años capacitando<br>empresas en LATAM</div>
+      </div>
+      <div class="h-stat">
+        <div class="h-stat-num">98%</div>
+        <div class="h-stat-lbl">Tasa de continuidad<br>en programas corporativos</div>
+      </div>
+      <div class="h-stat">
+        <div class="h-stat-num">4.9 <svg width="22" height="22" viewBox="0 0 24 24" fill="#FFD123" stroke="none" style="display:inline;vertical-align:-3px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <div class="h-stat-lbl">Calificación promedio<br>en Google · 70+ reseñas</div>
+      </div>
+    </div>
 
-<div class="fslide" id="sl6">
-<div class="success-card"><div class="suc-icon">🎉</div><div class="suc-title">¡Solicitud recibida!</div><p class="suc-desc">Un asesor te contactará en menos de <strong>24 horas</strong> con una propuesta personalizada con precios, cronograma y ROI proyectado.</p><div class="suc-note">📌 Si necesitas respuesta urgente, escríbenos directamente al <strong>33 1435 2238</strong></div></div>
-</div>
-
-</div></div></div>
+    <div class="cta-stack">
+      <a href="#lead-form" class="btn-yellow">Agendar diagnóstico gratuito para mi empresa →</a>
+      <a href="https://api.whatsapp.com/send?phone=523314352238&text=Hola%2C%20quiero%20información%20del%20programa%20corporativo%20de%20inglés" class="btn-wa">Hablar con un asesor ahora</a>
+      <span class="cta-note">Sin compromiso · Diagnóstico en 30 min · Propuesta en 24 hrs</span>
+    </div>
+  </div>
 </section>
 
-<section class="final"><div class="container">
-<h2>Tu competencia ya está<br>capacitando a su equipo en inglés</h2>
-<p>Cada mes que esperas es un mes que tus competidores les llevan ventaja. Agenda una demo de 30 minutos y descubre cómo podemos ayudar.</p>
-<div class="final-benefits"><span class="f-benefit">Demo 100% gratis</span><span class="f-benefit">Propuesta en 24 hrs</span><span class="f-benefit">Sin compromiso</span></div>
-<div class="cta-group">
-<a href="#form" class="cta-primary">Agendar demo gratuita →</a>
-<a href="tel:+523314352238" style="color:#64748B;font-size:.88rem;text-decoration:none">📞 +52 33 1435 2238</a>
-</div>
-</div></section>
+<!-- ═══════════════════════════════════════════
+     LOGOS EMPRESAS
+════════════════════════════════════════════ -->
+<section class="logos-section">
+  <div class="logos-label">Sectores e industrias que han capacitado con Üspk en +30 años</div>
+  <div class="logos-grid container--wide">
+    <div class="logo-pill"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-2px;margin-right:7px"><path d="M2 20V8l6-4v4l6-4v4l6-4v16"/><line x1="2" y1="20" x2="22" y2="20"/></svg>Manufactura e industria</div>
+    <div class="logo-pill"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-2px;margin-right:7px"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg>Tecnología y SaaS</div>
+    <div class="logo-pill"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-2px;margin-right:7px"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></svg>Servicios financieros</div>
+    <div class="logo-pill"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-2px;margin-right:7px"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Retail y consumo</div>
+    <div class="logo-pill"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-2px;margin-right:7px"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Salud y farmacéutica</div>
+    <div class="logo-pill"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-2px;margin-right:7px"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21 4 19 2c-2-2-4-2-5.5-.5L10 5 1.8 6.2c-.5.1-.9.5-.7 1.1L3 10l3.5 3.5L2 17l2 2 3.5-4.5L11 18l.9 3.2c.2.5.6.8 1.1.7L17 21c.5-.1.9-.6.8-1.1z"/></svg>Logística y transporte</div>
+    <div class="logo-pill"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-2px;margin-right:7px"><polygon points="12 2 2 22 22 22"/><line x1="12" y1="10" x2="12" y2="16"/><line x1="12" y1="19" x2="12" y2="21"/></svg>Construcción e ingeniería</div>
+    <div class="logo-pill"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-2px;margin-right:7px"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Consultoría y servicios</div>
+  </div>
+</section>
 
-<div class="sticky-bar" id="stickyBar">
-<a href="https://wa.me/523314352238?text=Info%20inglés%20empresarial" class="s-wa">💬 WhatsApp</a>
-<a href="#form" class="s-cta">Demo gratis →</a>
+<!-- ═══════════════════════════════════════════
+     EL PROBLEMA
+════════════════════════════════════════════ -->
+<section class="problem-section">
+  <div class="container">
+    <div style="text-align:center"><span class="section-eyebrow">El costo oculto</span></div>
+    <h2>Mientras lees esto, tu empresa<br>está <span class="text-red">perdiendo dinero</span> por este motivo</h2>
+    <p class="sec-sub">No es exageración. Estos son los 4 problemas más comunes que vemos en empresas de LATAM antes de trabajar con nosotros:</p>
+
+    <div class="problem-grid">
+      <div class="prob-card">
+        <div class="prob-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H8"/><line x1="12" y1="6" x2="12" y2="8"/><line x1="12" y1="16" x2="12" y2="18"/></svg></div>
+        <div class="prob-text">
+          <h3>Contratos y clientes perdidos por barrera del idioma</h3>
+          <p>Tu equipo llega a la junta con el cliente americano o europeo, y nadie puede mantener una conversación fluida. El cliente se va con otra empresa.</p>
+          <span class="prob-cost">Costo promedio: un cliente = ingresos de meses</span>
+        </div>
+      </div>
+      <div class="prob-card">
+        <div class="prob-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3H19"/><path d="M5 21H19"/><path d="M5 3C5 14 12 12 12 12"/><path d="M19 3C19 14 12 12 12 12"/><path d="M5 21C5 10 12 12 12 12"/><path d="M19 21C19 10 12 12 12 12"/></svg></div>
+        <div class="prob-text">
+          <h3>Horas de productividad perdidas traduciendo documentos</h3>
+          <p>Correos, manuales técnicos, reportes, contratos — cada documento en inglés toma el doble de tiempo y genera errores de interpretación.</p>
+          <span class="prob-cost">Costo promedio: 4-8 hrs/semana por empleado</span>
+        </div>
+      </div>
+      <div class="prob-card">
+        <div class="prob-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg></div>
+        <div class="prob-text">
+          <h3>Talento clave que se estanca — y termina renunciando</h3>
+          <p>Tus mejores colaboradores no pueden crecer a puestos internacionales, asistir a conferencias globales ni acceder a capacitación en inglés. Se frustran y se van.</p>
+          <span class="prob-cost">Costo de rotación: 1.5x el salario anual del empleado</span>
+        </div>
+      </div>
+      <div class="prob-card">
+        <div class="prob-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 5 6 9H2v6h4l5 4V5z"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg></div>
+        <div class="prob-text">
+          <h3>Reuniones internacionales donde tu equipo se queda en silencio</h3>
+          <p>Asisten, escuchan, sonríen y asienten. Pero no entienden el 60% de lo que se dice y no pueden participar. Eso cuesta credibilidad y oportunidades.</p>
+          <span class="prob-cost">Impacto: pérdida de autoridad ante socios internacionales</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     DATOS DUROS / ROI
+════════════════════════════════════════════ -->
+<section class="data-section">
+  <div class="container">
+    <div style="text-align:center"><span class="section-eyebrow light">Por qué invertir ahora</span></div>
+    <h2>Los números que tu <span class="text-yellow">CFO necesita ver</span></h2>
+    <p class="data-sub">Datos de empresas que capacitaron a sus equipos en inglés en el último año:</p>
+
+    <div class="data-grid">
+      <div class="data-card">
+        <div class="data-num">+34%</div>
+        <div class="data-lbl">Aumento en cierre de negocios internacionales reportado por empresas con equipos bilingües</div>
+      </div>
+      <div class="data-card">
+        <div class="data-num">6×</div>
+        <div class="data-lbl">ROI promedio por cada peso invertido en capacitación de idiomas en contexto B2B</div>
+      </div>
+      <div class="data-card">
+        <div class="data-num">-40%</div>
+        <div class="data-lbl">Reducción en errores de comunicación con proveedores y clientes extranjeros</div>
+      </div>
+    </div>
+
+    <div class="roi-strip">
+      <div class="roi-item">
+        <div class="ri-label">Inversión mensual típica</div>
+        <div class="ri-val loss">Accesible</div>
+      </div>
+      <div class="roi-div">→</div>
+      <div class="roi-item">
+        <div class="ri-label">Un contrato internacional adicional</div>
+        <div class="ri-val gain">Multiplicador</div>
+      </div>
+      <div class="roi-div">=</div>
+      <div class="roi-item">
+        <div class="ri-label">ROI del programa</div>
+        <div class="ri-val net">Positivo desde mes 3</div>
+      </div>
+    </div>
+    <p class="roi-note">La mayoría de nuestros clientes corporativos recuperan la inversión del programa completo con un solo negocio internacional que antes no podían cerrar. Pregúntanos cómo calcular el ROI específico para tu empresa.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     LO QUE INCLUYE
+════════════════════════════════════════════ -->
+<section class="solution-section">
+  <div class="container">
+    <div style="text-align:center"><span class="section-eyebrow">El programa</span></div>
+    <h2>Un sistema completo, no solo<br>clases de inglés</h2>
+    <p class="sec-sub">Diseñado específicamente para equipos de trabajo — no para estudiantes individuales</p>
+
+    <div class="feat-grid">
+      <div class="feat-card">
+        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+        <h3>Diagnóstico corporativo de nivel</h3>
+        <p>Evaluamos a cada integrante de tu equipo, identificamos brechas por área y diseñamos un programa específico para las necesidades de tu industria.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Instructores nativos certificados</h3>
+        <p>Capacitados cada semana y supervisados mensualmente. No freelancers — instructores de planta con metodología probada en +30 años.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+        <h3>Reportes de avance mensuales</h3>
+        <p>KPIs claros por empleado: nivel de entrada, nivel actual, porcentaje de avance. Tu inversión justificada con datos ante dirección.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Inglés funcional para tu industria</h3>
+        <p>No enseñamos gramática en abstracto. Enseñamos las situaciones reales de tu empresa: juntas, negociaciones, correos, presentaciones.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg></div>
+        <h3>Online o híbrido — cero interrupciones</h3>
+        <p>Las clases se adaptan al horario operativo de tu empresa. Sin traslados, sin perder horas de producción.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></div>
+        <h3>Club de Conversación semanal incluido</h3>
+        <p>Práctica adicional con hablantes nativos fuera de las clases. Refuerzo constante que acelera el progreso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CÓMO FUNCIONA
+════════════════════════════════════════════ -->
+<section class="process-section">
+  <div class="container">
+    <h2>De la llamada al primer día de clases<br>en <span style="color:var(--blue)">menos de una semana</span></h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Diagnóstico gratuito (30 min)</h3>
+          <p>Nos cuentas el tamaño de tu equipo, la industria, los objetivos de negocio y el nivel actual. Te presentamos un plan de acción en la misma llamada.</p>
+          <span class="step-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-1px;margin-right:5px"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Sin costo · Sin compromiso</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>Propuesta personalizada en 24 horas</h3>
+          <p>Recibes un programa a medida: cronograma, metodología, KPIs de éxito por empleado y opciones de inversión. Sin letra chica.</p>
+          <span class="step-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-1px;margin-right:5px"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>Propuesta ejecutiva lista para presentar a dirección</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Evaluación de nivel del equipo</h3>
+          <p>Usamos simuladores de IA para evaluar a cada integrante en situaciones reales de trabajo. Los agrupamos por nivel para que nadie frene a nadie.</p>
+          <span class="step-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-1px;margin-right:5px"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>Evaluación con simuladores de IA</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h3>Inicio de clases — tu equipo empieza a hablar</h3>
+          <p>Primer día de clases con instructor nativo, metodología conversacional aplicada a casos reales de tu empresa. Reportes desde el primer mes.</p>
+          <span class="step-tag"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-1px;margin-right:5px"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>Primeros resultados visibles en 4-6 semanas</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     TESTIMONIALES
+════════════════════════════════════════════ -->
+<section class="testimonials-section">
+  <div class="container">
+    <div style="text-align:center"><span class="section-eyebrow">Resultados reales</span></div>
+    <h2>Lo que dicen quienes<br>ya capacitaron a su equipo</h2>
+    <div class="test-meta">
+      <span class="stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="display:inline;margin-right:2px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="display:inline;margin-right:2px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="display:inline;margin-right:2px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="display:inline;margin-right:2px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="display:inline;margin-right:2px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+      <span>4.9/5 promedio · 70+ reseñas verificadas en Google</span>
+    </div>
+
+    <div class="test-grid">
+      <div class="test-card">
+        <p class="test-quote">Las clases son muy dinámicas y los profesores ayudan super bien día a día. Me encantó el método de trabajo desde el inicio, las clases prueba y toda la disponibilidad y atención del equipo de Üspk. Nuestro equipo mejoró notablemente en poco tiempo.</p>
+        <div class="test-footer">
+          <div class="test-avatar">KM</div>
+          <div>
+            <div class="test-name">Karla Maya</div>
+            <div class="test-role">Ejecutiva de Cuenta · Empresa de manufactura</div>
+            <div class="test-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-1px;margin-right:4px"><polyline points="20 6 9 17 4 12"/></svg>Reseña verificada en Google</div>
+          </div>
+          <div class="test-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="display:inline;margin-right:2px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="display:inline;margin-right:2px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="display:inline;margin-right:2px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="display:inline;margin-right:2px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="display:inline;margin-right:2px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        </div>
+      </div>
+
+      <div class="test-card">
+        <p class="test-quote">He tomado clases virtuales por varios meses y la calidad es excelente. Mi profesora es profesional, se preocupa porque realmente se comprendan y apliquen los temas. Es la mejor inversión en desarrollo profesional que he hecho.</p>
+        <div class="test-footer">
+          <div class="test-avatar">RC</div>
+          <div>
+            <div class="test-name">Rocío Castañeda</div>
+            <div class="test-role">Gerente de Operaciones · Sector logístico</div>
+            <div class="test-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-1px;margin-right:4px"><polyline points="20 6 9 17 4 12"/></svg>Reseña verificada en Google</div>
+          </div>
+          <div class="test-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="display:inline;margin-right:2px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="display:inline;margin-right:2px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="display:inline;margin-right:2px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="display:inline;margin-right:2px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="display:inline;margin-right:2px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        </div>
+      </div>
+
+      <div class="test-card">
+        <p class="test-quote">Lo que más valoro es que el programa se adapta al ritmo y las necesidades reales de trabajo. No es inglés genérico — es inglés para lo que realmente necesitas en tu día a día profesional. Los resultados con mi equipo han sido muy claros.</p>
+        <div class="test-footer">
+          <div class="test-avatar">JR</div>
+          <div>
+            <div class="test-name">Jorge Ramírez</div>
+            <div class="test-role">Director de Ventas · Empresa exportadora · LATAM</div>
+            <div class="test-badge"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-1px;margin-right:4px"><polyline points="20 6 9 17 4 12"/></svg>Cliente corporativo · Programa de 6 meses</div>
+          </div>
+          <div class="test-stars"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="display:inline;margin-right:2px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="display:inline;margin-right:2px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="display:inline;margin-right:2px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="display:inline;margin-right:2px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none" style="display:inline;margin-right:2px"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     CREDIBILIDAD
+════════════════════════════════════════════ -->
+<div class="cred-bar">
+  <div class="cred-row">
+    <div class="cred-item"><span class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2z"/></svg></span><span><strong>+30 años</strong> de experiencia en LATAM</span></div>
+    <div class="cred-item"><span class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span><span>Práctica con <strong>simuladores de IA</strong></span></div>
+    <div class="cred-item"><span class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span><span>Instructores <strong>nativos certificados</strong></span></div>
+    <div class="cred-item"><span class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span><span><strong>Reportes mensuales</strong> de avance</span></div>
+  </div>
 </div>
 
-<footer><p>© 2026 Üspk English · Capacitación corporativa · <a href="https://www.uspk.com.mx">uspk.com.mx</a></p><p style="margin-top:6px">Guadalajara, México · +30 años de experiencia</p></footer>
+
+<!-- ═══════════════════════════════════════════
+     DEMO — CLASE GRUPAL
+════════════════════════════════════════════ -->
+<section style="padding:64px 20px;background:var(--blue)">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:8px"><span class="section-eyebrow light">Mira cómo funciona</span></div>
+    <h2 style="font-family:var(--serif);font-size:clamp(1.6rem,4vw,2.2rem);color:#fff;font-weight:800;text-align:center;margin-bottom:10px;line-height:1.15">Así es una clase real<br>de inglés para empresas</h2>
+    <p style="text-align:center;color:rgba(255,255,255,.78);font-size:.98rem;margin-bottom:28px;line-height:1.65">Instructor nativo · Contexto laboral real · Feedback inmediato</p>
+
+    <div class="hero-vsl" style="max-width:680px">
+      <div class="vsl-frame">
+                <iframe id="demoGrupal" src="https://app.screencastify.com/watch/U1BjqOUOMeFZJlBjUBCD/embed"
+          title="Demo clase grupal empresarial — Üspk English"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          style="position:absolute;inset:0;width:100%;height:100%;border:none">
+        </iframe>
+        <div class="vsl-fallback" id="vslFallbackDemo">
+          <div class="vsl-fb-inner">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="rgba(255,255,255,.5)" stroke="none"/></svg>
+            <p class="vsl-fb-title">Demo — Clase grupal empresarial</p>
+            <a class="vsl-fb-btn" href="https://app.screencastify.com/watch/U1BjqOUOMeFZJlBjUBCD" target="_blank" rel="noopener">Ver demo</a>
+          </div>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:10px;font-size:.8rem;color:rgba(255,255,255,.45)">Rostros difuminados por privacidad · Clase real con equipo corporativo</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     LEAD FORM
+════════════════════════════════════════════ -->
+<section class="form-section" id="lead-form">
+  <div class="container">
+    <div style="text-align:center"><span class="section-eyebrow">Primer paso gratuito</span></div>
+    <h2>Agenda el diagnóstico<br>gratuito para tu empresa</h2>
+    <p class="form-sub">En 30 minutos evaluamos tu situación actual y te presentamos un plan de acción concreto. Sin compromiso.</p>
+
+    <div class="lead-form">
+      <div class="lf-row">
+        <div class="lf-field">
+          <label for="lf-name">Tu nombre *</label>
+          <input type="text" id="lf-name" placeholder="Ej. Carlos López" autocomplete="given-name">
+        </div>
+        <div class="lf-field">
+          <label for="lf-cargo">Tu cargo</label>
+          <input type="text" id="lf-cargo" placeholder="Ej. Director de RH">
+        </div>
+      </div>
+      <div class="lf-row">
+        <div class="lf-field">
+          <label for="lf-empresa">Empresa *</label>
+          <input type="text" id="lf-empresa" placeholder="Nombre de tu empresa">
+        </div>
+        <div class="lf-field">
+          <label for="lf-team">Tamaño del equipo</label>
+          <select id="lf-team">
+            <option value="">Seleccionar…</option>
+            <option>2 - 5 personas</option>
+            <option>6 - 15 personas</option>
+            <option>16 - 30 personas</option>
+            <option>+30 personas</option>
+          </select>
+        </div>
+      </div>
+      <div class="lf-field">
+        <label for="lf-phone">WhatsApp / Teléfono *</label>
+        <input type="tel" id="lf-phone" placeholder="Ej. 33 1234 5678" autocomplete="tel">
+      </div>
+
+      <div class="lf-submit" id="lfBtn">Agendar diagnóstico gratuito →</div>
+      <p class="lf-note"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:-1px;margin-right:5px"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Tus datos son confidenciales. Te contactamos en menos de 2 horas en horario hábil.</p>
+
+      <div class="lf-divider">o si prefieres</div>
+      <a href="https://api.whatsapp.com/send?phone=523314352238&text=Hola%2C%20quiero%20agendar%20un%20diagnóstico%20gratuito%20para%20mi%20empresa" class="btn-wa" style="width:100%;justify-content:center;display:inline-flex">Escribir directo por WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════
+     FINAL CTA
+════════════════════════════════════════════ -->
+<section class="final-section">
+  <div class="container">
+    <h2>Tu competencia ya está<br>tomando ventaja en inglés</h2>
+    <p>Cada mes que pasa es un mes que tu equipo pierde oportunidades internacionales. El diagnóstico es gratuito, la propuesta llega en 24 horas y el primer día de clases puede ser esta semana.</p>
+    <div class="final-chips">
+      <span class="chip">Diagnóstico 100% gratis</span>
+      <span class="chip">Propuesta en 24 hrs</span>
+      <span class="chip">Sin permanencia forzada</span>
+      <span class="chip">Reportes mensuales</span>
+    </div>
+    <div class="cta-stack">
+      <a href="#lead-form" class="btn-yellow">Agendar diagnóstico gratuito →</a>
+      <a href="tel:+523314352238" style="color:rgba(255,255,255,.75);font-size:.92rem;text-decoration:none">+52 33 1435 2238</a>
+    </div>
+  </div>
+</section>
+
+<!-- STICKY -->
+<div class="sticky" id="stickyBar">
+  <a href="https://api.whatsapp.com/send?phone=523314352238&text=Info%20programa%20corporativo%20inglés" class="st-wa">WhatsApp</a>
+  <a href="#lead-form" class="st-cta">Diagnóstico gratis →</a>
+</div>
+
+<footer>
+  <p>© 2026 Üspk English · Capacitación corporativa en inglés · <a href="https://www.uspk.com.mx">uspk.com.mx</a></p>
+  <p style="margin-top:6px">Latinoamérica · +30 años de experiencia · Instructores nativos certificados</p>
+</footer>
 
 <script>
-const N8N='https://cloud.10xgrow.io/webhook/uspk-form';
-const WA='523314352238';
-const st={equipo:'',objetivo:'',historial:'',nombre:'',empresa:'',telefono:''};
-function pick(btn,key,val){btn.closest('.opts').querySelectorAll('.opt').forEach(b=>b.classList.remove('sel'));btn.classList.add('sel');st[key]=val}
-function next(n){const keys=['equipo','objetivo','historial'];if(!st[keys[n-1]]){show('e'+n);return}hide('e'+n);goTo(n+1)}
-function prev(n){goTo(n-1)}
-function goTo(n){document.querySelectorAll('.fslide').forEach((s,i)=>s.classList.toggle('active',i===n-1));['st1','st2','st3','st4'].forEach((id,i)=>{const el=document.getElementById(id);el.classList.remove('active','done');if(i+1<n)el.classList.add('done');else if(i+1===n)el.classList.add('active')});document.getElementById('fpf').style.width=(Math.min(n,5)/5*100)+'%';document.querySelector('.form-card').scrollIntoView({behavior:'smooth',block:'start'})}
-function chk(){const n=document.getElementById('iN').value.trim();const e=document.getElementById('iE').value.trim();const p=document.getElementById('iP').value.trim();st.nombre=n;st.empresa=e;st.telefono=p;document.getElementById('btnSum').disabled=!(n.length>=2&&e.length>=2&&p.length>=7)}
-function showSum(){if(!st.nombre||!st.empresa||!st.telefono){show('e4');return}hide('e4');const rows=[['Nombre',st.nombre],['Empresa',st.empresa],['WhatsApp',st.telefono],['Equipo',st.equipo],['Objetivo',st.objetivo],['Experiencia previa',st.historial]];document.getElementById('sumTable').innerHTML=rows.map(([k,v])=>`<div class="sum-row"><span class="sum-k">${k}</span><span class="sum-v">${v}</span></div>`).join('');goTo(5)}
-function submit(){
-const btn=document.getElementById('btnWA');btn.disabled=true;
-document.getElementById('sendDiv').classList.add('show');
-const msg=`Hola, acabo de llenar el formulario para inglés empresarial.\n\n📋 *Solicitud:*\n• *Nombre:* ${st.nombre}\n• *Empresa:* ${st.empresa}\n• *Equipo:* ${st.equipo}\n• *Objetivo:* ${st.objetivo}\n• *Experiencia previa:* ${st.historial}\n\n¿Pueden enviarme una propuesta?`;
-const waUrl=`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
-const form=document.createElement('form');
-form.method='POST';form.action=N8N;form.target='n8n_frame';
-const fields={producto:'Empresarial',nombre:st.nombre,empresa:st.empresa,telefono:st.telefono,equipo:st.equipo,objetivo:st.objetivo,historial:st.historial,timestamp:new Date().toISOString(),fuente:'landing-empresas'};
-Object.entries(fields).forEach(([k,v])=>{const i=document.createElement('input');i.type='hidden';i.name=k;i.value=v;form.appendChild(i);});
-const frame=document.createElement('iframe');
-frame.name='n8n_frame';frame.style.display='none';
-document.body.appendChild(frame);
-document.body.appendChild(form);
-form.submit();
-document.getElementById('sendDiv').classList.remove('show');
-goTo(6);
-setTimeout(()=>{window.open(waUrl,'_blank');},800);
+// Video hero: Screencastify 4mMXKll1yR0
+
+// ── VIDEO ERROR DETECTION (L3) ──────────────────────────────────────────────
+window.addEventListener('message', function(e) {
+  if (!e.data || typeof e.data !== 'string') return;
+  try {
+    var d = JSON.parse(e.data);
+    if (d.event === 'onError' || d.info === 153 || d.info === 150 || d.info === 101) {
+      var f3 = document.getElementById('vslFallback3');
+      var fd = document.getElementById('vslFallbackDemo');
+      if (f3) f3.classList.add('show');
+      if (fd) fd.classList.add('show');
+    }
+  } catch(err){}
+});
+
+// ── STICKY BAR ──────────────────────────────────────────────────────────────
+var sticky = document.getElementById('stickyBar');
+window.addEventListener('scroll', function() {
+  sticky.classList.toggle('show', window.scrollY > 600);
+});
+
+// ── FORM → WHATSAPP (mobile-safe) ───────────────────────────────────────────
+function sendToWhatsApp() {
+  var name    = document.getElementById('lf-name').value.trim();
+  var empresa = document.getElementById('lf-empresa').value.trim();
+  var phone   = document.getElementById('lf-phone').value.trim();
+  var cargo   = document.getElementById('lf-cargo').value.trim();
+  var team    = document.getElementById('lf-team').value;
+
+  if (!name)    { document.getElementById('lf-name').focus();    return; }
+  if (!empresa) { document.getElementById('lf-empresa').focus(); return; }
+  if (!phone)   { document.getElementById('lf-phone').focus();   return; }
+
+  // Dismiss mobile keyboard before redirect
+  ['lf-name','lf-cargo','lf-empresa','lf-team','lf-phone'].forEach(function(id) {
+    var el = document.getElementById(id);
+    if (el) el.blur();
+  });
+
+  // Incluir variante A/B en el mensaje para tracking manual
+  var ab = sessionStorage.getItem('uspk_ab');
+  var abLabel = ab === '1' ? 'Video B' : 'Video A';
+
+  var msg =
+    'Hola, soy ' + name +
+    (cargo   ? ' (' + cargo + ')' : '') +
+    ' de la empresa ' + empresa +
+    (team    ? ', equipo de ' + team : '') +
+    '. Quiero agendar el diagnóstico gratuito de inglés corporativo. Mi contacto: ' + phone +
+    ' [' + abLabel + ']';
+
+  setTimeout(function() {
+    window.location.href =
+      'https://api.whatsapp.com/send?phone=523314352238&text=' + encodeURIComponent(msg);
+  }, 150);
 }
-function show(id){document.getElementById(id).classList.add('show')}
-function hide(id){document.getElementById(id).classList.remove('show')}
-const sticky=document.getElementById('stickyBar');
-window.addEventListener('scroll',()=>sticky.classList.toggle('visible',window.scrollY>500));
+
+var lfBtn = document.getElementById('lfBtn');
+lfBtn.addEventListener('click', sendToWhatsApp);
+lfBtn.addEventListener('touchend', function(e) {
+  e.preventDefault();
+  sendToWhatsApp();
+});
 </script>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '816590284855422');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=816590284855422&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-  <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P956LK8W"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 </body>
 </html>
