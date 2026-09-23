@@ -10,6 +10,10 @@ import SoundCloudEmbed from "@/components/sanity/soundcloud-embed";
 import { Metadata, ResolvingMetadata } from "next";
 import { BackToBlogLink } from "../back-to-blog-link";
 
+// TODO: Cache Components adoption. Refactor this route so this opt-out can be removed.
+// See: https://nextjs.org/docs/app/guides/migrating-to-cache-components
+export const instant = false;
+
 const { projectId, dataset } = client.config();
 const urlFor = (source: SanityImageSource) =>
   projectId && dataset
